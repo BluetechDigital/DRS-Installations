@@ -42,7 +42,7 @@ const TestimonialsTwo: FC<ITestimonialsTwo> = ({title, subtitle}) => {
 							initial={initial}
 							whileInView={fadeInUp}
 							viewport={{once: true}}
-							className="text-center lg:text-left text-base text-accent-default"
+							className="text-center lg:text-left text-base text-primary-default"
 						>
 							{subtitle}
 						</motion.h4>

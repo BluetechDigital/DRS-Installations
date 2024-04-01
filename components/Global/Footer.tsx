@@ -359,7 +359,7 @@ const Footer: FC = () => {
 					</div>
 				</div>
 			</div>
-			<div className="bg-primary-darkerTwo py-4 my-0">
+			<div className="bg-primary-two py-4 my-0">
 				<div className="md:container px-4 mx-auto flex flex-col-reverse lg:flex-row items-center justify-between">
 					<motion.div
 						initial={initial}
