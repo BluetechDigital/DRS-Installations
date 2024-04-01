@@ -1,8 +1,4 @@
 /*===== FONTS =====*/
-@font-face {
-	font-family: Inter;
-	src: url("../fonts/Inter.woff");
-}
 
 @font-face {
 	font-family: PlusJakartaSans;
@@ -10,10 +6,15 @@
 }
 
 @font-face {
-	font-family: cattiganLight;
-	src: url("../fonts/cattiganLight.woff");
+	font-family: OpenSauceSansRegular;
+	src: url("../fonts/opensaucesans-regular.woff");
+}
+
+@font-face {
+	font-family: neuveGrotesqueBold;
+	src: url("../fonts/neuvegrotesque-bold.woff");
 }
 
 // Font Stack Properties
-$main: "cattiganLight", sans-serif;
-$body: "PlusJakartaSans", "PlusJakartaSans", sans-serif;
+$main: "neuveGrotesqueBold", sans-serif;
+$body: "OpenSauceSansRegular", "PlusJakartaSans", sans-serif;

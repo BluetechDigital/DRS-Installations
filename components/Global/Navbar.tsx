@@ -55,8 +55,8 @@ const Navbar: FC = () => {
 		<>
 			<nav className={styles.navbar + ` z-[999] h-fit w-full fixed`}>
 				<NoticeInfoBanner />
-				<div className="flex px-4 py-1 bg-white border-t-4 border-solid border-primary-default">
-					<div className="container mx-auto bg-white w-full lg:w-[20%] xl:w-[40%]">
+				<div className="flex p-0 bg-white">
+					<div className="w-full container mx-auto px-4 bg-white">
 						<Link href="/">
 							<Image
 								priority
@@ -64,11 +64,11 @@ const Navbar: FC = () => {
 								height={500}
 								alt="DRS Installations Ltd Logo"
 								src="/img/logos/drs-installations-logo.png"
-								className="object-contain object-center w-[65px] h-[65px]"
+								className="object-contain object-center w-[100px] h-[65px]"
 							/>
 						</Link>
 					</div>
-					<div className="w-full lg:w-full xl:w-[60%] flex justify-end gap-8 2xl:gap-12 xl:gap-24">
+					<div className="w-full flex items-center justify-center gap-8 2xl:gap-12 xl:gap-24">
 						<div className="hidden lg:flex items-center justify-end">
 							<div className="hidden lg:flex items-center gap-8">
 								<ul className="flex lg:items-center">
@@ -91,7 +91,7 @@ const Navbar: FC = () => {
 																	target={item?.node?.target}
 																	onClick={resetNavbarStyling}
 																>
-																	<h3 className="font-semibold text-pureBlack group-hover:text-primary-two text-tiny text-center  uppercase tracking-[0.05rem]">
+																	<h3 className="font-semibold text-pureBlack group-hover:text-primary-two text-base text-center uppercase">
 																		{item?.node?.label}
 																	</h3>
 																</Link>
@@ -141,7 +141,7 @@ const Navbar: FC = () => {
 																											ourServicesSublinksOpen
 																												? "w-full hover:bg-primary-default text-center text-black hover:text-white"
 																												: "text-black"
-																										} block p-4 text-tiny`}
+																										} block p-4 uppercase text-base`}
 																									>
 																										{item?.node?.label}
 																									</Link>
@@ -170,7 +170,7 @@ const Navbar: FC = () => {
 																href={`${item?.node?.url}`}
 																target={item?.node?.target}
 															>
-																<h3 className="py-0 px-4 font-semibold text-pureBlack hover:text-primary-two text-tiny text-center uppercase tracking-[0.05rem]">
+																<h3 className="py-0 px-4 font-semibold text-pureBlack hover:text-primary-two text-base text-center uppercase">
 																	{item?.node?.label}
 																</h3>
 															</Link>
@@ -184,21 +184,28 @@ const Navbar: FC = () => {
 									)}
 								</ul>
 							</div>
-							<Link href="/contact" target="">
-								<div className="py-4 ml-6 pl-4 pr-10 cursor-pointer bg-primary-default hover:bg-primary-dark transition-all ease-in-out duration-500">
-									<h3 className="relative flex items-center justify-center font-semibold tracking-[0.10rem] uppercase pl-4 text-lightGrey text-tiny text-center">
-										Get a quote today
-										<Image
-											width={550}
-											height={550}
-											alt="Black Arrow Icon"
-											src="/svg/navigation-menu-dropdown-arrow-white.svg"
-											className="my-auto ml-2 absolute top-[-20px] right-[-40px] rotate-[-135deg] cursor-pointer w-[35px] h-[35px] object-contain object-center"
-										/>
-									</h3>
-								</div>
-							</Link>
 						</div>
+					</div>
+					<div
+						className="w-full px-4 flex items-center justify-end bg-cover bg-center bg-no-repeat"
+						style={{
+							backgroundImage: `url(/svg/background/layered-waves-haikei-blue-right.svg)`,
+						}}
+					>
+						<Link href="/contact" target="" className="w-fit">
+							<div className="py-4 ml-6 pl-4 pr-10 cursor-pointer transition-all ease-in-out duration-500">
+								<h3 className="relative flex items-center justify-center font-semibold uppercase pl-4 text-lightGrey text-base text-center">
+									Get a quote today
+									<Image
+										width={550}
+										height={550}
+										alt="Black Arrow Icon"
+										src="/svg/navigation-menu-dropdown-arrow-white.svg"
+										className="my-auto ml-2 absolute top-[-20px] right-[-40px] rotate-[-135deg] cursor-pointer w-[35px] h-[35px] object-contain object-center"
+									/>
+								</h3>
+							</div>
+						</Link>
 					</div>
 					<motion.div
 						initial={initialTwo}
