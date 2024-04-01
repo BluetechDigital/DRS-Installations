@@ -1,0 +1,31 @@
+// Imports
+@import "../base/fonts";
+@import "../base/colors";
+
+.hero {
+	.externalLink {
+		font-family: $main;
+	}
+}
+
+.heroTwo {
+	.externalLink {
+		font-family: $main;
+	}
+
+	.leftSideContent {
+		clip-path: none;
+
+		@media screen and (min-width: 1024px) {
+			clip-path: polygon(0 0, 100% 0%, 90% 100%, 0% 100%);
+		}
+	}
+
+	.rightSideContent {
+		clip-path: none;
+
+		@media screen and (min-width: 1024px) {
+			clip-path: polygon(10% 0, 100% 0%, 100% 100%, 0 100%);
+		}
+	}
+}

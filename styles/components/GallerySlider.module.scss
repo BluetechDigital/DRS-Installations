@@ -1,0 +1,27 @@
+// Imports
+@import "../base/fonts";
+@import "../base/colors";
+
+.gallerySlider {
+	.externalLink {
+		font-family: $main;
+	}
+
+	.swiper-button-prev::after {
+		content: "next";
+		width: 15px !important;
+		height: 15px !important;
+		font-size: 15px !important;
+		font-weight: 900 !important;
+		color: $white !important;
+	}
+
+	.swiper-button-next::after {
+		content: "next";
+		width: 15px !important;
+		height: 15px !important;
+		font-size: 15px !important;
+		font-weight: 900 !important;
+		color: $white !important;
+	}
+}

@@ -1,0 +1,185 @@
+// Imports
+@import "../base/fonts";
+@import "../base/colors";
+
+.navbar {
+	ul {
+		font-family: $body;
+	}
+
+	.servicesSublinks {
+		li:nth-last-child(0) {
+			display: none;
+			@apply border-none;
+		}
+	}
+
+	.ourServicesLinks {
+		li {
+			a {
+				font-family: $body;
+			}
+		}
+	}
+
+	.nav {
+		top: 0px;
+		bottom: 0px;
+		right: 0px;
+		z-index: 998;
+		display: flex;
+		width: 83.33%;
+		position: fixed;
+		max-width: 30rem;
+		overflow: hidden;
+		visibility: hidden;
+	}
+
+	// Reveal Fullscreen Nav
+	.navReveal {
+		right: 0px;
+		visibility: visible;
+		transition: all 0.5s ease-in-out;
+
+		::-webkit-scrollbar {
+			width: 0.65rem;
+			height: 0.65rem;
+		}
+
+		::-webkit-scrollbar-track {
+			background: $blueDark;
+		}
+
+		::-webkit-scrollbar-thumb {
+			background: $blue;
+			border-radius: 100px;
+
+			&:hover {
+				transition: all 0.5s;
+				background-color: $blue;
+			}
+		}
+	}
+
+	.navToggle {
+		cursor: pointer;
+		position: fixed;
+		z-index: 999;
+		right: 0px;
+		top: 18px;
+		padding: 0px;
+		width: 50px;
+		margin-right: 1rem;
+		height: 45px;
+		border: none;
+		line-height: 0.6;
+		border-radius: 0px;
+		text-align: center;
+		background: $blue;
+		// transition: all 1s ease-in-out;
+
+		&:hover {
+			transition: all 0.2s ease-in-out;
+			background: $blue;
+		}
+
+		span {
+			// the second divider
+			display: inline-block;
+			position: relative;
+			height: 2px;
+			width: 34px;
+			border-radius: 1px;
+			background: $white;
+			vertical-align: middle;
+			&:before,
+			&:after {
+				display: inline-block;
+				position: absolute;
+				content: "";
+				height: 2px;
+				border-radius: 1px;
+				background: $white;
+				// for the hover state
+				transition: all 200ms;
+			}
+			&:before {
+				top: -11px;
+				left: 0px;
+				width: 34px;
+			}
+			&:after {
+				top: 11px;
+				left: 0px;
+				width: 34px;
+			}
+		}
+
+		&:focus {
+			outline: none;
+		}
+		&:hover > span:after,
+		&:hover > span:before {
+			width: 34px;
+			left: 0;
+		}
+	}
+
+	// Open Full Screen Nav
+	.navToggleOpen {
+		cursor: pointer;
+		position: fixed;
+		z-index: 999;
+		right: 0px;
+		top: 18px;
+		padding: 0;
+		width: 50px;
+		height: 45px;
+		border: none;
+		margin-right: 1rem;
+		line-height: 0.6;
+		text-align: center;
+		background: $blue;
+		transition: all 1s ease-in-out;
+
+		span {
+			height: 0px;
+			width: 27px;
+			position: relative;
+			border-radius: 1px;
+			background: $white;
+			display: inline-block;
+			vertical-align: middle;
+
+			&:after,
+			&:before {
+				content: "";
+				left: 0;
+				top: 0px;
+				width: 25px;
+				height: 2px;
+				position: absolute;
+				border-radius: 1px;
+				display: inline-block;
+				background: $white;
+				// for the hover state
+				transition: all 200ms;
+			}
+			&:after {
+				top: -2px;
+				left: 1px;
+				transform: rotate(-45deg);
+			}
+			&:before {
+				top: -1.5px;
+				left: 0.5px;
+				transform: rotate(45deg);
+			}
+		}
+
+		&:hover {
+			background: $blue;
+			transition: all 0.2s ease-in-out;
+		}
+	}
+}
