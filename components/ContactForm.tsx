@@ -626,7 +626,7 @@ const ContactForm: FC<IContactForm> = ({title, paragraph}) => {
 									}
 								>
 									<ReCAPTCHA
-										sitekey={`6LcxjJApAAAAALtBg2jNe6IyiAZTNnWnAVtmbBHS`}
+										sitekey={`6LejGaspAAAAAJMmB2_ukYz39Zrs9YNH7lpNFjzK`}
 										onChange={handleReCaptchaChange}
 									/>
 								</motion.div>
