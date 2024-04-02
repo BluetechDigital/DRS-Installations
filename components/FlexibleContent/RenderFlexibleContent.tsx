@@ -23,6 +23,7 @@ import SkillsExperiences from "../SkillsExperiences";
 import TestimonialsSlider from "../TestimonialsSlider";
 import OurServicesGridTwo from "../OurServicesGridTwo";
 import RequestAppointmentForm from "../RequestAppointmentForm";
+import VideoBlock from "../VideoBlock";
 
 const RenderFlexibleContent: FC = () => {
 	const content = usePageContext();
@@ -123,6 +124,19 @@ const RenderFlexibleContent: FC = () => {
 									title={item?.title}
 									subtitle={item?.subtitle}
 									paragraph={item?.paragraph}
+								/>
+							</>
+						) : item?.fieldGroupName === `${FlexibleContent}_VideoBlock` &&
+						  item?.displaySection ? (
+							<>
+								<VideoBlock
+									title={item?.title}
+									video={item?.video}
+									subtitle={item?.subtitle}
+									paragraph={item?.paragraph}
+									buttonLink={item?.buttonLink}
+									displayVideo={item?.displayVideo}
+									videoBackgroundImage={item?.videoBackgroundImage?.sourceUrl}
 								/>
 							</>
 						) : item?.fieldGroupName === `${FlexibleContent}_Gallery` &&

@@ -62,6 +62,21 @@ export type IGallery = {
 		}
 	];
 };
+export type IVideoBlock = {
+	title: string;
+	video: string;
+	subtitle: string;
+	paragraph: string;
+	displayVideo: boolean;
+	buttonLink: {
+		url: string;
+		title: string;
+		target: string;
+	};
+	videoBackgroundImage: {
+		sourceUrl: string;
+	};
+};
 export type IOurClients = {
 	title: string;
 	subtitle: string;
@@ -365,6 +380,9 @@ export type IParagraph = {
 };
 export type IRenderStars = {
 	rating: number;
+};
+export type IVideoWrapper = {
+	children: React.ReactNode;
 };
 export type IBackHoverButton = {
 	link: string;

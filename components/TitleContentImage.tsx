@@ -72,7 +72,7 @@ const TitleContentImage: FC<ITitleContentImage> = ({
 						whileInView={slideInRightFinish}
 						className={`${
 							displayContentOption == "Right"
-								? "bg-center bg-no-repeat bg-cover w-full lg:w-1/2 h-[350px] lg:h-[500px] rounded-r-2xl"
+								? "bg-center bg-no-repeat bg-cover w-full lg:w-1/2 h-[350px] lg:h-[500px] lg:rounded-r-2xl"
 								: "hidden"
 						}`}
 						style={{
@@ -135,7 +135,7 @@ const TitleContentImage: FC<ITitleContentImage> = ({
 						whileInView={slideInRightFinish}
 						className={`${
 							displayContentOption == "Left"
-								? "bg-center bg-no-repeat bg-cover w-full lg:w-1/2 h-[350px] lg:h-[500px] rounded-l-2xl"
+								? "bg-center bg-no-repeat bg-cover w-full lg:w-1/2 h-[350px] lg:h-[500px] lg:rounded-l-2xl"
 								: "hidden"
 						}`}
 						style={{

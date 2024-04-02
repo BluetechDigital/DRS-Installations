@@ -114,11 +114,11 @@ const Navbar: FC = () => {
 																		onMouseLeave={resetNavbarStyling}
 																		onMouseEnter={displayNavBackgroundColor}
 																	>
-																		<div className="fixed mt-[1.6rem] w-full mx-auto left-0 bg-white flex flex-col items-center justify-center">
+																		<div className="fixed mt-[1.3rem] w-fit mx-auto left-0 right-0 bg-white flex flex-col items-center justify-center">
 																			<ul
 																				className={
-																					styles.aboutUsSublinks +
-																					" px-28 py-6 w-full grid grid-cols-4 gap-4 border-b-8 border-solid border-primary-default z-[999]"
+																					styles.ourServicesSublinks +
+																					" p-4 w-fit grid grid-cols-3 gap-4 z-[999]"
 																				}
 																			>
 																				{globalContext?.servicesSublinks
@@ -141,7 +141,7 @@ const Navbar: FC = () => {
 																											ourServicesSublinksOpen
 																												? "w-full hover:bg-primary-default text-center text-black hover:text-white"
 																												: "text-black"
-																										} block p-4 uppercase text-base`}
+																										} block p-4 font-tonnelier uppercase text-base`}
 																									>
 																										{item?.node?.label}
 																									</Link>
@@ -195,7 +195,7 @@ const Navbar: FC = () => {
 						<Link
 							href="/contact"
 							target=""
-							className="hidden xl:flex w-fit py-4 ml-6 pl-4 pr-10 cursor-pointer transition-all ease-in-out duration-500 font-semibold font-tonnelier uppercase pl-4 text-lightGrey text-medium text-center"
+							className="hidden xl:flex w-fit py-4 ml-6 pl-4 pr-10 cursor-pointer transition-all ease-in-out duration-500 font-semibold font-tonnelier uppercase pl-4 text-lightGrey text-base text-center"
 						>
 							Get a quote today
 						</Link>

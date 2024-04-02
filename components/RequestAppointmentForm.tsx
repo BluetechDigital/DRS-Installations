@@ -9,6 +9,7 @@ import {
 	initialTwo,
 } from "@/animations/animations";
 import Link from "next/link";
+import Image from "next/image";
 import {motion} from "framer-motion";
 import {useRouter} from "next/router";
 import React, {useState, FC} from "react";

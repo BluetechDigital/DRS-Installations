@@ -196,6 +196,23 @@ export const getAllFlexibleContentComponents = async (
 												paragraph
 												displaySection
 											}
+											... on ${postTypeFlexibleContent}_VideoBlock {
+												fieldGroupName
+												title
+												video
+												subtitle
+												paragraph
+												displayVideo
+												displaySection
+												buttonLink {
+													url
+													title
+													target
+												}
+												videoBackgroundImage {
+            										sourceUrl
+              									}
+											}
 											... on ${postTypeFlexibleContent}_Gallery {
 												fieldGroupName
 												title
