@@ -24,13 +24,13 @@ const TestimonialsGrid: FC<ITestimonialsGrid> = ({
 			<div
 				className={
 					styles.testimonials +
-					` relative py-16 lg:py-28 px-4 bg-white bg-cover bg-no-repeat bg-center`
+					` relative py-16 px-4 bg-white bg-cover bg-no-repeat bg-center`
 				}
 				style={{
 					backgroundImage: `url("/svg/background/layeblue-peaks-haikei-white-lightgrey.svg")`,
 				}}
 			>
-				<div className="md:container relative m-auto flex flex-col items-center gap-6 sm:gap-12 lg:gap-20">
+				<div className="md:container relative m-auto flex flex-col items-center gap-6 sm:gap-12 lg:gap-16">
 					<motion.div
 						initial={initial}
 						variants={stagger}
@@ -63,7 +63,7 @@ const TestimonialsGrid: FC<ITestimonialsGrid> = ({
 						contentType="TestimonialsCard"
 						numberOfItemsRenderedPerPage={12}
 						contentArray={globalContext?.testimonials}
-						tailwindStyling={`grid px-4 lg:px-16 lg:-m-4 gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4`}
+						tailwindStyling={`grid px-4 lg:px-16 lg:-m-4 gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3`}
 					/>
 				</div>
 			</div>

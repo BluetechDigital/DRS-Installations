@@ -5,6 +5,7 @@ import {
 	fadeInUp,
 	arrayLoopStaggerChildren,
 } from "../animations/animations";
+import Image from "next/image";
 import {FC, Fragment} from "react";
 import {motion} from "framer-motion";
 import {IOurServices} from "@/types/components/index";
@@ -24,8 +25,22 @@ const OurServices: FC<IOurServices> = ({
 }) => {
 	return (
 		<>
-			<div className={styles.ourServices + " py-12 px-4 bg-white"}>
-				<div className="md:container m-auto flex flex-col items-center gap-6 lg:gap-16">
+			<div
+				className={
+					styles.ourServices +
+					" relative py-12 px-4 bg-white bg-center bg-no-repeat bg-cover"
+				}
+				style={{
+					backgroundImage: `linear-gradient(
+								0deg,
+								rgb(255, 255, 255, 1),
+								rgba(255, 255, 255, 0.95),
+								rgba(255, 255, 255, 0.90),
+								rgba(255, 255, 255, 0.85)
+							),url("/svg/background/grid-background-06.svg")`,
+				}}
+			>
+				<div className="relative z-10 lg:container m-auto flex flex-col items-center gap-6">
 					<motion.div
 						initial={initial}
 						variants={stagger}
@@ -38,7 +53,7 @@ const OurServices: FC<IOurServices> = ({
 								initial={initial}
 								whileInView={fadeInUp}
 								viewport={{once: true}}
-								className="max-w-sm mx-auto lg:mx-0 text-center lg:text-left text-base text-primary-default"
+								className="text-center lg:text-left text-base text-primary-default"
 							>
 								{subtitle}
 							</motion.h4>
@@ -46,7 +61,7 @@ const OurServices: FC<IOurServices> = ({
 								initial={initial}
 								whileInView={fadeInUp}
 								viewport={{once: true}}
-								className="my-3 max-w-xl mx-auto lg:mx-0 uppercase text-black text-center lg:text-left font-semibold text-lg lg:text-xl"
+								className="my-3 max-w-xl mx-auto lg:mx-0 text-black uppercase font-tonnelier leading-[2.25rem] text-center lg:text-left text-lg sm:text-3xl"
 							>
 								{title}
 							</motion.h3>
@@ -56,7 +71,7 @@ const OurServices: FC<IOurServices> = ({
 							tailwindStyling="max-w-full lg:max-w-xl text-black text-base text-center lg:text-left"
 						/>
 					</motion.div>
-					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-6 px-0 md:px-4 lg:-m-4 gap-16 lg:gap-6">
+					<div className="grid grid-cols-1 lg:grid-cols-3 py-6 px-0 gap-6 w-full">
 						{servicesGrid?.length > 0 ? (
 							servicesGrid?.map((item: any, keys: number) => (
 								<Fragment key={keys}>
@@ -81,6 +96,13 @@ const OurServices: FC<IOurServices> = ({
 						)}
 					</div>
 				</div>
+				<Image
+					width={550}
+					height={550}
+					alt="Black security shield icon"
+					src="/svg/security-shield.svg"
+					className="hidden lg:block absolute top-[65%] right-[-100px] opacity-10 cursor-pointer w-fit h-[40px] xl:h-[250px] object-contain object-center"
+				/>
 			</div>
 		</>
 	);

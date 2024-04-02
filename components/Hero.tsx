@@ -77,7 +77,7 @@ const Hero: FC<IHero> = ({heroSlider}) => {
 																<div
 																	className={`py-4 pl-4 pr-10 w-full mx-auto lg:mx-0 cursor-pointer bg-primary-default hover:bg-primary-dark transition-all ease-in-out duration-500`}
 																>
-																	<h3 className="relative flex items-center justify-center font-semibold tracking-[0.10rem] uppercase pl-4 text-lightGrey text-tiny text-center">
+																	<h3 className="font-semibold tracking-[0.10rem] uppercase pl-4 text-lightGrey text-tiny text-center">
 																		{item?.buttonLink?.title}
 																		<Image
 																			width={550}
@@ -99,7 +99,7 @@ const Hero: FC<IHero> = ({heroSlider}) => {
 																<div
 																	className={`py-4 pl-4 pr-10 w-full mx-auto lg:mx-0 cursor-pointer bg-primary-default hover:bg-primary-dark transition-all ease-in-out duration-500`}
 																>
-																	<h3 className="relative flex items-center justify-center font-semibold tracking-[0.10rem] uppercase pl-4 text-lightGrey text-tiny text-center">
+																	<h3 className="font-semibold tracking-[0.10rem] uppercase pl-4 text-lightGrey text-tiny text-center">
 																		{item?.buttonLinkTwo?.title}
 																		<Image
 																			width={550}

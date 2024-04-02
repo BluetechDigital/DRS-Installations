@@ -307,6 +307,18 @@ export const getAllFlexibleContentComponents = async (
 												paragraph
 												displaySection
 											}
+											... on ${postTypeFlexibleContent}_RequestAppointmentForm {
+												fieldGroupName
+												title
+												subtitle
+												paragraph
+												displaySection
+												buttonLink {
+													url
+													title
+													target
+												}
+											}
 											... on ${postTypeFlexibleContent}_Maintenance {
 												fieldGroupName
 												title

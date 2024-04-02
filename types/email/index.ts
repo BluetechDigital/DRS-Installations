@@ -18,6 +18,24 @@ export type IBusinessEmail = {
 	html: string;
 };
 
+/* Customer Request Appointment 
+Confirmation Email */
+export type ICustomerRequestAppointmentEmail = {
+	from: string;
+	to: string;
+	subject: string;
+	html: string;
+};
+
+/* Business Request Appointment 
+Inquiry Confirmation Email */
+export type IBusinessRequestAppointmentEmail = {
+	from: string;
+	to: string;
+	subject: string;
+	html: string;
+};
+
 /* Types Namespace - (EMAIL HEADER)
 Global Email Header (IEmailHeader) */
 export namespace IEmailHeader {
@@ -161,6 +179,165 @@ export namespace IBusinessEmail {
 		phoneNumber?: number;
 		imagesDirUrl?: string;
 		selectedServices?: string;
+		themesOptionsContent?: IThemesOptionsContent;
+	};
+	export type IMain = {
+		padding: string;
+		fontFamily: string;
+		backgroundColor: string;
+	};
+	export type IIntroParagraph = {
+		lineHeight: number;
+		fontSize: number;
+		fontWeight: string;
+		padding: string;
+		paddingTop: string;
+	};
+	export type IDetailsParagraph = {
+		lineHeight: number;
+		fontSize: number;
+		fontWeight: string;
+		padding: string;
+	};
+	export type IParagraph = {
+		lineHeight: number;
+		fontSize: number;
+		fontWeight: string;
+		padding: string;
+	};
+	export type IContainer = {
+		maxWidth: string;
+		margin: string;
+		marginBottom: string;
+		backgroundColor: string;
+	};
+	export type IContent = {
+		padding: string;
+	};
+	export type IImageSection = {
+		width: string;
+		padding: string;
+		display: string;
+		alignItems: string;
+		justifyContent: string;
+		backgroundColor: string;
+	};
+	export type ILink = {
+		color: string;
+		textDecoration: string;
+	};
+	export type ILogo = {
+		width: string;
+		height: string;
+		minHeight: string;
+	};
+	export type IFooter = {
+		maxWidth: string;
+		margin: string;
+		marginBottom: string;
+		backgroundColor: string;
+	};
+	export type IFooterLogoSection = {
+		width: string;
+		padding: string;
+		display: string;
+		alignItems: string;
+		justifyContent: string;
+		backgroundColor: string;
+	};
+	export type IFooterLogo = {
+		width: string;
+		height: string;
+	};
+}
+
+/* Types Namespace - (CUSTOMER)
+Customer Request Appointment 
+Inquiry Confirmation Email */
+export namespace ICustomerRequestAppointmentEmail {
+	export type ICustomerRequestAppointmentConfirmationEmail = {
+		subject?: string;
+		fullName?: string;
+		updatedDate?: Date;
+		phoneNumber?: number;
+		imagesDirUrl?: string;
+		themesOptionsContent?: IThemesOptionsContent;
+	};
+	export type IMain = {
+		padding: string;
+		fontFamily: string;
+		backgroundColor: string;
+	};
+	export type IIntroParagraph = {
+		lineHeight: number;
+		fontSize: number;
+		fontWeight: string;
+		padding: string;
+		paddingTop: string;
+	};
+	export type IParagraph = {
+		lineHeight: number;
+		fontSize: number;
+		fontWeight: string;
+		padding: string;
+	};
+	export type IContainer = {
+		maxWidth: string;
+		margin: string;
+		marginBottom: string;
+		backgroundColor: string;
+	};
+	export type IContent = {
+		padding: string;
+	};
+	export type IImageSection = {
+		width: string;
+		padding: string;
+		display: string;
+		alignItems: string;
+		justifyContent: string;
+		backgroundColor: string;
+	};
+	export type ILink = {
+		color: string;
+		textDecoration: string;
+	};
+	export type ILogo = {
+		width: string;
+		height: string;
+		minHeight: string;
+	};
+	export type IFooter = {
+		maxWidth: string;
+		margin: string;
+		marginBottom: string;
+		backgroundColor: string;
+	};
+	export type IFooterLogoSection = {
+		width: string;
+		padding: string;
+		display: string;
+		alignItems: string;
+		justifyContent: string;
+		backgroundColor: string;
+	};
+	export type IFooterLogo = {
+		width: string;
+		height: string;
+	};
+}
+
+/* Types Namespace - (BUSINESS)
+Business Customer Request Appointment
+Inquiry Confirmation Email */
+export namespace IBusinessRequestAppointmentEmail {
+	export type IBusinessRequestAppointmentConfirmationEmail = {
+		message?: string;
+		subject?: string;
+		fullName?: string;
+		updatedDate?: Date;
+		phoneNumber?: number;
+		imagesDirUrl?: string;
 		themesOptionsContent?: IThemesOptionsContent;
 	};
 	export type IMain = {

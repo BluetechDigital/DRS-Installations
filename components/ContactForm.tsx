@@ -175,7 +175,7 @@ const ContactForm: FC<IContactForm> = ({title, paragraph}) => {
 								initial={initial}
 								whileInView={fadeInUp}
 								viewport={{once: true}}
-								className="my-3 max-w-xl mx-auto xl:mx-0 uppercase text-black text-center lg:text-left font-semibold text-lg md:text-xl"
+								className="my-3 max-w-xl mx-auto xl:mx-0 uppercase text-black text-center lg:text-left font-semibold font-tonnelier text-lg md:text-xl"
 							>
 								{title}
 							</motion.h3>
@@ -224,34 +224,26 @@ const ContactForm: FC<IContactForm> = ({title, paragraph}) => {
 								viewport={{once: true}}
 								className="max-w-xl mx-auto sm:mx-0"
 							>
-								<motion.h3
-									initial={initial}
-									whileInView={fadeInUp}
-									viewport={{once: true}}
-									className="mb-2 uppercase text-black text-center sm:text-left font-semibold text-base"
-								>
-									Phone
-								</motion.h3>
 								<Link
 									className="flex items-center gap-3 text-tiny sm:text-base text-center sm:text-left"
-									href={`tel:${globalContext?.themesOptionsContent?.phoneNumberThree}`}
+									href={`tel:${globalContext?.themesOptionsContent?.phoneNumber}`}
 								>
 									<span className="font-semibold uppercase font-tonnelier">
 										Office:{" "}
 									</span>
-									<span className="text-black hover:text-primary-default">
-										{globalContext?.themesOptionsContent?.phoneNumberThree}
+									<span className="text-black hover:text-primary-default hover:border-b-2">
+										{globalContext?.themesOptionsContent?.phoneNumber}
 									</span>
 								</Link>
 								<Link
 									className="flex items-center gap-3 text-tiny sm:text-base text-center sm:text-left"
-									href={`tel:${globalContext?.themesOptionsContent?.phoneNumberThree}`}
+									href={`tel:${globalContext?.themesOptionsContent?.phoneNumberTwo}`}
 								>
 									<span className="font-semibold uppercase font-tonnelier">
 										David:{" "}
 									</span>
-									<span className="text-black hover:text-primary-default">
-										{globalContext?.themesOptionsContent?.phoneNumberThree}
+									<span className="text-black hover:text-primary-default hover:border-b-2">
+										{globalContext?.themesOptionsContent?.phoneNumberTwo}
 									</span>
 								</Link>
 								<Link
@@ -261,7 +253,7 @@ const ContactForm: FC<IContactForm> = ({title, paragraph}) => {
 									<span className="font-semibold uppercase font-tonnelier">
 										Tony:{" "}
 									</span>
-									<span className="text-black hover:text-primary-default">
+									<span className="text-black hover:text-primary-default hover:border-b-2">
 										{globalContext?.themesOptionsContent?.phoneNumberThree}
 									</span>
 								</Link>
@@ -310,7 +302,7 @@ const ContactForm: FC<IContactForm> = ({title, paragraph}) => {
 								<Link
 									className={
 										globalContext?.themesOptionsContent?.email
-											? "block text-tiny sm:text-base text-black text-center sm:text-left hover:text-primary-default"
+											? "block text-tiny sm:text-base text-black text-center sm:text-left hover:text-primary-default hover:border-b-2"
 											: "hidden"
 									}
 									href={`mailto:${globalContext?.themesOptionsContent?.email}`}
@@ -320,7 +312,7 @@ const ContactForm: FC<IContactForm> = ({title, paragraph}) => {
 								<Link
 									className={
 										globalContext?.themesOptionsContent?.email
-											? "block text-tiny sm:text-base text-black text-center sm:text-left hover:text-primary-default"
+											? "block text-tiny sm:text-base text-black text-center sm:text-left hover:text-primary-default hover:border-b-2"
 											: "hidden"
 									}
 									href={`mailto:${globalContext?.themesOptionsContent?.emailTwo}`}

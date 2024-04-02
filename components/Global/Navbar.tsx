@@ -70,7 +70,7 @@ const Navbar: FC = () => {
 					</div>
 					<div className="w-full flex items-center justify-center gap-8 2xl:gap-12 xl:gap-24">
 						<div className="hidden lg:flex items-center justify-end">
-							<div className="hidden lg:flex items-center gap-8">
+							<div className="hidden xl:flex items-center gap-8">
 								<ul className="flex lg:items-center">
 									{globalContext?.navbarMenuLinks?.length > 0 ? (
 										globalContext?.navbarMenuLinks?.map(
@@ -187,31 +187,24 @@ const Navbar: FC = () => {
 						</div>
 					</div>
 					<div
-						className="w-full px-4 flex items-center justify-end bg-cover bg-center bg-no-repeat"
+						className="w-full px-4 flex items-center justify-end bg-cover bg-center bg-no-repeat hover:opacity-95"
 						style={{
 							backgroundImage: `url(/svg/background/layered-waves-haikei-blue-right.svg)`,
 						}}
 					>
-						<Link href="/contact" target="" className="w-fit">
-							<div className="py-4 ml-6 pl-4 pr-10 cursor-pointer transition-all ease-in-out duration-500">
-								<h3 className="relative flex items-center justify-center font-semibold uppercase pl-4 text-lightGrey text-base text-center">
-									Get a quote today
-									<Image
-										width={550}
-										height={550}
-										alt="Black Arrow Icon"
-										src="/svg/navigation-menu-dropdown-arrow-white.svg"
-										className="my-auto ml-2 absolute top-[-20px] right-[-40px] rotate-[-135deg] cursor-pointer w-[35px] h-[35px] object-contain object-center"
-									/>
-								</h3>
-							</div>
+						<Link
+							href="/contact"
+							target=""
+							className="hidden xl:flex w-fit py-4 ml-6 pl-4 pr-10 cursor-pointer transition-all ease-in-out duration-500 font-semibold font-tonnelier uppercase pl-4 text-lightGrey text-medium text-center"
+						>
+							Get a quote today
 						</Link>
 					</div>
 					<motion.div
 						initial={initialTwo}
 						whileInView={fadeIn}
 						viewport={{once: true}}
-						className="flex flex-col lg:hidden items-center justify-center"
+						className="flex flex-col xl:hidden items-center justify-center"
 					>
 						<button
 							type="button"

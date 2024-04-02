@@ -1,0 +1,18 @@
+// Imports
+@import "../base/fonts";
+@import "../base/colors";
+
+.requestAppointmentForm {
+	input,
+	textarea {
+		background-color: $white;
+	}
+
+	.submitButton {
+		@apply w-fit flex items-center justify-center rounded-lg py-3 px-6 bg-primary-two hover:bg-primary-dark transition-all duration-200 ease-in-out;
+	}
+
+	.messageSent {
+		@apply w-fit flex items-center justify-center py-3 px-6 bg-primary-default;
+	}
+}

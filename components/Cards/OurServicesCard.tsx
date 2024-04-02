@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import {motion} from "framer-motion";
 import {IOurServicesCard} from "@/types/components";
-import {initial, stagger, fadeInUp} from "@/animations/animations";
+import {initial, fadeInUp} from "@/animations/animations";
 
 // Styling
 import styles from "../../styles/components/OurServices.module.scss";
@@ -30,31 +30,40 @@ const OurServicesCard: FC<IOurServicesCard> = ({
 						initial={initial}
 						whileInView={fadeInUp}
 						viewport={{once: true}}
-						className="bg-primary-darker group-hover:bg-primary-darker relative px-4 py-6 lg:py-12 h-[250px] bg-center bg-no-repeat bg-cover transition-all duration-500 ease-in-out"
+						className="bg-primary-darker group-hover:bg-primary-darker relative px-4 py-6 w-full lg:py-12 h-[350px] bg-center bg-no-repeat bg-cover"
 						style={{
 							backgroundImage: `url("${image?.sourceUrl}")`,
 						}}
 					>
-						<motion.div
-							initial={initial}
-							variants={stagger}
-							whileInView="animate"
-							viewport={{once: true}}
-							className={link?.url ? "absolute -bottom-2 right-2" : "hidden"}
+						<div
+							className={link?.url ? "absolute -bottom-0 right-0" : "hidden"}
 						>
-							<div className="flex justify-end gap-4 mb-4">
-								<h3 className="flex items-center justify-center font-semibold tracking-[0.10rem] text-white text-tiny uppercase pl-4 w-fit h-12 bg-primary-default hover:bg-primary-dark">
-									{link?.title}
-									<Image
-										width={550}
-										height={550}
-										alt="Black Arrow Icon"
-										src="/svg/navigation-menu-dropdown-arrow-white.svg"
-										className="my-auto ml-2 mb-6 rotate-[-135deg] cursor-pointer w-[35px] h-[35px] object-contain object-center"
-									/>
-								</h3>
+							<div className="w-fit p-2 bg-lightGreyTwo hover:bg-lightGrey">
+								{link?.title}
+								<svg
+									viewBox="0 0 24 24"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+									className="cursor-pointer w-full h-[35px] rotate-[-45deg] object-contain object-center"
+								>
+									<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+									<g
+										id="SVGRepo_tracerCarrier"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									></g>
+									<g id="SVGRepo_iconCarrier">
+										{" "}
+										<path
+											fill-rule="evenodd"
+											clip-rule="evenodd"
+											d="M17.6492 11.2501L12.7904 6.53852L13.8346 5.46167L20.5774 12.0001L13.8346 18.5385L12.7904 17.4617L17.6492 12.7501H3V11.2501H17.6492Z"
+											fill="#099bdb"
+										></path>{" "}
+									</g>
+								</svg>
 							</div>
-						</motion.div>
+						</div>
 					</motion.div>
 				</Link>
 				<div className="px-4 py-6">
@@ -62,7 +71,7 @@ const OurServicesCard: FC<IOurServicesCard> = ({
 						initial={initial}
 						whileInView={fadeInUp}
 						viewport={{once: true}}
-						className="text-center text-black uppercase text-paragraph my-3 font-semibold"
+						className="text-center text-black uppercase font-tonnelier text-medium my-3 font-semibold"
 					>
 						{title}
 					</motion.h3>
@@ -72,7 +81,7 @@ const OurServicesCard: FC<IOurServicesCard> = ({
 								? paragraph?.substring(0, 235) + "..."
 								: paragraph
 						}
-						tailwindStyling="text-black text-base sm:text-tiny text-center"
+						tailwindStyling="text-black text-base sm:text-base text-center"
 					/>
 				</div>
 			</div>

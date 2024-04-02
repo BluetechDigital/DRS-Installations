@@ -82,7 +82,7 @@ const GallerySlider: FC<IGallerySlider> = ({gallerySlider}) => {
 																viewport={{once: true}}
 																className={`py-4 pl-4 pr-10 w-full mx-auto cursor-pointer bg-primary-default hover:bg-primary-dark transition-all ease-in-out duration-500`}
 															>
-																<h3 className="relative flex items-center justify-center font-semibold tracking-[0.10rem] uppercase pl-4 text-lightGrey text-tiny text-center lg:text-left">
+																<h3 className="font-semibold tracking-[0.10rem] uppercase pl-4 text-lightGrey text-tiny text-center lg:text-left">
 																	{item?.buttonLink?.title}
 																	<Image
 																		width={550}

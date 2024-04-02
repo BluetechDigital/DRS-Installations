@@ -51,7 +51,7 @@ const Footer: FC = () => {
 							content={globalContext?.themesOptionsContent?.textarea}
 							tailwindStyling={
 								globalContext?.themesOptionsContent?.textarea
-									? "px-4 lg:px-0 max-w-full lg:max-w-sm text-tiny text-black text-center lg:text-left"
+									? "px-4 lg:px-0 max-w-full lg:max-w-lg text-base text-black text-center lg:text-left"
 									: "hidden"
 							}
 						/>
@@ -59,14 +59,14 @@ const Footer: FC = () => {
 							content={globalContext?.themesOptionsContent?.businessHours}
 							tailwindStyling={
 								globalContext?.themesOptionsContent?.businessHours
-									? "block px-4 lg:px-0 max-w-full lg:max-w-xl text-tiny text-black text-center lg:text-left"
+									? "block px-4 lg:px-0 max-w-full lg:max-w-xl text-base text-black text-center lg:text-left"
 									: "hidden"
 							}
 						/>
 					</motion.div>
 					<div className="flex flex-col md:flex-row items-center lg:items-start justify-center gap-6 xl:gap-20">
 						<div className="flex flex-col px-0">
-							<h3 className="mb-5 text-base font-semibold tracking-normal text-center text-black uppercase lg:text-left">
+							<h3 className="mb-5 text-lg font-semibold tracking-normal text-center text-black uppercase lg:text-left">
 								About
 							</h3>
 							<motion.ul
@@ -89,7 +89,7 @@ const Footer: FC = () => {
 												>
 													<Link
 														href={`${item?.node?.url}`}
-														className="text-black transition-all duration-200 ease-in-out text-tiny hover:text-primary-default"
+														className="text-black transition-all duration-200 ease-in-out text-base hover:text-primary-default hover:border-b-2"
 													>
 														{item?.node?.label}
 													</Link>
@@ -103,7 +103,7 @@ const Footer: FC = () => {
 							</motion.ul>
 						</div>
 						<div className="flex flex-col px-0">
-							<h3 className="mb-5 text-base font-semibold tracking-normal text-center text-black lg:text-lightGreyTwo uppercase lg:text-left">
+							<h3 className="mb-5 text-lg font-semibold tracking-normal text-center text-black lg:text-lightGreyTwo uppercase lg:text-left">
 								Info
 							</h3>
 							<div className="flex flex-col items-center lg:items-baseline justify-between">
@@ -139,7 +139,7 @@ const Footer: FC = () => {
 											</svg>
 										</div>
 										<Link
-											className="font-medium text-tiny tracking-wide text-black lg:text-lightGreyTwo hover:text-primary-two lg:hover:text-primary-darkerTwo"
+											className="font-medium text-base tracking-wide text-black lg:text-lightGreyTwo hover:text-primary-two lg:hover:text-primary-darkerTwo hover:border-b-2"
 											href={`mailto:${globalContext?.themesOptionsContent?.email}`}
 										>
 											{globalContext?.themesOptionsContent?.email}
@@ -170,7 +170,7 @@ const Footer: FC = () => {
 											</svg>
 										</div>
 										<Link
-											className="font-medium text-tiny tracking-wide text-black lg:text-lightGreyTwo hover:text-primary-two lg:hover:text-primary-darkerTwo"
+											className="font-medium text-base tracking-wide text-black lg:text-lightGreyTwo hover:text-primary-two lg:hover:text-primary-darkerTwo hover:border-b-2"
 											href={`mailto:${globalContext?.themesOptionsContent?.emailTwo}`}
 										>
 											{globalContext?.themesOptionsContent?.emailTwo}
@@ -209,7 +209,7 @@ const Footer: FC = () => {
 											</svg>
 										</div>
 										<Link
-											className="font-medium text-tiny tracking-wide text-black lg:text-lightGreyTwo hover:text-primary-two lg:hover:text-primary-darkerTwo"
+											className="font-medium text-base tracking-wide text-black lg:text-lightGreyTwo hover:text-primary-two lg:hover:text-primary-darkerTwo hover:border-b-2"
 											href={`tel:${globalContext?.themesOptionsContent?.phoneNumber}`}
 										>
 											{globalContext?.themesOptionsContent?.phoneNumber}
@@ -248,7 +248,7 @@ const Footer: FC = () => {
 											</svg>
 										</div>
 										<Link
-											className="font-medium text-tiny tracking-wide text-black lg:text-lightGreyTwo hover:text-primary-two lg:hover:text-primary-darkerTwo"
+											className="font-medium text-base tracking-wide text-black lg:text-lightGreyTwo hover:text-primary-two lg:hover:text-primary-darkerTwo hover:border-b-2"
 											href={`tel:${globalContext?.themesOptionsContent?.phoneNumberTwo}`}
 										>
 											{globalContext?.themesOptionsContent?.phoneNumberTwo}
@@ -467,10 +467,10 @@ const Footer: FC = () => {
 					>
 						<Paragraph
 							content={globalContext?.themesOptionsContent?.copyrightText}
-							tailwindStyling="max-w-full lg:max-w-lg text-black text-sm text-center lg:text-left"
+							tailwindStyling="max-w-full lg:max-w-lg text-black text-tiny text-center lg:text-left"
 						/>
 						<Link
-							className="lg:inline-block items-center justify-center mt-2 px-1 text-black hover:text-primary-default hover:underline"
+							className="lg:inline-block items-center justify-center mt-2 px-1 text-black hover:text-primary-default hover:border-b-2"
 							href={`https://bluetech-digital.co.uk`}
 							target="_blank"
 						>
@@ -485,7 +485,7 @@ const Footer: FC = () => {
 								/>
 								<Paragraph
 									content={`Website by BluetechDigital`}
-									tailwindStyling="w-fit lg:w-full text-sm text-center lg:text-left"
+									tailwindStyling="w-fit lg:w-full text-tiny text-center lg:text-left"
 								/>
 							</span>
 						</Link>
@@ -503,7 +503,7 @@ const Footer: FC = () => {
 									>
 										<Link
 											href={`${item?.node?.url}`}
-											className="text-black lg:text-lightGreyTwo transition-all duration-200 ease-in-out text-sm hover:text-primary-darkerTwo"
+											className="text-black lg:text-lightGreyTwo transition-all duration-200 ease-in-out text-tiny hover:text-primary-darkerTwo hover:border-b-2"
 										>
 											{item?.node?.label}
 										</Link>

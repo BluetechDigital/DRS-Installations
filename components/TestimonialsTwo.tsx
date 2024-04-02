@@ -21,13 +21,7 @@ const TestimonialsTwo: FC<ITestimonialsTwo> = ({title, subtitle}) => {
 					` py-16 px-4 bg-white bg-cover bg-no-repeat bg-center`
 				}
 				style={{
-					backgroundImage: `linear-gradient(
-									0deg,
-									rgba(255, 255, 255, 1),
-									rgba(255, 255, 255, 0.95),
-									rgba(255, 255, 255, 0.85),
-									rgba(255, 255, 255, 0.80)
-								),url("/svg/background/grid-background-12.svg")`,
+					backgroundImage: `url("/svg/background/layered-waves-haikei-lightgrey-three.svg")`,
 				}}
 			>
 				<div className="lg:container m-auto px-0">
@@ -50,7 +44,7 @@ const TestimonialsTwo: FC<ITestimonialsTwo> = ({title, subtitle}) => {
 							initial={initial}
 							whileInView={fadeInUp}
 							viewport={{once: true}}
-							className="my-3 max-w-xl mx-auto lg:mx-0 text-primary-default uppercase font-aspektaMain leading-[2.25rem] text-center lg:text-left text-lg sm:text-3xl"
+							className="my-3 max-w-xl mx-auto lg:mx-0 text-black uppercase font-tonnelier leading-[2.25rem] text-center lg:text-left text-lg sm:text-3xl"
 						>
 							{title}
 						</motion.h3>

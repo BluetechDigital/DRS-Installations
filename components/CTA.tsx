@@ -17,17 +17,12 @@ const CTA: FC<ICTA> = ({title, paragraph, buttonLink, backgroundImage}) => {
 			<div className="py-8">
 				<div className="md:md:container mx-auto px-4">
 					<div
-						className="p-8 relative flex flex-col lg:flex-row gap-4 bg-cover bg-no-repeat bg-center"
+						className="p-8 relative flex flex-col lg:flex-row gap-4 rounded-2xl bg-cover bg-no-repeat bg-center"
 						style={{
-							backgroundImage: `linear-gradient(
-							0deg,
-							rgb(0, 0, 0, 0.20),
-							rgba(0, 0, 0, 0.45),
-							rgba(0, 0, 0, 0.55)
-						),url("${backgroundImage}")`,
+							backgroundImage: `url("${backgroundImage}")`,
 						}}
 					>
-						<div className="py-11 px-9 lg:max-w-xl bg-white">
+						<div className="py-11 px-9 lg:max-w-xl rounded-2xl bg-white">
 							<div className="flex items-center justify-center mb-6 gap-4">
 								<Link
 									href={`${globalContext?.themesOptionsContent?.facebookLink}`}
@@ -130,7 +125,7 @@ const CTA: FC<ICTA> = ({title, paragraph, buttonLink, backgroundImage}) => {
 								initial={initialTwo}
 								whileInView={fadeIn}
 								viewport={{once: true}}
-								className="my-3 max-w-xl mx-auto lg:mx-0 uppercase text-black text-center lg:text-left font-semibold text-lg md:text-xl"
+								className="my-3 max-w-xl mx-auto lg:mx-0 uppercase text-black text-center lg:text-left font-semibold font-tonnelier text-lg md:text-xl"
 							>
 								{title}
 							</motion.h3>
@@ -141,41 +136,21 @@ const CTA: FC<ICTA> = ({title, paragraph, buttonLink, backgroundImage}) => {
 							<Link
 								href={`${buttonLink?.url}`}
 								target={buttonLink?.target}
-								className={`${buttonLink?.url ? "block" : "hidden"} lg:hidden`}
+								className={`${
+									buttonLink?.url ? "block" : "hidden"
+								} lg:hidden py-4 px-6 cursor-pointer rounded-lg bg-primary-default hover:bg-primary-dark transition-all ease-in-out duration-500 font-semibold tracking-[0.10rem] uppercase text-lightGrey text-base text-center font-tonnelier`}
 							>
-								<div className="py-4 pl-4 pr-10 w-fit mx-auto lg:mx-0 cursor-pointer bg-primary-default hover:bg-primary-dark transition-all ease-in-out duration-500">
-									<h3 className="relative flex items-center justify-center font-semibold tracking-[0.10rem] uppercase pl-4 text-lightGrey text-tiny text-center">
-										{buttonLink?.title}
-										<Image
-											width={550}
-											height={550}
-											alt="Black Arrow Icon"
-											src="/svg/navigation-menu-dropdown-arrow-white.svg"
-											className="my-auto ml-2 absolute top-[-20px] right-[-40px] rotate-[-135deg] cursor-pointer w-[35px] h-[35px] object-contain object-center"
-										/>
-									</h3>
-								</div>
+								{buttonLink?.title}
 							</Link>
 						</div>
 						<Link
 							href={`${buttonLink?.url}`}
 							target={buttonLink?.target}
-							className={`hidden absolute bottom-0 right-0 mb-8 mr-8 ${
+							className={`hidden absolute bottom-0 right-0 mb-8 mr-8 py-4 px-6 cursor-pointer rounded-lg bg-primary-default hover:bg-primary-dark transition-all ease-in-out duration-500 font-semibold tracking-[0.10rem] uppercase text-lightGrey text-base text-center font-tonnelier ${
 								buttonLink?.url ? "lg:block" : "lg:hidden"
 							}`}
 						>
-							<div className="py-6 pl-4 pr-10 w-fit mx-auto lg:mx-0 cursor-pointer bg-primary-default hover:bg-primary-dark transition-all ease-in-out duration-500">
-								<h3 className="relative flex items-center justify-center font-semibold tracking-[0.10rem] uppercase pl-4 text-lightGrey text-tiny text-center">
-									{buttonLink?.title}
-									<Image
-										width={550}
-										height={550}
-										alt="Black Arrow Icon"
-										src="/svg/navigation-menu-dropdown-arrow-white.svg"
-										className="my-auto ml-2 absolute top-[-25px] right-[-40px] rotate-[-135deg] cursor-pointer w-[35px] h-[35px] object-contain object-center"
-									/>
-								</h3>
-							</div>
+							{buttonLink?.title}
 						</Link>
 					</div>
 				</div>
