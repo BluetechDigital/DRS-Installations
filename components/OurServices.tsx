@@ -114,7 +114,7 @@ const OurServices: FC<IOurServices> = ({
 					height={550}
 					alt="Black security shield icon"
 					src="/svg/security-shield.svg"
-					className="hidden lg:block absolute top-[65%] right-[-100px] opacity-10 cursor-pointer w-fit h-[40px] xl:h-[250px] object-contain object-center"
+					className="hidden xl:block absolute top-[65%] right-[-100px] opacity-10 cursor-pointer w-fit h-[40px] xl:h-[250px] object-contain object-center"
 				/>
 			</div>
 		</>

@@ -43,9 +43,7 @@ const TitleContentImage: FC<ITitleContentImage> = ({
 	return (
 		<>
 			<div className={`titleContentImage py-12 ${backgroundColor}`}>
-				<div
-					className={title ? "lg:container mx-auto px-0 block py-4" : "hidden"}
-				>
+				<div className={title ? "lg:container mx-auto block p-4" : "hidden"}>
 					<motion.h4
 						initial={initial}
 						whileInView={fadeInUp}
@@ -95,7 +93,7 @@ const TitleContentImage: FC<ITitleContentImage> = ({
 									displayContentOption == "Left"
 										? "lg:items-end"
 										: "lg:items-start"
-								} lg:w-1/2 h-full xl:pl-28 2xl:pl-32`}
+								} lg:w-1/2 h-full xl:pl-28 2xl:pl-48`}
 							>
 								<TitleContentImageCard
 									title={title}
@@ -117,7 +115,7 @@ const TitleContentImage: FC<ITitleContentImage> = ({
 									displayContentOption == "Right"
 										? "lg:items-end"
 										: "lg:items-start"
-								} lg:w-1/2 h-full  xl:pr-28 2xl:pr-32`}
+								} lg:w-1/2 h-full xl:pr-28 2xl:pr-32`}
 							>
 								<TitleContentImageCard
 									title={title}
