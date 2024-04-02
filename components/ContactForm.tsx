@@ -159,11 +159,11 @@ const ContactForm: FC<IContactForm> = ({title, paragraph}) => {
 			<div
 				className="px-4 py-10 bg-cover bg-center bg-no-repeat"
 				style={{
-					backgroundImage: `url("/svg/background/layered-peaks-haikei-lightgrey-grey-one.svg")`,
+					backgroundImage: `url("/svg/background/layered-waves-haikei-lightgrey-two.svg")`,
 				}}
 			>
-				<div className="md:container mx-auto flex flex-col lg:flex-row items-baseline ">
-					<div className="w-full lg:w-1/2 sm:p-6 flex flex-col">
+				<div className="md:container mx-auto flex flex-col lg:flex-row items-center ">
+					<div className="w-full lg:w-1/2 p-0 flex flex-col">
 						<motion.div
 							initial={initial}
 							variants={stagger}
@@ -233,16 +233,37 @@ const ContactForm: FC<IContactForm> = ({title, paragraph}) => {
 									Phone
 								</motion.h3>
 								<Link
-									className="block text-tiny sm:text-base text-black text-center sm:text-left hover:text-primary-default"
-									href={`tel:${globalContext?.themesOptionsContent?.phoneNumber}`}
+									className="flex items-center gap-3 text-tiny sm:text-base text-center sm:text-left"
+									href={`tel:${globalContext?.themesOptionsContent?.phoneNumberThree}`}
 								>
-									{globalContext?.themesOptionsContent?.phoneNumber}
+									<span className="font-semibold uppercase font-tonnelier">
+										Office:{" "}
+									</span>
+									<span className="text-black hover:text-primary-default">
+										{globalContext?.themesOptionsContent?.phoneNumberThree}
+									</span>
 								</Link>
 								<Link
-									className="block text-tiny sm:text-base text-black text-center sm:text-left hover:text-primary-default"
-									href={`tel:${globalContext?.themesOptionsContent?.phoneNumberTwo}`}
+									className="flex items-center gap-3 text-tiny sm:text-base text-center sm:text-left"
+									href={`tel:${globalContext?.themesOptionsContent?.phoneNumberThree}`}
 								>
-									{globalContext?.themesOptionsContent?.phoneNumberTwo}
+									<span className="font-semibold uppercase font-tonnelier">
+										David:{" "}
+									</span>
+									<span className="text-black hover:text-primary-default">
+										{globalContext?.themesOptionsContent?.phoneNumberThree}
+									</span>
+								</Link>
+								<Link
+									className="flex items-center gap-3 text-tiny sm:text-base text-center sm:text-left"
+									href={`tel:${globalContext?.themesOptionsContent?.phoneNumberThree}`}
+								>
+									<span className="font-semibold uppercase font-tonnelier">
+										Tony:{" "}
+									</span>
+									<span className="text-black hover:text-primary-default">
+										{globalContext?.themesOptionsContent?.phoneNumberThree}
+									</span>
 								</Link>
 							</motion.div>
 						</motion.div>
@@ -362,13 +383,30 @@ const ContactForm: FC<IContactForm> = ({title, paragraph}) => {
 								/>
 							</motion.div>
 						</motion.div>
+						<motion.div
+							initial={initial}
+							variants={stagger}
+							whileInView="animate"
+							viewport={{once: true}}
+							className="mt-8"
+						>
+							<iframe
+								width="100%"
+								height="350"
+								loading="lazy"
+								style={{border: "0"}}
+								allowFullScreen={true}
+								referrerPolicy="no-referrer-when-downgrade"
+								src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9963.425979151369!2d-0.6502861!3d51.3689348!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487671c38776d87d%3A0x4a72de204fcefefb!2sDRS%20Installations%20Ltd!5e0!3m2!1sen!2suk!4v1712049805880!5m2!1sen!2suk"
+							></iframe>
+						</motion.div>
 					</div>
 					<Formik
 						onSubmit={formik?.onSubmit}
 						initialValues={formik?.initialValues}
 						className="w-full lg:w-1/2"
 					>
-						<Form className="md:container mx-auto py-10 md:max-w-xl">
+						<Form className="md:container mx-auto py-10 px-6 md:max-w-xl shadow-2xl border-4 border-primary-default">
 							{loading ? (
 								<motion.div
 									initial={initialTwo}

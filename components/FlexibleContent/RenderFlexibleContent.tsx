@@ -11,7 +11,6 @@ import Gallery from "../Gallery";
 import OurClients from "../OurClients";
 import OurServices from "../OurServices";
 import ContactForm from "../ContactForm";
-import OurLocation from "../OurLocation";
 import ErrorPage from "../Global/ErrorPage";
 import GallerySlider from "../GallerySlider";
 import GettingStarted from "../GettingStarted";
@@ -115,11 +114,6 @@ const RenderFlexibleContent: FC = () => {
 									paragraph={item?.paragraph}
 									skillsExperiencesGrid={item?.skillsExperiencesGrid}
 								/>
-							</>
-						) : item?.fieldGroupName === `${FlexibleContent}_OurLocation` &&
-						  item?.displaySection ? (
-							<>
-								<OurLocation title={item?.title} paragraph={item?.paragraph} />
 							</>
 						) : item?.fieldGroupName === `${FlexibleContent}_GettingStarted` &&
 						  item?.displaySection ? (

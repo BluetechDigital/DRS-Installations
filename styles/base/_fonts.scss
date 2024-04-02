@@ -11,10 +11,10 @@
 }
 
 @font-face {
-	font-family: neuveGrotesqueBold;
-	src: url("../fonts/neuvegrotesque-bold.woff");
+	font-family: tonnelier;
+	src: url("../fonts/tonnelier-heavy.woff");
 }
 
 // Font Stack Properties
-$main: "neuveGrotesqueBold", sans-serif;
+$main: "tonnelier", sans-serif;
 $body: "OpenSauceSansRegular", "PlusJakartaSans", sans-serif;

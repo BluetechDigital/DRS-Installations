@@ -184,12 +184,6 @@ export const getAllFlexibleContentComponents = async (
             										text
             									}
             								}
-											... on ${postTypeFlexibleContent}_OurLocation {
-												fieldGroupName
-												title
-												paragraph
-												displaySection
-											}
 											... on ${postTypeFlexibleContent}_GettingStarted {
             									fieldGroupName
             									title
