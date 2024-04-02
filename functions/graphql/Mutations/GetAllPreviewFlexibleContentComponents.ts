@@ -95,7 +95,6 @@ export const getAllPreviewFlexibleContentComponents = async (
             									displaySection
             									displayContentOption
             									displayImageClipPath
-            									displayParagraphColor
             									displayBackgroundColor
             								}
 											... on ${postTypeFlexibleContent}_OurClients {
@@ -125,6 +124,11 @@ export const getAllPreviewFlexibleContentComponents = async (
 												title
 												subtitle
 												paragraph
+												buttonLink {
+													url
+													title
+													target
+												}
 												displaySection
 												servicesGrid {
 													card {
@@ -185,54 +189,6 @@ export const getAllPreviewFlexibleContentComponents = async (
 												}
             									skillsExperiencesGrid {
             										text
-            									}
-            								}
-											... on ${postTypeFlexibleContent}_OurLocation {
-												fieldGroupName
-												title
-												paragraph
-												displaySection
-											}
-											... on ${postTypeFlexibleContent}_GettingStarted {
-            									fieldGroupName
-            									title
-												subtitle
-												displaySection
-            									stepOne {
-            										title
-            										paragraph
-            										image {
-            											altText
-            											sourceUrl
-            											mediaDetails {
-            												height
-            												width
-            											}
-            										}
-            									}
-            									stepTwo {
-            										title
-            										paragraph
-            										image {
-            											altText
-            											sourceUrl
-            											mediaDetails {
-            												height
-            												width
-            											}
-            										}
-            									}
-            									stepThree {
-            										title
-            										paragraph
-            										image {
-            											altText
-            											sourceUrl
-            											mediaDetails {
-            												height
-            												width
-            											}
-            										}
             									}
             								}
 											... on ${postTypeFlexibleContent}_OurProjectsGrid {
@@ -315,6 +271,18 @@ export const getAllPreviewFlexibleContentComponents = async (
 												title
 												paragraph
 												displaySection
+											}
+											... on ${postTypeFlexibleContent}_RequestAppointmentForm {
+												fieldGroupName
+												title
+												subtitle
+												paragraph
+												displaySection
+												buttonLink {
+													url
+													title
+													target
+												}
 											}
 											... on ${postTypeFlexibleContent}_Maintenance {
 												fieldGroupName

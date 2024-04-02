@@ -13,7 +13,6 @@ import OurServices from "../OurServices";
 import ContactForm from "../ContactForm";
 import ErrorPage from "../Global/ErrorPage";
 import GallerySlider from "../GallerySlider";
-import GettingStarted from "../GettingStarted";
 import TitleParagraph from "../TitleParagraph";
 import Maintenance from "../Global/Maintenance";
 import TestimonialsTwo from "../TestimonialsTwo";
@@ -92,6 +91,7 @@ const RenderFlexibleContent: FC = () => {
 									title={item?.title}
 									subtitle={item?.subtitle}
 									paragraph={item?.paragraph}
+									buttonLink={item?.buttonLink}
 									servicesGrid={item?.servicesGrid}
 								/>
 							</>
@@ -114,17 +114,6 @@ const RenderFlexibleContent: FC = () => {
 									image={item?.image}
 									paragraph={item?.paragraph}
 									skillsExperiencesGrid={item?.skillsExperiencesGrid}
-								/>
-							</>
-						) : item?.fieldGroupName === `${FlexibleContent}_GettingStarted` &&
-						  item?.displaySection ? (
-							<>
-								<GettingStarted
-									title={item?.title}
-									subtitle={item?.subtitle}
-									stepOne={item?.stepOne}
-									stepTwo={item?.stepTwo}
-									stepThree={item?.stepThree}
 								/>
 							</>
 						) : item?.fieldGroupName === `${FlexibleContent}_OurProjectsGrid` &&

@@ -5,6 +5,7 @@ import {
 	fadeInUp,
 	arrayLoopStaggerChildren,
 } from "../animations/animations";
+import Link from "next/link";
 import Image from "next/image";
 import {FC, Fragment} from "react";
 import {motion} from "framer-motion";
@@ -21,6 +22,7 @@ const OurServices: FC<IOurServices> = ({
 	title,
 	subtitle,
 	paragraph,
+	buttonLink,
 	servicesGrid,
 }) => {
 	return (
@@ -66,10 +68,21 @@ const OurServices: FC<IOurServices> = ({
 								{title}
 							</motion.h3>
 						</div>
-						<Paragraph
-							content={paragraph}
-							tailwindStyling="max-w-full lg:max-w-xl text-black text-base text-center lg:text-left"
-						/>
+						<div className="">
+							<Paragraph
+								content={paragraph}
+								tailwindStyling="max-w-full lg:max-w-xl text-black text-base text-center lg:text-left"
+							/>
+							<Link
+								href={`${buttonLink?.url}`}
+								target={buttonLink?.target}
+								className={`hidden w-fit mx-auto lg:mx-0 mt-2 py-4 px-6 cursor-pointer rounded-lg bg-primary-default hover:bg-primary-dark transition-all ease-in-out duration-500 font-semibold tracking-[0.10rem] uppercase text-lightGrey text-base text-center font-tonnelier ${
+									buttonLink?.url ? "lg:block" : "lg:hidden"
+								}`}
+							>
+								{buttonLink?.title}
+							</Link>
+						</div>
 					</motion.div>
 					<div className="grid grid-cols-1 lg:grid-cols-3 py-6 px-0 gap-6 w-full">
 						{servicesGrid?.length > 0 ? (

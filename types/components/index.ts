@@ -88,6 +88,11 @@ export type IOurServices = {
 	title: string;
 	subtitle: string;
 	paragraph: string;
+	buttonLink: {
+		url: string;
+		title: string;
+		target: string;
+	};
 	servicesGrid: [
 		{
 			card: {
@@ -151,46 +156,6 @@ export type ITitleParagraph = {
 	title: string;
 	paragraph: string;
 	displayParagraph: boolean;
-};
-export type IGettingStarted = {
-	title: string;
-	subtitle: string;
-	stepOne: {
-		title: string;
-		paragraph: string;
-		image: {
-			altText: string;
-			sourceUrl: string;
-			mediaDetails: {
-				width: number;
-				height: number;
-			};
-		};
-	};
-	stepTwo: {
-		title: string;
-		paragraph: string;
-		image: {
-			altText: string;
-			sourceUrl: string;
-			mediaDetails: {
-				width: number;
-				height: number;
-			};
-		};
-	};
-	stepThree: {
-		title: string;
-		paragraph: string;
-		image: {
-			altText: string;
-			sourceUrl: string;
-			mediaDetails: {
-				width: number;
-				height: number;
-			};
-		};
-	};
 };
 export type IOurProjectsGrid = {
 	title: string;

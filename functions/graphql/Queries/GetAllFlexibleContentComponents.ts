@@ -122,6 +122,11 @@ export const getAllFlexibleContentComponents = async (
 												title
 												subtitle
 												paragraph
+												buttonLink {
+													url
+													title
+													target
+												}
 												displaySection
 												servicesGrid {
 													card {
@@ -182,48 +187,6 @@ export const getAllFlexibleContentComponents = async (
 												}
             									skillsExperiencesGrid {
             										text
-            									}
-            								}
-											... on ${postTypeFlexibleContent}_GettingStarted {
-            									fieldGroupName
-            									title
-												subtitle
-												displaySection
-            									stepOne {
-            										title
-            										paragraph
-            										image {
-            											altText
-            											sourceUrl
-            											mediaDetails {
-            												height
-            												width
-            											}
-            										}
-            									}
-            									stepTwo {
-            										title
-            										paragraph
-            										image {
-            											altText
-            											sourceUrl
-            											mediaDetails {
-            												height
-            												width
-            											}
-            										}
-            									}
-            									stepThree {
-            										title
-            										paragraph
-            										image {
-            											altText
-            											sourceUrl
-            											mediaDetails {
-            												height
-            												width
-            											}
-            										}
             									}
             								}
 											... on ${postTypeFlexibleContent}_OurProjectsGrid {
