@@ -22,7 +22,7 @@ const Hero: FC<IHero> = ({heroSlider}) => {
 	return (
 		<>
 			<div className={styles.hero + " relative z-50 flex flex-col h-fit"}>
-				<div className="lg:relative pt-[75px] flex flex-col lg:flex-row">
+				<div className="lg:relative pt-[49px] lg:pt-[49px] flex flex-col lg:flex-row">
 					<div className="HeroSwiperSlider relative overflow-hidden">
 						<Swiper
 							loop={true}
@@ -39,7 +39,7 @@ const Hero: FC<IHero> = ({heroSlider}) => {
 								heroSlider?.map((item: any, keys: number) => (
 									<Fragment key={keys}>
 										<SwiperSlide>
-											<div className="w-full p-4">
+											<div className="w-full py-4">
 												<div
 													className="pt-24 pb-44 sm:pb-20 w-full h-[75vh] sm:h-[75vh] lg:h-[65vh] flex flex-col items-center lg:items-baseline justify-center relative bg-center bg-no-repeat bg-cover"
 													style={{
@@ -49,6 +49,7 @@ const Hero: FC<IHero> = ({heroSlider}) => {
 																rgba(0, 0, 0, 0.20),
 																rgba(0, 0, 0, 0.20)
 															),url("${item?.backgroundImage?.sourceUrl}")`,
+														clipPath: `ellipse(100% 55% at 50% 45%)`,
 													}}
 												>
 													<div className="relative z-10 flex flex-col items-center lg:items-start gap-4 px-8 px-4 sm:px-8 lg:px-24">
@@ -70,46 +71,13 @@ const Hero: FC<IHero> = ({heroSlider}) => {
 															<Link
 																href={`${item?.buttonLink?.url}`}
 																target={item?.buttonLink?.target}
-																className={`${
-																	item?.buttonLink?.url ? "block" : "hidden"
+																className={`hidden w-fit mx-auto lg:mx-0 py-4 px-6 cursor-pointer rounded-lg bg-primary-default hover:bg-primary-dark transition-all ease-in-out duration-500 font-semibold tracking-[0.10rem] uppercase text-lightGrey text-base text-center font-tonnelier ${
+																	item?.buttonLink?.url
+																		? "lg:block"
+																		: "lg:hidden"
 																}`}
 															>
-																<div
-																	className={`py-4 pl-4 pr-10 w-full mx-auto lg:mx-0 cursor-pointer bg-primary-default hover:bg-primary-dark transition-all ease-in-out duration-500`}
-																>
-																	<h3 className="font-semibold tracking-[0.10rem] uppercase pl-4 text-lightGrey text-tiny text-center">
-																		{item?.buttonLink?.title}
-																		<Image
-																			width={550}
-																			height={550}
-																			alt="Black Arrow Icon"
-																			src="/svg/navigation-menu-dropdown-arrow-white.svg"
-																			className="my-auto ml-2 absolute top-[-20px] right-[-40px] rotate-[-135deg] cursor-pointer w-[35px] h-[35px] object-contain object-center"
-																		/>
-																	</h3>
-																</div>
-															</Link>
-															<Link
-																href={`${item?.buttonLinkTwo?.url}`}
-																target={item?.buttonLinkTwo?.target}
-																className={`${
-																	item?.buttonLinkTwo?.url ? "block" : "hidden"
-																}`}
-															>
-																<div
-																	className={`py-4 pl-4 pr-10 w-full mx-auto lg:mx-0 cursor-pointer bg-primary-default hover:bg-primary-dark transition-all ease-in-out duration-500`}
-																>
-																	<h3 className="font-semibold tracking-[0.10rem] uppercase pl-4 text-lightGrey text-tiny text-center">
-																		{item?.buttonLinkTwo?.title}
-																		<Image
-																			width={550}
-																			height={550}
-																			alt="Black Arrow Icon"
-																			src="/svg/navigation-menu-dropdown-arrow-white.svg"
-																			className="my-auto ml-2 absolute top-[-20px] right-[-40px] rotate-[-135deg] cursor-pointer w-[35px] h-[35px] object-contain object-center"
-																		/>
-																	</h3>
-																</div>
+																{item?.buttonLink?.title}
 															</Link>
 														</div>
 													</div>

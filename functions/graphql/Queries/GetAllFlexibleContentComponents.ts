@@ -31,11 +31,6 @@ export const getAllFlexibleContentComponents = async (
                 										title
                 										target
                 									}
-                									buttonLinkTwo {
-                										url
-                										title
-                										target
-                									}
               										backgroundImage {
               											altText
               											sourceUrl
