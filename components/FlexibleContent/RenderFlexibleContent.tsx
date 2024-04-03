@@ -114,6 +114,7 @@ const RenderFlexibleContent: FC = () => {
 									title={item?.title}
 									image={item?.image}
 									paragraph={item?.paragraph}
+									displayImageFullWidth={item?.displayImageFullWidth}
 									skillsExperiencesGrid={item?.skillsExperiencesGrid}
 								/>
 							</>

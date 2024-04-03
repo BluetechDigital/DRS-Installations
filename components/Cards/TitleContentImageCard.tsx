@@ -104,8 +104,8 @@ const TitleContentImageCard: FC<ITitleContentImageCard> = ({
 					<Link
 						href={`${buttonLink?.url}`}
 						target={buttonLink?.target}
-						className={`hidden mb-8 mr-8 py-4 px-6 cursor-pointer rounded-lg bg-primary-default hover:bg-primary-dark transition-all ease-in-out duration-500 font-semibold tracking-[0.10rem] uppercase text-lightGrey text-base text-center font-tonnelier ${
-							buttonLink?.url ? "lg:block" : "lg:hidden"
+						className={`mb-8 mr-8 py-4 px-6 cursor-pointer rounded-lg bg-primary-default hover:bg-primary-dark transition-all ease-in-out duration-500 font-semibold tracking-[0.10rem] uppercase text-lightGrey text-base text-center font-tonnelier ${
+							buttonLink?.url ? "block" : "hidden"
 						}`}
 					>
 						{buttonLink?.title}
