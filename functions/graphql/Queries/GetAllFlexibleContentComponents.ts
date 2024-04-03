@@ -92,8 +92,9 @@ export const getAllFlexibleContentComponents = async (
             									}
             									displaySection
             									displayContentOption
-            									displayImageClipPath
+            									displayBackgroundWave
             									displayBackgroundColor
+												displayWaveColorOptions
             								}
 											... on ${postTypeFlexibleContent}_OurClients {
 												fieldGroupName

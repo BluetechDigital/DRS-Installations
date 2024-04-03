@@ -70,9 +70,10 @@ const RenderFlexibleContent: FC = () => {
 									paragraph={item?.paragraph}
 									buttonLink={item?.buttonLink}
 									bulletPoints={item?.bulletPoints}
-									displayImageClipPath={item?.displayImageClipPath}
 									displayContentOption={item?.displayContentOption}
+									displayBackgroundWave={item?.displayBackgroundWave}
 									displayBackgroundColor={item?.displayBackgroundColor}
+									displayWaveColorOptions={item?.displayWaveColorOptions}
 								/>
 							</>
 						) : item?.fieldGroupName === `${FlexibleContent}_OurClients` &&

@@ -192,8 +192,9 @@ export type ITitleContentImage = {
 	paragraph: string;
 	textTitle: string;
 	displayContentOption: string;
+	displayBackgroundWave: boolean;
 	displayBackgroundColor: string;
-	displayImageClipPath: boolean;
+	displayWaveColorOptions: string;
 	buttonLink: {
 		url: string;
 		title: string;

@@ -7,6 +7,7 @@ import {
 	slideInRightInitial,
 } from "../animations/animations";
 import {FC} from "react";
+import Image from "next/image";
 import {motion} from "framer-motion";
 import {ITitleContentImage} from "@/types/components";
 
@@ -22,11 +23,12 @@ const TitleContentImage: FC<ITitleContentImage> = ({
 	buttonLink,
 	bulletPoints,
 	displayContentOption,
-	displayImageClipPath,
+	displayBackgroundWave,
 	displayBackgroundColor,
+	displayWaveColorOptions,
 }) => {
+	let backgroundSVG;
 	let backgroundColor;
-	let paragraphColor;
 
 	switch (displayBackgroundColor) {
 		case "White":
@@ -40,10 +42,34 @@ const TitleContentImage: FC<ITitleContentImage> = ({
 			break;
 	}
 
+	switch (displayWaveColorOptions) {
+		case "WhiteToWhite":
+			backgroundSVG = "background-white-blue-white-divider";
+			break;
+		case "WhiteToGrey":
+			backgroundSVG = "background-white-blue-grey-divider";
+			break;
+		case "GreyToWhite":
+			backgroundSVG = "background-grey-blue-white-divider";
+			break;
+		case "GreyToGrey":
+			backgroundSVG = "background-grey-blue-grey-divider";
+			break;
+		default:
+			backgroundSVG = "background-grey-blue-whites-divider";
+			break;
+	}
+
 	return (
 		<>
-			<div className={`titleContentImage py-12 ${backgroundColor}`}>
-				<div className={title ? "lg:container mx-auto block p-4" : "hidden"}>
+			<div
+				className={`titleContentImage pt-12 pb-2 lg:pb-0 ${backgroundColor}`}
+			>
+				<div
+					className={
+						title ? "relative z-10 lg:container mx-auto block p-4" : "hidden"
+					}
+				>
 					<motion.h4
 						initial={initial}
 						whileInView={fadeInUp}
@@ -62,7 +88,7 @@ const TitleContentImage: FC<ITitleContentImage> = ({
 					</motion.h3>
 				</div>
 				<div
-					className={`flex ${
+					className={`relative z-10 flex ${
 						displayContentOption == "Right" ? "flex-col-reverse" : "flex-col"
 					} gap-4 lg:gap-x-16 p-0 mx-auto items-center justify-center lg:flex-row`}
 				>
@@ -77,9 +103,6 @@ const TitleContentImage: FC<ITitleContentImage> = ({
 						}`}
 						style={{
 							backgroundImage: `url(${image?.sourceUrl})`,
-							clipPath: `polygon(${
-								displayImageClipPath ? "50% at 50% 50%" : "0%"
-							})`,
 						}}
 					/>
 
@@ -140,13 +163,21 @@ const TitleContentImage: FC<ITitleContentImage> = ({
 						}`}
 						style={{
 							backgroundImage: `url(${image?.sourceUrl})`,
-							clipPath: `polygon(${
-								displayImageClipPath ? "50% at 50% 50%" : "0%"
-							})`,
 						}}
 					/>
 				</div>
 			</div>
+			<Image
+				width={550}
+				height={550}
+				alt="Background Wave Divider"
+				src={`/svg/background/${backgroundSVG}.svg`}
+				className={
+					displayBackgroundWave
+						? "w-full h-full mt-0 lg:mt-[-50px] object-contain object-center"
+						: "hidden"
+				}
+			/>
 		</>
 	);
 };
