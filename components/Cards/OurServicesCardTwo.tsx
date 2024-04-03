@@ -32,6 +32,24 @@ const OurServicesCardTwo: FC<IOurServicesCardTwo> = ({
 		case 8:
 			starSrc = "037-star";
 			break;
+		case 10:
+			starSrc = "004-star";
+			break;
+		case 12:
+			starSrc = "033-star";
+			break;
+		case 14:
+			starSrc = "024-star";
+			break;
+		case 16:
+			starSrc = "016-star";
+			break;
+		case 18:
+			starSrc = "037-star";
+			break;
+		case 20:
+			starSrc = "004-star";
+			break;
 		default:
 			starSrc = "004-star";
 			break;
@@ -76,7 +94,9 @@ const OurServicesCardTwo: FC<IOurServicesCardTwo> = ({
 						currentIteration === null ||
 						(currentIteration !== null && currentIteration % 2 !== 0)
 							? "hidden"
-							: "hidden lg:block absolute top-0 lg:top-[38%] xl:top-[42%] right-0 lg:right-12 xl:right-20 2xl:right-32 cursor-pointer w-[45px] h-[40px] xl:h-[45px] object-contain object-center"
+							: `hidden ${
+									image?.sourceUrl ? "lg:block" : "lg:hidden"
+							  } absolute top-0 lg:top-[38%] xl:top-[42%] right-0 lg:right-12 xl:right-20 2xl:right-32 cursor-pointer w-[45px] h-[40px] xl:h-[45px] object-contain object-center`
 					}`}
 				/>
 			</div>
