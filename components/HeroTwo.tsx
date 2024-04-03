@@ -26,18 +26,18 @@ const HeroTwo: FC<IHeroTwo> = ({title, paragraph, backgroundImage}) => {
 						clipPath: `ellipse(100% 55% at 48% 44%)`,
 					}}
 				>
-					<div className="max-w-sm lg:max-w-2xl mx-auto lg:mx-0 relative z-10 flex flex-col items-center lg:items-start px-8 sm:px-24">
+					<div className="max-w-lg lg:max-w-2xl mx-auto relative z-10 flex flex-col items-center px-8 sm:px-24">
 						<motion.h1
 							initial={initialTwo}
 							whileInView={fadeIn}
 							viewport={{once: true}}
-							className="text-center lg:text-left uppercase text-lg md:text-xl xl:text-3xl text-white font-semibold xl:leading-[2.5rem]"
+							className="text-center uppercase text-lg md:text-xl xl:text-3xl text-white font-semibold xl:leading-[2.5rem]"
 						>
 							{title}
 						</motion.h1>
 						<Paragraph
 							content={paragraph}
-							tailwindStyling="py-2 text-white leading-[1.75rem] text-base text-center lg:text-left"
+							tailwindStyling="py-2 text-white leading-[1.3rem] text-base text-center"
 						/>
 					</div>
 				</div>

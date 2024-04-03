@@ -177,6 +177,7 @@ export const getAllFlexibleContentComponents = async (
             									title
             									paragraph
 												displaySection
+												displayImageFullWidth
 												image {
 													altText
 													sourceUrl

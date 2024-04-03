@@ -1,11 +1,9 @@
 // Imports
 import {
 	initial,
-	stagger,
 	fadeInUp,
 	arrayLoopStaggerChildren,
 } from "../animations/animations";
-import Link from "next/link";
 import Image from "next/image";
 import {FC, Fragment} from "react";
 import {motion} from "framer-motion";
@@ -18,6 +16,7 @@ const SkillsExperiences: FC<ISkillsExperiences> = ({
 	title,
 	image,
 	paragraph,
+	displayImageFullWidth,
 	skillsExperiencesGrid,
 }) => {
 	return (
@@ -47,13 +46,17 @@ const SkillsExperiences: FC<ISkillsExperiences> = ({
 								height={image?.mediaDetails.height}
 								className={`${
 									image?.sourceUrl
-										? "mx-auto xl:mx-0 px-16 lg:px-28 w-full h-[150px] lg:h-[200px] object-contain object-center"
+										? `mx-auto xl:mx-0 w-full h-[150px] lg:h-[200px] ${
+												displayImageFullWidth
+													? "px-0 object-cover rounded-2xl"
+													: "px-16 lg:px-28 object-contain"
+										  } object-center`
 										: "hidden"
 								}`}
 							/>
 						</div>
 					</div>
-					<div className=" p-4 w-full grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 items-center justify-center">
+					<div className=" p-4 w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 items-center justify-center">
 						{skillsExperiencesGrid?.length > 0 ? (
 							skillsExperiencesGrid?.map((item: any, keys: number) => (
 								<Fragment key={keys}>

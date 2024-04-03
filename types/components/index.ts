@@ -216,6 +216,7 @@ export type ITitleContentImage = {
 export type ISkillsExperiences = {
 	title: string;
 	paragraph: string;
+	displayImageFullWidth: boolean;
 	image: {
 		altText: string;
 		sourceUrl: string;
