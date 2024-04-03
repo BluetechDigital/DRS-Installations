@@ -38,8 +38,10 @@ const OurServicesCard: FC<IOurServicesCard> = ({
 						<div
 							className={link?.url ? "absolute -bottom-0 right-0" : "hidden"}
 						>
-							<div className="w-fit p-2 bg-lightGreyTwo hover:bg-lightGrey">
-								{link?.title}
+							<div className="w-14 lg:w-fit p-2 flex items-center justify-between text-primary-default bg-lightGreyTwo hover:bg-lightGrey">
+								<span className="hidden lg:block w-full min-w-40 px-4">
+									{link?.title}
+								</span>
 								<svg
 									viewBox="0 0 24 24"
 									fill="none"
