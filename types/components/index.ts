@@ -19,11 +19,6 @@ export type IHero = {
 				title: string;
 				target: string;
 			};
-			buttonLinkTwo: {
-				url: string;
-				title: string;
-				target: string;
-			};
 			backgroundImage: {
 				altText: string;
 				sourceUrl: string;

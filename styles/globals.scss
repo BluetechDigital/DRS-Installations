@@ -83,7 +83,7 @@ h3 {
 
 .swiper-button-prev,
 .swiper-button-next {
-	@apply mt-64 lg:mt-0 w-16 h-16 p-8 border-2 border-primary-default hover:border-primary-darker text-primary-darker hover:text-primary-darker;
+	@apply mt-64 lg:mt-0 w-16 h-16 p-8 rounded-full border-2 border-primary-default hover:border-primary-darker text-primary-darker hover:text-primary-darker;
 
 	top: 85% !important;
 
@@ -108,6 +108,27 @@ h3 {
 	font-size: 15px !important;
 	font-weight: 900 !important;
 	color: $blueDarker !important;
+}
+
+.HeroSwiperSlider {
+	.swiper-button-prev,
+	.swiper-button-next {
+		@apply mx-0 border-white hover:border-primary-default;
+
+		top: 75% !important;
+
+		@media screen and (min-width: 1024px) {
+			top: 50% !important;
+		}
+	}
+
+	.swiper-button-prev::after {
+		color: $white !important;
+	}
+
+	.swiper-button-next::after {
+		color: $white !important;
+	}
 }
 
 /* SQUARE BOX CUBES

@@ -23,7 +23,7 @@ const HeroTwo: FC<IHeroTwo> = ({title, paragraph, backgroundImage}) => {
 								rgba(0, 0, 0, 0.20),
 								rgba(0, 0, 0, 0.20)
 							),url("${backgroundImage?.sourceUrl}")`,
-						clipPath: `ellipse(100% 55% at 48% 44%)`,
+						clipPath: `ellipse(100% 55% at 50% 45%)`,
 					}}
 				>
 					<div className="max-w-lg lg:max-w-2xl mx-auto relative z-10 flex flex-col items-center px-8 sm:px-24">
