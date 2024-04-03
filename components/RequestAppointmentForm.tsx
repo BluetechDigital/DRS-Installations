@@ -142,8 +142,11 @@ const RequestAppointmentForm: FC<IRequestAppointmentForm> = ({
 			<div
 				className={
 					styles.requestAppointmentForm +
-					" px-4 py-10 bg-white requestAppointmentForm"
+					" px-4 py-10 bg-white requestAppointmentForm bg-cover bg-no-repeat bg-center"
 				}
+				style={{
+					backgroundImage: `url("/svg/background/layered-waves-haikei-lightgrey-three.svg")`,
+				}}
 			>
 				<div className="lg:container mx-auto px-0 flex flex-col lg:flex-row items-baseline justify-between gap-8">
 					<div className="flex flex-col items-center justify-center lg:items-baseline w-full">
