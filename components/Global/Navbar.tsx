@@ -56,7 +56,7 @@ const Navbar: FC = () => {
 			<nav className={styles.navbar + ` z-[999] h-fit w-full fixed`}>
 				<NoticeInfoBanner />
 				<div className="flex p-0 bg-white">
-					<div className="w-full container mx-auto px-4 bg-white">
+					<div className="w-full flex items-center gap-4 container mx-auto px-4 bg-white">
 						<Link href="/">
 							<Image
 								priority
@@ -64,9 +64,82 @@ const Navbar: FC = () => {
 								height={500}
 								alt="DRS Installations Ltd Logo"
 								src="/img/logos/drs-installations-logo.png"
-								className="object-contain object-center w-[100px] h-[65px]"
+								className="object-contain object-center w-[150px] h-[65px]"
 							/>
 						</Link>
+						<div className="flex flex-col items-baseline gap-2 py-2 ">
+							<div
+								className={
+									globalContext?.themesOptionsContent?.email
+										? "flex items-center justify-center gap-2"
+										: "hidden"
+								}
+							>
+								<div className="flex items-center justify-center w-8 h-8 rounded-full bg-primary-two sm:mr-1">
+									<svg
+										width="20"
+										height="20"
+										viewBox="0 0 20 20"
+										fill="none"
+										className="w-5 h-5"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M2.5 6.66669L9.0755 11.0504C9.63533 11.4236 10.3647 11.4236 10.9245 11.0504L17.5 6.66669M4.16667 15.8334H15.8333C16.7538 15.8334 17.5 15.0872 17.5 14.1667V5.83335C17.5 4.91288 16.7538 4.16669 15.8333 4.16669H4.16667C3.24619 4.16669 2.5 4.91288 2.5 5.83335V14.1667C2.5 15.0872 3.24619 15.8334 4.16667 15.8334Z"
+											stroke="#ffffff"
+											strokeWidth="1.5"
+											strokeLinecap="round"
+											strokeLinejoin="round"
+										></path>
+									</svg>
+								</div>
+								<Link
+									className="hidden sm:block font-medium uppercase text-tiny tracking-wide font-tonnelier text-black hover:text-primary-default hover:border-b-2"
+									href={`mailto:${globalContext?.themesOptionsContent?.email}`}
+								>
+									{globalContext?.themesOptionsContent?.email}
+								</Link>
+							</div>
+							<div
+								className={
+									globalContext?.themesOptionsContent?.phoneNumber
+										? "flex items-center justify-center gap-2"
+										: "hidden"
+								}
+							>
+								<div className="flex items-center justify-center w-8 h-8 rounded-full bg-primary-two sm:mr-1">
+									<svg
+										viewBox="0 0 24 24"
+										fill="none"
+										className="w-5 h-5"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+										<g
+											id="SVGRepo_tracerCarrier"
+											strokeLinecap="round"
+											strokeLinejoin="round"
+										></g>
+										<g id="SVGRepo_iconCarrier">
+											{" "}
+											<path
+												d="M14.5 6.5C15.2372 6.64382 15.9689 6.96892 16.5 7.5C17.0311 8.03108 17.3562 8.76284 17.5 9.5M15 3C16.5315 3.17014 17.9097 3.91107 19 5C20.0903 6.08893 20.8279 7.46869 21 9M20.9995 16.4767V19.1864C21.0037 20.2223 20.0723 21.0873 19.0265 20.9929C10.0001 21 3.00006 13.935 3.00713 4.96919C2.91294 3.92895 3.77364 3.00106 4.80817 3.00009H7.52331C7.96253 2.99577 8.38835 3.151 8.72138 3.43684C9.66819 4.24949 10.2772 7.00777 10.0429 8.10428C9.85994 8.96036 8.99696 9.55929 8.41026 10.1448C9.69864 12.4062 11.5747 14.2785 13.8405 15.5644C14.4272 14.9788 15.0274 14.1176 15.8851 13.935C16.9855 13.7008 19.7615 14.3106 20.5709 15.264C20.858 15.6021 21.0105 16.0337 20.9995 16.4767Z"
+												stroke="#ffffff"
+												strokeWidth="1.5"
+												strokeLinecap="round"
+												strokeLinejoin="round"
+											></path>{" "}
+										</g>
+									</svg>
+								</div>
+								<Link
+									className="hidden sm:block font-medium uppercase text-tiny tracking-wide font-tonnelier text-black hover:text-primary-default hover:border-b-2"
+									href={`tel:${globalContext?.themesOptionsContent?.phoneNumber}`}
+								>
+									{globalContext?.themesOptionsContent?.phoneNumber}
+								</Link>
+							</div>
+						</div>
 					</div>
 					<div className="w-full flex items-center justify-center gap-8 2xl:gap-12 xl:gap-24">
 						<div className="hidden lg:flex items-center justify-end">
