@@ -162,8 +162,8 @@ const ContactForm: FC<IContactForm> = ({title, paragraph}) => {
 					backgroundImage: `url("/svg/background/layered-waves-haikei-lightgrey-two.svg")`,
 				}}
 			>
-				<div className="md:container mx-auto flex flex-col lg:flex-row items-center ">
-					<div className="w-full lg:w-1/2 p-0 flex flex-col">
+				<div className="md:container mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-0">
+					<div className="w-full lg:w-1/2 p-0 flex flex-col items-center lg:items-baseline">
 						<motion.div
 							initial={initial}
 							variants={stagger}
@@ -380,7 +380,7 @@ const ContactForm: FC<IContactForm> = ({title, paragraph}) => {
 							variants={stagger}
 							whileInView="animate"
 							viewport={{once: true}}
-							className="mt-8"
+							className="mt-8 w-full"
 						>
 							<iframe
 								width="100%"
@@ -676,7 +676,7 @@ const ContactForm: FC<IContactForm> = ({title, paragraph}) => {
 										reCaptchaResult === null ||
 										reCaptchaResult === undefined
 									}
-									className="w-full text-white font-semibold tracking-wide disabled:bg-opacity-20 disabled:cursor-not-allowed"
+									className="w-fit mx-auto lg:mx-0 text-white font-semibold tracking-wide disabled:bg-opacity-20 disabled:cursor-not-allowed"
 									type="submit"
 								>
 									<span

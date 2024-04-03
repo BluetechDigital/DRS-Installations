@@ -83,9 +83,9 @@ const Navbar: FC = () => {
 															whileInView="animate"
 															viewport={{once: true}}
 															variants={arrayLoopStaggerChildren}
-															className="relative group py-0 px-8"
+															className="relative group py-0 px-2"
 														>
-															<div className="flex flex-row justify-center items-center gap-2 cursor-pointer">
+															<div className="w-full flex flex-row justify-center items-center gap-2 cursor-pointer">
 																<Link
 																	href={`${item?.node?.url}`}
 																	target={item?.node?.target}

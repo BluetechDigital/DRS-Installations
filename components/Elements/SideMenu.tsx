@@ -112,7 +112,7 @@ const SideMenu: FC<ISideMenu> = ({menuActive, setMenuActive}) => {
 																						keys < 1
 																							? "border-t-[1px] border-primary-default  border-opacity-50"
 																							: "border-t-[0px]"
-																					} hover:border-primary-default hover:bg-primary-default border-y-[1px] border-primary-default border-opacity-50 text-black`}
+																					} hover:border-primary-default hover:bg-primary-default border-y-[1px] border-primary-default border-opacity-50 text-black hover:text-white`}
 																				>
 																					<Link
 																						onClick={toggleMenu}
