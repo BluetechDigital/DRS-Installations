@@ -15,7 +15,7 @@ const TestimonialsTwo: FC<ITestimonialsTwo> = ({title, subtitle}) => {
 	const globalContext = useGlobalContext();
 	return (
 		<>
-			<div className={styles.testimonials + ` py-16 px-4 bg-white`}>
+			<div className={styles.testimonials + ` py-6 px-4 bg-white`}>
 				<div className="lg:container m-auto px-0">
 					<motion.div
 						initial={initial}
