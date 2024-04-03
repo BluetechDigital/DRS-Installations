@@ -31,18 +31,10 @@ const TitleContentImageCard: FC<ITitleContentImageCard> = ({
 					title && subtitle ? "pt-2 pb-10 lg:py-10" : "py-10"
 				} px-4 lg:items-baseline`}
 			>
-				<motion.h3
-					initial={initialTwo}
-					whileInView={fadeIn}
-					viewport={{once: true}}
-					className={
-						textTitle
-							? "lg:max-w-xl mb-2 font-semibold text-center lg:text-left text-black text-medium"
-							: "hidden"
-					}
-				>
-					{textTitle}
-				</motion.h3>
+				<Paragraph
+					content={textTitle}
+					tailwindStyling="mb-2 lg:max-w-xl leading-[1.5rem] font-semibold text-center lg:text-left text-black"
+				/>
 				<Paragraph
 					content={paragraph}
 					tailwindStyling="lg:max-w-xl leading-[1.5rem] text-base text-center lg:text-left text-black"
