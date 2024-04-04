@@ -67,7 +67,7 @@ const Navbar: FC = () => {
 								className="object-contain object-center w-[150px] h-[65px]"
 							/>
 						</Link>
-						<div className="flex flex-col items-baseline gap-2 py-2 ">
+						<div className="flex flex-row md:flex-col items-baseline gap-2 py-2 ">
 							<div
 								className={
 									globalContext?.themesOptionsContent?.email
@@ -94,7 +94,7 @@ const Navbar: FC = () => {
 									</svg>
 								</div>
 								<Link
-									className="hidden sm:block font-medium uppercase text-tiny tracking-wide font-tonnelier text-black hover:text-primary-default hover:border-b-2"
+									className="hidden md:block font-medium uppercase text-tiny tracking-wide font-tonnelier text-black hover:text-primary-default hover:border-b-2"
 									href={`mailto:${globalContext?.themesOptionsContent?.email}`}
 								>
 									{globalContext?.themesOptionsContent?.email}
@@ -133,7 +133,7 @@ const Navbar: FC = () => {
 									</svg>
 								</div>
 								<Link
-									className="hidden sm:block font-medium uppercase text-tiny tracking-wide font-tonnelier text-black hover:text-primary-default hover:border-b-2"
+									className="hidden md:block font-medium uppercase text-tiny tracking-wide font-tonnelier text-black hover:text-primary-default hover:border-b-2"
 									href={`tel:${globalContext?.themesOptionsContent?.phoneNumber}`}
 								>
 									{globalContext?.themesOptionsContent?.phoneNumber}
@@ -141,7 +141,7 @@ const Navbar: FC = () => {
 							</div>
 						</div>
 					</div>
-					<div className="w-full flex items-center justify-center gap-8 2xl:gap-12 xl:gap-24">
+					<div className="hidden w-full lg:flex items-center justify-center gap-8 2xl:gap-12 xl:gap-24">
 						<div className="hidden lg:flex items-center justify-end">
 							<div className="hidden xl:flex items-center gap-8">
 								<ul className="flex lg:items-center">
