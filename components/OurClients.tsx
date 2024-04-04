@@ -64,8 +64,8 @@ const OurClients: FC<IOurClients> = ({
 									<Fragment key={keys}>
 										<div>
 											<Image
-												alt={item?.image?.altText}
 												src={item?.image?.sourceUrl}
+												alt={`${item?.image?.altText}`}
 												width={item?.image?.mediaDetails?.width}
 												height={item?.image?.mediaDetails?.height}
 												className={

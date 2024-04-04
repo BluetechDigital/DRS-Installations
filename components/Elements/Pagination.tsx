@@ -66,8 +66,8 @@ const Pagination: FC<IPagination> = ({
 								{contentType === `Gallery` ? (
 									<>
 										<Image
-											alt={item?.altText}
 											src={item?.sourceUrl}
+											alt={`${item?.altText}`}
 											width={item?.mediaDetails?.width}
 											height={item?.mediaDetails?.height}
 											className={

@@ -46,7 +46,7 @@ const TestimonialsCard: FC<ITestimonialsCard> = ({
 								<div className="w-auto p-2">
 									<Image
 										className="bg-lightGreyTwo m-auto lg:mx-0 rounded-full w-12 h-12 object-cover object-center"
-										alt={image?.altText}
+										alt={`${image?.altText}`}
 										src={
 											image?.sourceUrl
 												? image?.sourceUrl

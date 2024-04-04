@@ -40,8 +40,8 @@ const SkillsExperiences: FC<ISkillsExperiences> = ({
 						</div>
 						<div className="w-full lg:w-1/2 p-4">
 							<Image
-								alt={image?.altText}
 								src={image?.sourceUrl}
+								alt={`${image?.altText}`}
 								width={image?.mediaDetails.width}
 								height={image?.mediaDetails.height}
 								className={`${
