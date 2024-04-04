@@ -64,8 +64,8 @@ const OurServicesCardTwo: FC<IOurServicesCardTwo> = ({
 							? "bg-lightGreyTwo mx-auto rounded-full w-44 h-44 mb-6 object-cover object-center"
 							: "hidden"
 					}
-					alt={image?.altText}
 					src={image?.sourceUrl}
+					alt={`${image?.altText}`}
 					width={image?.mediaDetails?.width}
 					height={image?.mediaDetails?.height}
 				/>
