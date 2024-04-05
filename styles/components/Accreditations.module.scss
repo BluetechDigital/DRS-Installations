@@ -1,0 +1,11 @@
+// Imports
+@import "../base/fonts";
+@import "../base/colors";
+
+.accreditations {
+	.paragraph {
+		span {
+			@apply text-primary-default;
+		}
+	}
+}

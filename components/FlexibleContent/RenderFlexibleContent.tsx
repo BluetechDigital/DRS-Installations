@@ -9,10 +9,12 @@ import Hero from "../Hero";
 import HeroTwo from "../HeroTwo";
 import Gallery from "../Gallery";
 import OurClients from "../OurClients";
+import VideoBlock from "../VideoBlock";
 import OurServices from "../OurServices";
 import ContactForm from "../ContactForm";
 import ErrorPage from "../Global/ErrorPage";
 import GallerySlider from "../GallerySlider";
+import Accreditations from "../Accreditations";
 import TitleParagraph from "../TitleParagraph";
 import Maintenance from "../Global/Maintenance";
 import TestimonialsTwo from "../TestimonialsTwo";
@@ -23,7 +25,6 @@ import SkillsExperiences from "../SkillsExperiences";
 import TestimonialsSlider from "../TestimonialsSlider";
 import OurServicesGridTwo from "../OurServicesGridTwo";
 import RequestAppointmentForm from "../RequestAppointmentForm";
-import VideoBlock from "../VideoBlock";
 
 const RenderFlexibleContent: FC = () => {
 	const content = usePageContext();
@@ -124,6 +125,17 @@ const RenderFlexibleContent: FC = () => {
 									paragraph={item?.paragraph}
 									displayImageFullWidth={item?.displayImageFullWidth}
 									skillsExperiencesGrid={item?.skillsExperiencesGrid}
+								/>
+							</>
+						) : item?.fieldGroupName === `${FlexibleContent}_Accreditations` &&
+						  item?.displaySection ? (
+							<>
+								<Accreditations
+									text={item?.text}
+									textTwo={item?.textTwo}
+									paragraph={item?.paragraph}
+									backgroundImage={item?.backgroundImage}
+									accreditationsGrid={item?.accreditationsGrid}
 								/>
 							</>
 						) : item?.fieldGroupName === `${FlexibleContent}_OurProjectsGrid` &&

@@ -164,6 +164,31 @@ export type IGallerySlider = {
 		}
 	];
 };
+export type IAccreditations = {
+	text: string;
+	textTwo: string;
+	paragraph: string;
+	backgroundImage: {
+		altText: string;
+		sourceUrl: string;
+		mediaDetails: {
+			width: number;
+			height: number;
+		};
+	};
+	accreditationsGrid: [
+		{
+			image: {
+				altText: string;
+				sourceUrl: string;
+				mediaDetails: {
+					width: number;
+					height: number;
+				};
+			};
+		}
+	];
+};
 export type ITitleParagraph = {
 	title: string;
 	paragraph: string;

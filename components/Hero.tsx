@@ -1,9 +1,11 @@
 // Imports
 import {
 	fadeIn,
+	initial,
 	initialTwo,
 	slideInRightFinish,
 	slideInRightInitial,
+	stagger,
 } from "../animations/animations";
 import {FC} from "react";
 import Link from "next/link";
@@ -31,8 +33,9 @@ const Hero: FC<IHero> = ({
 			<div className={styles.hero + " hero relative z-50 flex flex-col h-fit"}>
 				<div className="lg:relative pt-[65px] md:pt-[112px] lg:pt-[112px] flex flex-col lg:flex-row">
 					<motion.div
-						initial={initialTwo}
-						whileInView={fadeIn}
+						initial={initial}
+						variants={stagger}
+						whileInView="animate"
 						viewport={{once: true}}
 						className="w-full h-[75vh] flex flex-col items-center lg:items-baseline justify-center relative bg-center bg-no-repeat bg-cover"
 						style={{
@@ -46,12 +49,18 @@ const Hero: FC<IHero> = ({
 						}}
 					>
 						<div className="relative z-10 flex flex-col items-center lg:items-start gap-4 px-4 sm:px-8 lg:px-24">
-							<div className="max-w-sm lg:max-w-xl mx-auto lg:mx-0 ">
+							<motion.div
+								initial={initial}
+								variants={stagger}
+								whileInView="animate"
+								viewport={{once: true}}
+								className="max-w-sm lg:max-w-xl mx-auto lg:mx-0 "
+							>
 								<motion.h1
 									initial={initialTwo}
 									whileInView={fadeIn}
 									viewport={{once: true}}
-									className="text-center lg:text-left uppercase text-medium sm:text-2xl md:text-2xl lg:text-3xl xl:text-5xl  text-white font-semibold leading-tight xl:leading-[2.5rem]"
+									className="text-center lg:text-left uppercase text-medium sm:text-2xl md:text-2xl lg:text-3xl xl:text-5xl text-white font-semibold leading-tight xl:leading-[2.5rem]"
 								>
 									{title}
 								</motion.h1>
@@ -59,7 +68,13 @@ const Hero: FC<IHero> = ({
 									content={paragraph}
 									tailwindStyling="py-2 text-white leading-[1.5rem] md:leading-[1.75rem] text-base text-center lg:text-left"
 								/>
-								<div className="w-fit mx-auto lg:mx-0 py-3 px-4 bg-lightGreyTwo/30 grid sm:grid-cols-2 items-center justify-start gap-6">
+								<motion.div
+									initial={initial}
+									variants={stagger}
+									whileInView="animate"
+									viewport={{once: true}}
+									className="w-fit mx-auto lg:mx-0 py-3 px-4 bg-lightGreyTwo/30 grid sm:grid-cols-2 items-center justify-start gap-6"
+								>
 									<div className="flex items-center justify-start gap-3">
 										<Image
 											className="my-auto lg:mx-0 rounded-full w-10 h-10 object-cover object-center"
@@ -94,8 +109,8 @@ const Hero: FC<IHero> = ({
 											</h3>
 										</div>
 									</div>
-								</div>
-							</div>
+								</motion.div>
+							</motion.div>
 							<div className="flex flex-col md:flex-row gap-2 sm:gap-4 max-w-sm lg:max-w-4xl mx-auto lg:mx-0">
 								<Link
 									href={`${buttonLink?.url}`}
@@ -163,7 +178,7 @@ const Hero: FC<IHero> = ({
 								href={`${buttonLinkTwo?.url}`}
 								target={buttonLinkTwo?.target}
 								aria-label={`${buttonLinkTwo?.title}`}
-								className={`hidden xl:flex w-fit mx-auto mt-2 py-4 px-6 cursor-pointer bg-white hover:bg-accent-two transition-all ease-in-out duration-500 font-semibold  uppercase text-black hover:text-white text-base text-center font-tonnelier`}
+								className={`hidden xl:flex w-fit mx-auto mt-2 py-4 px-6 cursor-pointer rounded-full bg-white hover:bg-accent-two transition-all ease-in-out duration-500 font-semibold  uppercase text-black hover:text-white text-base text-center font-tonnelier`}
 							>
 								{buttonLinkTwo?.title}
 							</Link>
