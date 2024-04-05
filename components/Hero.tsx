@@ -12,8 +12,11 @@ const Hero: FC<IHero> = ({title, buttonLink, paragraph, backgroundImage}) => {
 	return (
 		<>
 			<div className="hero relative z-50 flex flex-col h-fit">
-				<div className="lg:relative pt-[65px] lg:pt-[85px] flex flex-col lg:flex-row">
-					<div
+				<div className="lg:relative pt-[65px] lg:pt-[112px] flex flex-col lg:flex-row">
+					<motion.div
+						initial={initialTwo}
+						whileInView={fadeIn}
+						viewport={{once: true}}
 						className="w-full h-[75vh] flex flex-col items-center lg:items-baseline justify-center relative bg-center bg-no-repeat bg-cover"
 						style={{
 							backgroundImage: `linear-gradient(
@@ -53,7 +56,7 @@ const Hero: FC<IHero> = ({title, buttonLink, paragraph, backgroundImage}) => {
 								</Link>
 							</div>
 						</div>
-					</div>
+					</motion.div>
 				</div>
 			</div>
 		</>
