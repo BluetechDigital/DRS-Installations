@@ -11,9 +11,6 @@ import {FC, Fragment} from "react";
 import {motion} from "framer-motion";
 import {useGlobalContext} from "@/context/global";
 
-// Styling
-import styles from "@/styles/components/Footer.module.scss";
-
 // Components
 import Paragraph from "@/components/Elements/Paragraph";
 
