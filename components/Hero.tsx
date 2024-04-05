@@ -49,7 +49,7 @@ const Hero: FC<IHero> = ({heroSlider}) => {
 																rgba(0, 0, 0, 0.20),
 																rgba(0, 0, 0, 0.20)
 															),url("${item?.backgroundImage?.sourceUrl}")`,
-														clipPath: `ellipse(100% 55% at 50% 45%)`,
+														// clipPath: `ellipse(100% 55% at 50% 45%)`,
 													}}
 												>
 													<div className="relative z-10 flex flex-col items-center lg:items-start gap-4 px-4 sm:px-8 lg:px-24">

@@ -26,7 +26,7 @@ const CTA: FC<ICTA> = ({title, paragraph, buttonLink, backgroundImage}) => {
 							<div className="flex items-center justify-center mb-6 gap-4">
 								<Link
 									href={`${globalContext?.themesOptionsContent?.facebookLink?.url}`}
-									aria-label={`${globalContext?.themesOptionsContent?.facebookLink?.title}`}
+									aria-label={`Facebook Social Media Link ${globalContext?.themesOptionsContent?.facebookLink?.title}`}
 									className={
 										globalContext?.themesOptionsContent?.facebookLink?.url
 											? "inline-block px-1 hover:opacity-70"
@@ -55,7 +55,7 @@ const CTA: FC<ICTA> = ({title, paragraph, buttonLink, backgroundImage}) => {
 								</Link>
 								<Link
 									href={`${globalContext?.themesOptionsContent?.twitterLink?.url}`}
-									aria-label={`${globalContext?.themesOptionsContent?.twitterLink?.title}`}
+									aria-label={`Twitter Social Media Link ${globalContext?.themesOptionsContent?.twitterLink?.title}`}
 									className={
 										globalContext?.themesOptionsContent?.twitterLink?.url
 											? "inline-block px-1 hover:opacity-70"
@@ -84,7 +84,7 @@ const CTA: FC<ICTA> = ({title, paragraph, buttonLink, backgroundImage}) => {
 								</Link>
 								<Link
 									href={`${globalContext?.themesOptionsContent?.linkedinLink?.url}`}
-									aria-label={`${globalContext?.themesOptionsContent?.linkedinLink?.title}`}
+									aria-label={`Linkedin Social Media Link ${globalContext?.themesOptionsContent?.linkedinLink?.title}`}
 									className={
 										globalContext?.themesOptionsContent?.linkedinLink?.url
 											? "inline-block px-1 hover:opacity-70"
@@ -124,7 +124,7 @@ const CTA: FC<ICTA> = ({title, paragraph, buttonLink, backgroundImage}) => {
 								</Link>
 								<Link
 									href={`${globalContext?.themesOptionsContent?.instagramLink?.url}`}
-									aria-label={`${globalContext?.themesOptionsContent?.instagramLink?.title}`}
+									aria-label={`Instagram Social Media Link ${globalContext?.themesOptionsContent?.instagramLink?.title}`}
 									className={
 										globalContext?.themesOptionsContent?.instagramLink?.url
 											? "inline-block px-1 hover:opacity-70"
