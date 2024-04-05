@@ -88,10 +88,10 @@ const TitleContentImage: FC<ITitleContentImage> = ({
 					</motion.h3>
 				</div>
 				<div
-					className={`relative z-10 gap-4 lg:gap-x-16 p-0 mx-auto items-center justify-center flex ${
+					className={`relative z-10 gap-4 lg:gap-x-16 p-0 mx-auto items-center justify-center flex flex-col ${
 						displayContentOption == "Left"
-							? "flex-col-reverse lg:flex-row-reverse"
-							: "flex-col lg:flex-row"
+							? "lg:flex-row-reverse"
+							: "lg:flex-row"
 					}`}
 				>
 					<motion.div
