@@ -52,7 +52,7 @@ const Hero: FC<IHero> = ({heroSlider}) => {
 														clipPath: `ellipse(100% 55% at 50% 45%)`,
 													}}
 												>
-													<div className="relative z-10 flex flex-col items-center lg:items-start gap-4 px-8 px-4 sm:px-8 lg:px-24">
+													<div className="relative z-10 flex flex-col items-center lg:items-start gap-4 px-4 sm:px-8 lg:px-24">
 														<div className="max-w-sm lg:max-w-xl mx-auto lg:mx-0 ">
 															<motion.h1
 																initial={initialTwo}
@@ -71,6 +71,7 @@ const Hero: FC<IHero> = ({heroSlider}) => {
 															<Link
 																href={`${item?.buttonLink?.url}`}
 																target={item?.buttonLink?.target}
+																aria-label={`${item?.buttonLink?.title}`}
 																className={`hidden w-fit mx-auto lg:mx-0 py-4 px-6 cursor-pointer rounded-lg bg-primary-default hover:bg-primary-dark transition-all ease-in-out duration-500 font-semibold tracking-[0.10rem] uppercase text-lightGrey text-base text-center font-tonnelier ${
 																	item?.buttonLink?.url
 																		? "lg:block"

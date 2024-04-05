@@ -70,6 +70,7 @@ const GallerySlider: FC<IGallerySlider> = ({gallerySlider}) => {
 														<Link
 															href={`${item?.buttonLink?.url}`}
 															target={item?.buttonLink?.target}
+															aria-label={`${item?.buttonLink?.title}`}
 															className={`${
 																item?.buttonLink?.url
 																	? "block mt-8 mx-auto"
