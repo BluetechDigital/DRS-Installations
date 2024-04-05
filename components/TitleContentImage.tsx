@@ -88,83 +88,53 @@ const TitleContentImage: FC<ITitleContentImage> = ({
 					</motion.h3>
 				</div>
 				<div
-					className={`relative z-10 flex ${
-						displayContentOption == "Right" ? "flex-col-reverse" : "flex-col"
-					} gap-4 lg:gap-x-16 p-0 mx-auto items-center justify-center lg:flex-row`}
+					className={`relative z-10 gap-4 lg:gap-x-16 p-0 mx-auto items-center justify-center flex ${
+						displayContentOption == "Left"
+							? "flex-col-reverse lg:flex-row-reverse"
+							: "flex-col lg:flex-row"
+					}`}
 				>
 					<motion.div
 						viewport={{once: true}}
-						initial={slideInLeftInitial}
+						initial={
+							displayContentOption == "Left"
+								? slideInRightInitial
+								: slideInLeftInitial
+						}
 						whileInView={slideInRightFinish}
-						className={`${
-							displayContentOption == "Right"
-								? "bg-center bg-no-repeat bg-cover w-full lg:w-1/2 h-[350px] lg:h-[500px] lg:rounded-r-2xl"
-								: "hidden"
+						className={`bg-center bg-no-repeat bg-cover w-full lg:w-1/2 h-[350px] lg:h-[500px] ${
+							displayContentOption == "Left"
+								? "lg:rounded-l-2xl"
+								: "lg:rounded-r-2xl"
 						}`}
 						style={{
 							backgroundImage: `url(${image?.sourceUrl})`,
 						}}
 					/>
-
-					{displayContentOption == "Left" ? (
-						<>
-							<motion.div
-								viewport={{once: true}}
-								initial={slideInLeftInitial}
-								whileInView={slideInRightFinish}
-								className={`${
-									displayContentOption == "Left"
-										? "lg:items-end"
-										: "lg:items-start"
-								} lg:w-1/2 h-full xl:pl-28 2xl:pl-48`}
-							>
-								<TitleContentImageCard
-									title={title}
-									subtitle={subtitle}
-									textTitle={textTitle}
-									paragraph={paragraph}
-									buttonLink={buttonLink}
-									bulletPoints={bulletPoints}
-								/>
-							</motion.div>
-						</>
-					) : (
-						<>
-							<motion.div
-								viewport={{once: true}}
-								initial={slideInRightInitial}
-								whileInView={slideInRightFinish}
-								className={`${
-									displayContentOption == "Right"
-										? "lg:items-end"
-										: "lg:items-start"
-								} lg:w-1/2 h-full xl:pr-28 2xl:pr-32`}
-							>
-								<TitleContentImageCard
-									title={title}
-									subtitle={subtitle}
-									textTitle={textTitle}
-									paragraph={paragraph}
-									buttonLink={buttonLink}
-									bulletPoints={bulletPoints}
-								/>
-							</motion.div>
-						</>
-					)}
 
 					<motion.div
 						viewport={{once: true}}
-						initial={slideInRightInitial}
+						initial={
+							displayContentOption == "Left"
+								? slideInLeftInitial
+								: slideInRightInitial
+						}
 						whileInView={slideInRightFinish}
 						className={`${
 							displayContentOption == "Left"
-								? "bg-center bg-no-repeat bg-cover w-full lg:w-1/2 h-[350px] lg:h-[500px] lg:rounded-l-2xl"
-								: "hidden"
-						}`}
-						style={{
-							backgroundImage: `url(${image?.sourceUrl})`,
-						}}
-					/>
+								? "xl:pl-28 2xl:pl-48 lg:items-end"
+								: "xl:pr-28 2xl:pr-32 lg:items-start"
+						} lg:w-1/2 h-full`}
+					>
+						<TitleContentImageCard
+							title={title}
+							subtitle={subtitle}
+							textTitle={textTitle}
+							paragraph={paragraph}
+							buttonLink={buttonLink}
+							bulletPoints={bulletPoints}
+						/>
+					</motion.div>
 				</div>
 			</div>
 			<Image
