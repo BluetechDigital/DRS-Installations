@@ -88,6 +88,8 @@ const Footer: FC = () => {
 													>
 														<Link
 															href={`${item?.node?.url}`}
+															target={`${item?.node?.target}`}
+															aria-label={`${item?.node?.label}`}
 															className="text-black transition-all duration-200 ease-in-out text-base hover:text-primary-default hover:border-b-2"
 														>
 															{item?.node?.label}
@@ -140,6 +142,7 @@ const Footer: FC = () => {
 											<Link
 												className="font-medium text-base tracking-wide text-black lg:text-lightGreyTwo hover:text-primary-two lg:hover:text-primary-darkerTwo hover:border-b-2"
 												href={`mailto:${globalContext?.themesOptionsContent?.email}`}
+												aria-label={`${globalContext?.themesOptionsContent?.email}`}
 											>
 												{globalContext?.themesOptionsContent?.email}
 											</Link>
@@ -210,6 +213,7 @@ const Footer: FC = () => {
 											<Link
 												className="font-medium text-base tracking-wide text-black lg:text-lightGreyTwo hover:text-primary-two lg:hover:text-primary-darkerTwo hover:border-b-2"
 												href={`tel:${globalContext?.themesOptionsContent?.phoneNumber}`}
+												aria-label={`${globalContext?.themesOptionsContent?.phoneNumber}`}
 											>
 												{globalContext?.themesOptionsContent?.phoneNumber}
 											</Link>
@@ -257,7 +261,7 @@ const Footer: FC = () => {
 									<div className="hidden lg:flex items-center justify-center my-4 gap-4 text-center">
 										<Link
 											href={`${globalContext?.themesOptionsContent?.facebookLink?.url}`}
-											aria-label={`${globalContext?.themesOptionsContent?.facebookLink?.title}`}
+											aria-label={`Facebook Social Media Link ${globalContext?.themesOptionsContent?.facebookLink?.title}`}
 											target={
 												globalContext?.themesOptionsContent?.facebookLink
 													?.target
@@ -290,7 +294,7 @@ const Footer: FC = () => {
 										</Link>
 										<Link
 											href={`${globalContext?.themesOptionsContent?.twitterLink?.url}`}
-											aria-label={`${globalContext?.themesOptionsContent?.twitterLink?.title}`}
+											aria-label={`Twitter Social Media Link ${globalContext?.themesOptionsContent?.twitterLink?.title}`}
 											target={
 												globalContext?.themesOptionsContent?.twitterLink?.target
 											}
@@ -322,7 +326,7 @@ const Footer: FC = () => {
 										</Link>
 										<Link
 											href={`${globalContext?.themesOptionsContent?.linkedinLink?.url}`}
-											aria-label={`${globalContext?.themesOptionsContent?.linkedinLink?.title}`}
+											aria-label={`Linkedin Social Media Link ${globalContext?.themesOptionsContent?.linkedinLink?.title}`}
 											target={
 												globalContext?.themesOptionsContent?.linkedinLink
 													?.target
@@ -366,7 +370,7 @@ const Footer: FC = () => {
 										</Link>
 										<Link
 											href={`${globalContext?.themesOptionsContent?.instagramLink?.url}`}
-											aria-label={`${globalContext?.themesOptionsContent?.instagramLink?.title}`}
+											aria-label={`Instagram Social Media Link ${globalContext?.themesOptionsContent?.instagramLink?.title}`}
 											target={
 												globalContext?.themesOptionsContent?.instagramLink
 													?.target
@@ -413,7 +417,7 @@ const Footer: FC = () => {
 									<div className="flex lg:hidden items-center justify-center my-4 gap-4 text-center">
 										<Link
 											href={`${globalContext?.themesOptionsContent?.facebookLink?.url}`}
-											aria-label={`${globalContext?.themesOptionsContent?.facebookLink?.title}`}
+											aria-label={`Facebook Social Media Link ${globalContext?.themesOptionsContent?.facebookLink?.title}`}
 											target={
 												globalContext?.themesOptionsContent?.facebookLink
 													?.target
@@ -446,7 +450,7 @@ const Footer: FC = () => {
 										</Link>
 										<Link
 											href={`${globalContext?.themesOptionsContent?.twitterLink?.url}`}
-											aria-label={`${globalContext?.themesOptionsContent?.twitterLink?.title}`}
+											aria-label={`Twitter Social Media Link ${globalContext?.themesOptionsContent?.twitterLink?.title}`}
 											target={
 												globalContext?.themesOptionsContent?.twitterLink?.target
 											}
@@ -478,7 +482,7 @@ const Footer: FC = () => {
 										</Link>
 										<Link
 											href={`${globalContext?.themesOptionsContent?.linkedinLink?.url}`}
-											aria-label={`${globalContext?.themesOptionsContent?.linkedinLink?.title}`}
+											aria-label={`Linkedin Social Media Link ${globalContext?.themesOptionsContent?.linkedinLink?.title}`}
 											target={
 												globalContext?.themesOptionsContent?.linkedinLink
 													?.target
@@ -522,7 +526,7 @@ const Footer: FC = () => {
 										</Link>
 										<Link
 											href={`${globalContext?.themesOptionsContent?.instagramLink?.url}`}
-											aria-label={`${globalContext?.themesOptionsContent?.instagramLink?.title}`}
+											aria-label={`Instagram Social Media Link ${globalContext?.themesOptionsContent?.instagramLink?.title}`}
 											target={
 												globalContext?.themesOptionsContent?.instagramLink
 													?.target
@@ -588,6 +592,7 @@ const Footer: FC = () => {
 								className="lg:inline-block items-center justify-center mt-2 px-1 text-black hover:text-primary-default hover:border-b-2"
 								href={`https://bluetech-digital.co.uk`}
 								target="_blank"
+								aria-label="Bluetech Digital Ltd Website Link"
 							>
 								<span className="flex items-center justify-center lg:justify-left gap-2">
 									<Image
@@ -619,6 +624,8 @@ const Footer: FC = () => {
 											>
 												<Link
 													href={`${item?.node?.url}`}
+													target={`${item?.node?.target}`}
+													aria-label={`${item?.node?.label}`}
 													className="text-black lg:text-lightGreyTwo transition-all duration-200 ease-in-out text-tiny hover:text-primary-darkerTwo hover:border-b-2"
 												>
 													{item?.node?.label}

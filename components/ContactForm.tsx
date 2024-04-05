@@ -227,6 +227,7 @@ const ContactForm: FC<IContactForm> = ({title, paragraph}) => {
 								<Link
 									className="flex items-center gap-3 text-tiny sm:text-base text-center sm:text-left"
 									href={`tel:${globalContext?.themesOptionsContent?.phoneNumber}`}
+									aria-label={`${globalContext?.themesOptionsContent?.phoneNumber}`}
 								>
 									<span className="font-semibold uppercase font-tonnelier">
 										Office:{" "}
@@ -306,6 +307,7 @@ const ContactForm: FC<IContactForm> = ({title, paragraph}) => {
 											: "hidden"
 									}
 									href={`mailto:${globalContext?.themesOptionsContent?.email}`}
+									aria-label={`${globalContext?.themesOptionsContent?.email}`}
 								>
 									{globalContext?.themesOptionsContent?.email}
 								</Link>

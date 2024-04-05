@@ -106,7 +106,11 @@ const SideMenu: FC<ISideMenu> = ({menuActive, setMenuActive}) => {
 																globalContext?.servicesSublinks?.map(
 																	(item: any, keys: number) => (
 																		<Fragment key={keys}>
-																			<Link href={`${item?.node?.url}`}>
+																			<Link
+																				href={`${item?.node?.url}`}
+																				target={`${item?.node?.target}`}
+																				aria-label={`${item?.node?.label}`}
+																			>
 																				<li
 																					className={`${
 																						keys < 1
@@ -117,6 +121,8 @@ const SideMenu: FC<ISideMenu> = ({menuActive, setMenuActive}) => {
 																					<Link
 																						onClick={toggleMenu}
 																						href={`${item?.node?.url}`}
+																						target={`${item?.node?.target}`}
+																						aria-label={`${item?.node?.label}`}
 																						className="block p-4 text-tiny"
 																					>
 																						{item?.node?.label}
@@ -138,6 +144,8 @@ const SideMenu: FC<ISideMenu> = ({menuActive, setMenuActive}) => {
 												<Link
 													onClick={toggleMenu}
 													href={`${item?.node?.url}`}
+													target={`${item?.node?.target}`}
+													aria-label={`${item?.node?.label}`}
 													className="block py-4 leading-snug font-tonnelier uppercase text-tiny text-black hover:text-primary-two"
 												>
 													{item?.node?.label}
@@ -165,7 +173,7 @@ const SideMenu: FC<ISideMenu> = ({menuActive, setMenuActive}) => {
 							<div className="flex items-center justify-center gap-4 text-center">
 								<Link
 									href={`${globalContext?.themesOptionsContent?.facebookLink?.url}`}
-									aria-label={`${globalContext?.themesOptionsContent?.facebookLink?.title}`}
+									aria-label={`Facebook Social Media Link ${globalContext?.themesOptionsContent?.facebookLink?.title}`}
 									className={
 										globalContext?.themesOptionsContent?.facebookLink?.url
 											? "inline-block px-1 hover:opacity-70"
@@ -194,7 +202,7 @@ const SideMenu: FC<ISideMenu> = ({menuActive, setMenuActive}) => {
 								</Link>
 								<Link
 									href={`${globalContext?.themesOptionsContent?.twitterLink?.url}`}
-									aria-label={`${globalContext?.themesOptionsContent?.twitterLink?.title}`}
+									aria-label={`Twitter Social Media Link ${globalContext?.themesOptionsContent?.twitterLink?.title}`}
 									className={
 										globalContext?.themesOptionsContent?.twitterLink?.url
 											? "inline-block px-1 hover:opacity-70"
@@ -223,7 +231,7 @@ const SideMenu: FC<ISideMenu> = ({menuActive, setMenuActive}) => {
 								</Link>
 								<Link
 									href={`${globalContext?.themesOptionsContent?.linkedinLink?.url}`}
-									aria-label={`${globalContext?.themesOptionsContent?.linkedinLink?.title}`}
+									aria-label={`Linkedin Social Media Link ${globalContext?.themesOptionsContent?.linkedinLink?.title}`}
 									className={
 										globalContext?.themesOptionsContent?.linkedinLink?.url
 											? "inline-block px-1 hover:opacity-70"
@@ -263,7 +271,7 @@ const SideMenu: FC<ISideMenu> = ({menuActive, setMenuActive}) => {
 								</Link>
 								<Link
 									href={`${globalContext?.themesOptionsContent?.instagramLink?.url}`}
-									aria-label={`${globalContext?.themesOptionsContent?.instagramLink?.title}`}
+									aria-label={`Instagram Social Media Link ${globalContext?.themesOptionsContent?.instagramLink?.title}`}
 									className={
 										globalContext?.themesOptionsContent?.instagramLink?.url
 											? "inline-block px-1 hover:opacity-70"
@@ -334,6 +342,7 @@ const SideMenu: FC<ISideMenu> = ({menuActive, setMenuActive}) => {
 									<Link
 										className="font-medium text-tiny tracking-wide text-black hover:text-primary-default"
 										href={`mailto:${globalContext?.themesOptionsContent?.email}`}
+										aria-label={`${globalContext?.themesOptionsContent?.email}`}
 									>
 										{globalContext?.themesOptionsContent?.email}
 									</Link>
@@ -410,6 +419,7 @@ const SideMenu: FC<ISideMenu> = ({menuActive, setMenuActive}) => {
 									<Link
 										className="font-medium text-tiny tracking-wide text-black hover:text-primary-two"
 										href={`tel:${globalContext?.themesOptionsContent?.phoneNumber}`}
+										aria-label={`${globalContext?.themesOptionsContent?.phoneNumber}`}
 									>
 										{globalContext?.themesOptionsContent?.phoneNumber}
 									</Link>

@@ -96,6 +96,7 @@ const Navbar: FC = () => {
 								<Link
 									className="hidden md:block font-medium uppercase text-tiny tracking-wide font-tonnelier text-black hover:text-primary-default hover:border-b-2"
 									href={`mailto:${globalContext?.themesOptionsContent?.email}`}
+									aria-label={`${globalContext?.themesOptionsContent?.email}`}
 								>
 									{globalContext?.themesOptionsContent?.email}
 								</Link>
@@ -135,6 +136,7 @@ const Navbar: FC = () => {
 								<Link
 									className="hidden md:block font-medium uppercase text-tiny tracking-wide font-tonnelier text-black hover:text-primary-default hover:border-b-2"
 									href={`tel:${globalContext?.themesOptionsContent?.phoneNumber}`}
+									aria-label={`${globalContext?.themesOptionsContent?.phoneNumber}`}
 								>
 									{globalContext?.themesOptionsContent?.phoneNumber}
 								</Link>
@@ -161,7 +163,8 @@ const Navbar: FC = () => {
 															<div className="w-full flex flex-row justify-center items-center gap-2 cursor-pointer">
 																<Link
 																	href={`${item?.node?.url}`}
-																	target={item?.node?.target}
+																	target={`${item?.node?.target}`}
+																	aria-label={`${item?.node?.label}`}
 																	onClick={resetNavbarStyling}
 																>
 																	<h3 className="font-semibold text-pureBlack group-hover:text-primary-two text-base text-center uppercase">
@@ -210,6 +213,8 @@ const Navbar: FC = () => {
 																								>
 																									<Link
 																										href={`${item?.node?.url}`}
+																										target={`${item?.node?.target}`}
+																										aria-label={`${item?.node?.label}`}
 																										className={` ${
 																											ourServicesSublinksOpen
 																												? "w-full hover:bg-primary-default text-center text-black hover:text-white"
@@ -241,7 +246,8 @@ const Navbar: FC = () => {
 														>
 															<Link
 																href={`${item?.node?.url}`}
-																target={item?.node?.target}
+																target={`${item?.node?.target}`}
+																aria-label={`${item?.node?.label}`}
 															>
 																<h3 className="py-0 px-4 font-semibold text-pureBlack hover:text-primary-two text-base text-center uppercase">
 																	{item?.node?.label}
@@ -268,7 +274,7 @@ const Navbar: FC = () => {
 						<Link
 							href="/contact"
 							target=""
-							className="hidden xl:flex w-fit py-4 ml-6 pl-4 pr-10 cursor-pointer transition-all ease-in-out duration-500 font-semibold font-tonnelier uppercase pl-4 text-lightGrey text-base text-center"
+							className="hidden xl:flex w-fit py-4 ml-6 pr-10 cursor-pointer transition-all ease-in-out duration-500 font-semibold font-tonnelier uppercase pl-4 text-lightGrey text-base text-center"
 						>
 							Get a quote today
 						</Link>
