@@ -23,9 +23,7 @@ const Footer: FC = () => {
 	return (
 		<>
 			<footer
-				className={
-					styles.footer + " p-0 overflow-hidden bg-cover bg-center bg-no-repeat"
-				}
+				className="footer p-0 overflow-hidden bg-cover bg-center bg-no-repeat"
 				style={{
 					backgroundImage: `url(/svg/background/layered-waves-haikei-lightgrey-blue-right.svg)`,
 				}}
