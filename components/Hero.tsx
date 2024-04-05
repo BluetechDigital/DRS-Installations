@@ -5,27 +5,24 @@ import {motion} from "framer-motion";
 import {IHero} from "@/types/components/index";
 import {fadeIn, initialTwo} from "../animations/animations";
 
-// Styling
-import styles from "../styles/components/Hero.module.scss";
-
 // Components
 import Paragraph from "./Elements/Paragraph";
 
 const Hero: FC<IHero> = ({title, buttonLink, paragraph, backgroundImage}) => {
 	return (
 		<>
-			<div className={styles.hero + " relative z-50 flex flex-col h-fit"}>
+			<div className="hero relative z-50 flex flex-col h-fit">
 				<div className="lg:relative pt-[65px] lg:pt-[85px] flex flex-col lg:flex-row">
 					<div
-						className="pt-24 pb-44 sm:pb-20 w-full h-[75vh] sm:h-[75vh] lg:h-[75vh] flex flex-col items-center lg:items-baseline justify-center relative bg-center bg-no-repeat bg-cover"
+						className="w-full h-[75vh] flex flex-col items-center lg:items-baseline justify-center relative bg-center bg-no-repeat bg-cover"
 						style={{
 							backgroundImage: `linear-gradient(
-												0deg,
-												rgb(0, 0, 0, 0.20),
-												rgba(0, 0, 0, 0.20),
-												rgba(0, 0, 0, 0.20)
-											),url("${backgroundImage?.sourceUrl}")`,
-							// clipPath: `ellipse(100% 55% at 50% 45%)`,
+								0deg,
+								rgb(0, 0, 0, 0.20),
+								rgba(0, 0, 0, 0.20),
+								rgba(0, 0, 0, 0.20)
+							),url("${backgroundImage?.sourceUrl}")`,
+							clipPath: `ellipse(100% 55% at 50% 45%)`,
 						}}
 					>
 						<div className="relative z-10 flex flex-col items-center lg:items-start gap-4 px-4 sm:px-8 lg:px-24">

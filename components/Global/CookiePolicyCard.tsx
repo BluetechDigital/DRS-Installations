@@ -34,7 +34,7 @@ const CookiePolicyCard: FC = () => {
 					variants={stagger}
 					whileInView="animate"
 					viewport={{once: true}}
-					className="px-6 py-4 mb-3 mr-3 bg-white border-solid border-l-[5px] border-b-[5px] border-lightGrey"
+					className="px-6 py-4 mb-3 bg-white border-solid border-l-[5px] border-b-[5px] border-lightGrey"
 					style={{
 						boxShadow: "0px 30px 2px -25px rgba(0,0,0,0.1)",
 					}}

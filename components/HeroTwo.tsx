@@ -4,16 +4,13 @@ import {FC} from "react";
 import {motion} from "framer-motion";
 import {IHeroTwo} from "@/types/components/index";
 
-// Styling
-import styles from "../styles/components/Hero.module.scss";
-
 // Components
 import Paragraph from "./Elements/Paragraph";
 
 const HeroTwo: FC<IHeroTwo> = ({title, paragraph, backgroundImage}) => {
 	return (
 		<>
-			<div className={styles.heroTwo + ` relative z-50 w-full p-0 pt-[65px]`}>
+			<div className="relative z-50 w-full p-0 pt-[65px]">
 				<div
 					className="pt-24 pb-20 w-full h-[35vh] flex flex-col items-center lg:items-baseline justify-center relative bg-center bg-no-repeat bg-cover"
 					style={{
