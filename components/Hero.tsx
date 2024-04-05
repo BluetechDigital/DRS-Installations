@@ -1,19 +1,33 @@
 // Imports
+import {
+	fadeIn,
+	initialTwo,
+	slideInRightFinish,
+	slideInRightInitial,
+} from "../animations/animations";
 import {FC} from "react";
 import Link from "next/link";
 import Image from "next/image";
 import {motion} from "framer-motion";
 import {IHero} from "@/types/components/index";
-import {fadeIn, initialTwo} from "../animations/animations";
+
+// Styling
+import styles from "../styles/components/Hero.module.scss";
 
 // Components
 import Paragraph from "./Elements/Paragraph";
 import RenderStars from "./Elements/RenderStars";
 
-const Hero: FC<IHero> = ({title, buttonLink, paragraph, backgroundImage}) => {
+const Hero: FC<IHero> = ({
+	title,
+	paragraph,
+	buttonLink,
+	ctaParagraph,
+	backgroundImage,
+}) => {
 	return (
 		<>
-			<div className="hero relative z-50 flex flex-col h-fit">
+			<div className={styles.hero + " hero relative z-50 flex flex-col h-fit"}>
 				<div className="lg:relative pt-[65px] lg:pt-[112px] flex flex-col lg:flex-row">
 					<motion.div
 						initial={initialTwo}
@@ -92,6 +106,70 @@ const Hero: FC<IHero> = ({title, buttonLink, paragraph, backgroundImage}) => {
 								</Link>
 							</div>
 						</div>
+						<motion.div
+							viewport={{once: true}}
+							initial={slideInRightInitial}
+							whileInView={slideInRightFinish}
+							className="w-full lg:w-fit lg:max-w-md py-2 px-4 lg:py-6 lg:px-8 bg-primary-darkerTwo text-left xl:text-center absolute right-0 top-0"
+							style={{
+								backgroundImage: `url(/svg/background/layered-waves-haikei-blue-right.svg)`,
+							}}
+						>
+							<Link
+								href="/#requestAppointmentForm"
+								target=" "
+								aria-label={`${ctaParagraph} Form button link`}
+								className="flex items-center gap-4 font-semibold font-tonnelier uppercase text-white text-tiny md:text-base lg:text-lg"
+							>
+								<span className="w-full">{ctaParagraph}</span>
+								<span className="ctaSVG flex xl:hidden items-center justify-center h-12 w-16 lg:h-16 rounded-full bg-white hover:bg-primary-default transition-all duration-200 ease-in-out sm:mr-1">
+									<svg
+										version="1.1"
+										fill="none"
+										viewBox="0 0 32 32"
+										className="w-8 h-8 rotate-[-45deg]"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+										<g
+											id="SVGRepo_tracerCarrier"
+											strokeLinecap="round"
+											strokeLinejoin="round"
+										></g>
+										<g id="SVGRepo_iconCarrier">
+											<title>arrow-right-circle</title>
+											<desc>Created with Sketch Beta.</desc> <defs> </defs>
+											<g
+												id="Page-1"
+												stroke="none"
+												strokeWidth="1"
+												fill="none"
+												fillRule="evenodd"
+											>
+												<g
+													id="Icon-Set"
+													transform="translate(-308.000000, -1087.000000)"
+													fill="#11acff"
+												>
+													<path
+														d="M324,1117 C316.268,1117 310,1110.73 310,1103 C310,1095.27 316.268,1089 324,1089 C331.732,1089 338,1095.27 338,1103 C338,1110.73 331.732,1117 324,1117 L324,1117 Z M324,1087 C315.163,1087 308,1094.16 308,1103 C308,1111.84 315.163,1119 324,1119 C332.837,1119 340,1111.84 340,1103 C340,1094.16 332.837,1087 324,1087 L324,1087 Z M330.535,1102.12 L324.879,1096.46 C324.488,1096.07 323.855,1096.07 323.465,1096.46 C323.074,1096.86 323.074,1097.49 323.465,1097.88 L327.586,1102 L317,1102 C316.447,1102 316,1102.45 316,1103 C316,1103.55 316.447,1104 317,1104 L327.586,1104 L323.465,1108.12 C323.074,1108.51 323.074,1109.15 323.465,1109.54 C323.855,1109.93 324.488,1109.93 324.879,1109.54 L330.535,1103.88 C330.775,1103.64 330.85,1103.31 330.795,1103 C330.85,1102.69 330.775,1102.36 330.535,1102.12 L330.535,1102.12 Z"
+														id="arrow-right-circle"
+													></path>
+												</g>
+											</g>
+										</g>
+									</svg>
+								</span>
+							</Link>
+							<Link
+								href={`${buttonLink?.url}`}
+								target={buttonLink?.target}
+								aria-label={`${buttonLink?.title}`}
+								className={`hidden xl:flex w-fit mx-auto mt-2 py-4 px-6 cursor-pointer rounded-lg bg-primary-three hover:bg-primary-dark transition-all ease-in-out duration-500 font-semibold tracking-[0.10rem] uppercase text-lightGrey text-base text-center font-tonnelier`}
+							>
+								{buttonLink?.title}
+							</Link>
+						</motion.div>
 					</motion.div>
 				</div>
 			</div>
