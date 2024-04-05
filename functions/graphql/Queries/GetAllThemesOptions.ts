@@ -21,10 +21,26 @@ export const getThemesOptionsContent = async () => {
 								phoneNumberTwo
 								phoneNumberThree
 								copyrightText
-								facebookLink
-								twitterLink
-								linkedinLink
-								instagramLink
+								facebookLink {
+									url
+									title
+									target
+								}
+								twitterLink {
+									url
+									title
+									target
+								}
+								linkedinLink {
+									url
+									title
+									target
+								}
+								instagramLink {
+									url
+									title
+									target
+								}
 								displayNoticeBanner
 								noticeBannerTextarea
 							}

@@ -136,10 +136,26 @@ export type IThemesOptionsContent = {
 	phoneNumberTwo: string;
 	phoneNumberThree: string;
 	copyrightText: string;
-	facebookLink: string;
-	twitterLink: string;
-	linkedinLink: string;
-	instagramLink: string;
+	facebookLink: {
+		url: string;
+		title: string;
+		target: string;
+	};
+	twitterLink: {
+		url: string;
+		title: string;
+		target: string;
+	};
+	linkedinLink: {
+		url: string;
+		title: string;
+		target: string;
+	};
+	instagramLink: {
+		url: string;
+		title: string;
+		target: string;
+	};
 	displayNoticeBanner: boolean;
 	noticeBannerTextarea: string;
 };
