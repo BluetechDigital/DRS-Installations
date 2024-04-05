@@ -1,0 +1,13 @@
+// Imports
+@import "../base/fonts";
+@import "../base/colors";
+
+.hero {
+	.ctaSVG:hover {
+		svg {
+			g {
+				fill: $white !important;
+			}
+		}
+	}
+}

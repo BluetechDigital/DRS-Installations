@@ -12,6 +12,7 @@ export type ICTA = {
 export type IHero = {
 	title: string;
 	paragraph: string;
+	ctaParagraph: string;
 	buttonLink: {
 		url: string;
 		title: string;

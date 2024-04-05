@@ -58,7 +58,7 @@ const Navbar: FC = () => {
 				<NoticeInfoBanner />
 				<NavbarContactInfoBanner />
 				<div className="flex p-0 bg-white">
-					<div className="w-full flex items-center gap-4 container mx-auto px-4 bg-white">
+					<div className="w-full flex items-center gap-4 container lg:mx-auto px-4 bg-white">
 						<Link href="/">
 							<Image
 								priority
@@ -123,7 +123,7 @@ const Navbar: FC = () => {
 							</Link>
 						</div>
 					</div>
-					<div className="hidden w-full lg:min-w-[45%] 2xl:min-w-[40%] lg:flex items-center justify-center gap-8 2xl:gap-12 xl:gap-24">
+					<div className="hidden w-full lg:min-w-[45%] 2xl:min-w-[40%] lg:flex items-center justify-end gap-8 2xl:gap-12 xl:gap-24">
 						<div className="hidden lg:flex items-center justify-end">
 							<div className="hidden xl:flex items-center gap-8">
 								<ul className="flex lg:items-center">
@@ -143,7 +143,11 @@ const Navbar: FC = () => {
 															<div className="w-full flex flex-row justify-center items-center gap-2 cursor-pointer">
 																<Link
 																	href={`${item?.node?.url}`}
-																	target={`${item?.node?.target}`}
+																	target={`${
+																		item?.node?.target
+																			? item?.node?.target
+																			: "_self"
+																	}`}
 																	aria-label={`${item?.node?.label}`}
 																	onClick={resetNavbarStyling}
 																>
@@ -226,7 +230,11 @@ const Navbar: FC = () => {
 														>
 															<Link
 																href={`${item?.node?.url}`}
-																target={`${item?.node?.target}`}
+																target={`${
+																	item?.node?.target
+																		? item?.node?.target
+																		: "_self"
+																}`}
 																aria-label={`${item?.node?.label}`}
 															>
 																<h3 className="py-0 px-4 font-semibold text-pureBlack hover:text-primary-two text-base text-center uppercase">
@@ -244,20 +252,6 @@ const Navbar: FC = () => {
 								</ul>
 							</div>
 						</div>
-					</div>
-					<div
-						className="w-full px-4 flex items-center justify-end bg-cover bg-center bg-no-repeat hover:opacity-95"
-						style={{
-							backgroundImage: `url(/svg/background/layered-waves-haikei-blue-right.svg)`,
-						}}
-					>
-						<Link
-							href="/contact"
-							target=""
-							className="hidden xl:flex w-fit py-4 ml-6 pr-10 cursor-pointer transition-all ease-in-out duration-500 font-semibold font-tonnelier uppercase pl-4 text-lightGrey text-base text-center"
-						>
-							Get a quote today
-						</Link>
 					</div>
 					<motion.div
 						initial={initialTwo}
