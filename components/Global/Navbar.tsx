@@ -253,6 +253,7 @@ const Navbar: FC = () => {
 							</div>
 						</div>
 					</div>
+					<div className="w-full"></div>
 					<motion.div
 						initial={initialTwo}
 						whileInView={fadeIn}
@@ -280,7 +281,7 @@ const Navbar: FC = () => {
 				</div>
 
 				{/* Hidden Tablet & Mobile  Side Menu */}
-				<div className={menuActive ? "flex flex-col lg:hidden" : "hidden"}>
+				<div className={menuActive ? "flex flex-col xl:hidden" : "hidden"}>
 					<SideMenu menuActive={menuActive} setMenuActive={setMenuActive} />
 				</div>
 			</nav>

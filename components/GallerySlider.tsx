@@ -59,7 +59,7 @@ const GallerySlider: FC<IGallerySlider> = ({gallerySlider}) => {
 															initial={initialTwo}
 															whileInView={fadeIn}
 															viewport={{once: true}}
-															className="text-center uppercase text-lg md:text-xl lg:text-3xl xl:text-5xl tracking-[0.10rem] text-white font-semibold xl:leading-[2.5rem]"
+															className="text-center uppercase text-lg md:text-xl lg:text-3xl xl:text-5xl  text-white font-semibold xl:leading-[2.5rem]"
 														>
 															{item?.title}
 														</motion.h1>
@@ -83,7 +83,7 @@ const GallerySlider: FC<IGallerySlider> = ({gallerySlider}) => {
 																viewport={{once: true}}
 																className={`py-4 pl-4 pr-10 w-full mx-auto cursor-pointer bg-primary-default hover:bg-primary-dark transition-all ease-in-out duration-500`}
 															>
-																<h3 className="font-semibold tracking-[0.10rem] uppercase pl-4 text-lightGrey text-tiny text-center lg:text-left">
+																<h3 className="font-semibold  uppercase pl-4 text-lightGrey text-tiny text-center lg:text-left">
 																	{item?.buttonLink?.title}
 																	<Image
 																		width={550}

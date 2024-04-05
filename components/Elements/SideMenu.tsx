@@ -311,7 +311,7 @@ const SideMenu: FC<ISideMenu> = ({menuActive, setMenuActive}) => {
 									</svg>
 								</Link>
 							</div>
-							<div className="flex flex-col lg:flex-row items-center justify-center w-auto gap-2 py-6 mb-10">
+							<div className="flex flex-col xl:flex-row items-center justify-center w-auto gap-2 py-6 mb-10">
 								<motion.div
 									initial={initialTwo}
 									whileInView={fadeIn}

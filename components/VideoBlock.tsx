@@ -67,7 +67,7 @@ const VideoBlock: FC<IVideoBlock> = ({
 								href={`${buttonLink?.url}`}
 								target={buttonLink?.target}
 								aria-label={`${buttonLink?.title}`}
-								className={`hidden w-fit mx-auto lg:mx-0 mt-2 py-4 px-6 cursor-pointer rounded-lg bg-primary-default hover:bg-primary-dark transition-all ease-in-out duration-500 font-semibold tracking-[0.10rem] uppercase text-lightGrey text-base text-center font-tonnelier ${
+								className={`hidden w-fit mx-auto lg:mx-0 mt-2 py-4 px-6 cursor-pointer rounded-full bg-primary-default hover:bg-primary-dark transition-all ease-in-out duration-500 font-semibold  uppercase text-lightGrey text-base text-center font-tonnelier ${
 									buttonLink?.url ? "lg:block" : "lg:hidden"
 								}`}
 							>

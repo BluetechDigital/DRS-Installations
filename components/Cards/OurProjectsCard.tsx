@@ -48,7 +48,7 @@ const OurProjectsCard: FC<IOurProjectsCard> = ({
 							className={slug ? "absolute -bottom-2 right-2" : "hidden"}
 						>
 							<div className="flex justify-end gap-4 mb-4">
-								<h3 className="flex items-center justify-center font-semibold tracking-[0.10rem] text-white text-tiny uppercase pl-4 w-fit h-12 bg-primary-default hover:bg-primary-dark">
+								<h3 className="flex items-center justify-center font-semibold  text-white text-tiny uppercase pl-4 w-fit h-12 bg-primary-default hover:bg-primary-dark">
 									Read More
 									<Image
 										width={550}

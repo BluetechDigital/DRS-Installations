@@ -182,7 +182,7 @@ const CTA: FC<ICTA> = ({title, paragraph, buttonLink, backgroundImage}) => {
 								aria-label={`${buttonLink?.title}`}
 								className={`${
 									buttonLink?.url ? "block" : "hidden"
-								} lg:hidden py-4 px-6 cursor-pointer rounded-lg bg-primary-default hover:bg-primary-dark transition-all ease-in-out duration-500 font-semibold tracking-[0.10rem] uppercase text-lightGrey text-base text-center font-tonnelier`}
+								} lg:hidden py-4 px-6 cursor-pointer rounded-full bg-primary-default hover:bg-primary-dark transition-all ease-in-out duration-500 font-semibold  uppercase text-lightGrey text-base text-center font-tonnelier`}
 							>
 								{buttonLink?.title}
 							</Link>
@@ -191,7 +191,7 @@ const CTA: FC<ICTA> = ({title, paragraph, buttonLink, backgroundImage}) => {
 							href={`${buttonLink?.url}`}
 							target={buttonLink?.target}
 							aria-label={`${buttonLink?.title}`}
-							className={`hidden absolute bottom-0 right-0 mb-8 mr-8 py-4 px-6 cursor-pointer rounded-lg bg-primary-default hover:bg-primary-dark transition-all ease-in-out duration-500 font-semibold tracking-[0.10rem] uppercase text-lightGrey text-base text-center font-tonnelier ${
+							className={`hidden absolute bottom-0 right-0 mb-8 mr-8 py-4 px-6 cursor-pointer rounded-full bg-primary-default hover:bg-primary-dark transition-all ease-in-out duration-500 font-semibold  uppercase text-lightGrey text-base text-center font-tonnelier ${
 								buttonLink?.url ? "lg:block" : "lg:hidden"
 							}`}
 						>

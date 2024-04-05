@@ -47,23 +47,23 @@
 		}
 
 		::-webkit-scrollbar-track {
-			background: $blueDark;
+			background: $primary-dark;
 		}
 
 		::-webkit-scrollbar-thumb {
-			background: $blue;
+			background: $primary-default;
 			border-radius: 100px;
 
 			&:hover {
 				transition: all 0.5s;
-				background-color: $blue;
+				background-color: $primary-default;
 			}
 		}
 	}
 
 	.navToggle {
 		cursor: pointer;
-		position: fixed;
+		position: static;
 		z-index: 999;
 		right: 0px;
 		top: 10px;
@@ -71,17 +71,8 @@
 		width: 50px;
 		margin-right: 1rem;
 		height: 45px;
-		border: none;
-		line-height: 0.6;
-		border-radius: 0px;
-		text-align: center;
-		background: $blue;
-		// transition: all 1s ease-in-out;
 
-		&:hover {
-			transition: all 0.2s ease-in-out;
-			background: $blue;
-		}
+		@apply bg-black border-none mr-4;
 
 		span {
 			// the second divider
@@ -139,14 +130,15 @@
 		margin-right: 1rem;
 		line-height: 0.6;
 		text-align: center;
-		background: $blue;
+		background: $primary-default;
 		transition: all 1s ease-in-out;
+
+		@apply bg-black border-none mr-4;
 
 		span {
 			height: 0px;
 			width: 27px;
 			position: relative;
-			border-radius: 1px;
 			background: $white;
 			display: inline-block;
 			vertical-align: middle;
@@ -175,11 +167,6 @@
 				left: 0.5px;
 				transform: rotate(45deg);
 			}
-		}
-
-		&:hover {
-			background: $blue;
-			transition: all 0.2s ease-in-out;
 		}
 	}
 }

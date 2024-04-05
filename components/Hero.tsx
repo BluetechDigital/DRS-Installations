@@ -29,7 +29,7 @@ const Hero: FC<IHero> = ({
 	return (
 		<>
 			<div className={styles.hero + " hero relative z-50 flex flex-col h-fit"}>
-				<div className="lg:relative pt-[65px] lg:pt-[112px] flex flex-col lg:flex-row">
+				<div className="lg:relative pt-[65px] md:pt-[112px] lg:pt-[112px] flex flex-col lg:flex-row">
 					<motion.div
 						initial={initialTwo}
 						whileInView={fadeIn}
@@ -51,7 +51,7 @@ const Hero: FC<IHero> = ({
 									initial={initialTwo}
 									whileInView={fadeIn}
 									viewport={{once: true}}
-									className="text-center lg:text-left uppercase text-medium sm:text-2xl md:text-2xl lg:text-3xl xl:text-5xl tracking-[0.10rem] text-white font-semibold leading-tight xl:leading-[2.5rem]"
+									className="text-center lg:text-left uppercase text-medium sm:text-2xl md:text-2xl lg:text-3xl xl:text-5xl  text-white font-semibold leading-tight xl:leading-[2.5rem]"
 								>
 									{title}
 								</motion.h1>
@@ -101,7 +101,7 @@ const Hero: FC<IHero> = ({
 									href={`${buttonLink?.url}`}
 									target={buttonLink?.target}
 									aria-label={`${buttonLink?.title}`}
-									className={`w-fit mx-auto lg:mx-0 py-4 px-6 cursor-pointer rounded-lg bg-primary-default hover:bg-primary-dark transition-all ease-in-out duration-500 font-semibold tracking-[0.10rem] uppercase text-lightGrey text-base text-center font-tonnelier`}
+									className={`w-fit mx-auto lg:mx-0 py-4 px-6 cursor-pointer rounded-full bg-primary-default hover:bg-primary-dark transition-all ease-in-out duration-500 font-semibold  uppercase text-lightGrey text-base text-center font-tonnelier`}
 								>
 									{buttonLink?.title}
 								</Link>
@@ -111,19 +111,16 @@ const Hero: FC<IHero> = ({
 							viewport={{once: true}}
 							initial={slideInRightInitial}
 							whileInView={slideInRightFinish}
-							className="w-full lg:w-fit lg:max-w-md py-2 px-4 lg:py-6 lg:px-8 bg-primary-darkerTwo text-left xl:text-center absolute right-0 top-0"
-							style={{
-								backgroundImage: `url(/svg/background/layered-waves-haikei-blue-right.svg)`,
-							}}
+							className="ctaBanner w-full lg:w-fit lg:max-w-sm xl:max-w-xs py-2 px-4 lg:pb-10 xl:pb-16 lg:p-6 bg-accent-default text-left xl:text-center absolute right-0 top-0"
 						>
 							<Link
 								href={`${buttonLinkTwo?.url}`}
 								target={buttonLinkTwo?.target}
 								aria-label={`${ctaParagraph} Form button link`}
-								className="flex items-center gap-4 font-semibold font-tonnelier uppercase text-white text-tiny md:text-base lg:text-lg"
+								className="flex items-center justify-between gap-4 font-semibold font-tonnelier uppercase leading-tight text-white text-tiny md:text-base lg:text-medium"
 							>
-								<span className="w-full">{ctaParagraph}</span>
-								<span className="ctaSVG flex xl:hidden items-center justify-center h-12 w-16 lg:h-16 rounded-full bg-white hover:bg-primary-default transition-all duration-200 ease-in-out sm:mr-1">
+								<span>{ctaParagraph}</span>
+								<span className="ctaSVG xl:hidden flex items-center justify-center h-12 w-32 sm:w-16 md:w-12 lg:w-44 lg:h-16 rounded-full bg-white hover:bg-primary-default transition-all duration-200 ease-in-out">
 									<svg
 										version="1.1"
 										fill="none"
@@ -166,7 +163,7 @@ const Hero: FC<IHero> = ({
 								href={`${buttonLinkTwo?.url}`}
 								target={buttonLinkTwo?.target}
 								aria-label={`${buttonLinkTwo?.title}`}
-								className={`hidden xl:flex w-fit mx-auto mt-2 py-4 px-6 cursor-pointer rounded-lg bg-primary-three hover:bg-primary-dark transition-all ease-in-out duration-500 font-semibold tracking-[0.10rem] uppercase text-lightGrey text-base text-center font-tonnelier`}
+								className={`hidden xl:flex w-fit mx-auto mt-2 py-4 px-6 cursor-pointer bg-white hover:bg-accent-two transition-all ease-in-out duration-500 font-semibold  uppercase text-black hover:text-white text-base text-center font-tonnelier`}
 							>
 								{buttonLinkTwo?.title}
 							</Link>
