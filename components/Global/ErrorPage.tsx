@@ -63,6 +63,7 @@ const ErrorPage: FC<IErrorPage> = ({
 						>
 							<Link
 								href={`${buttonLink?.url}`}
+								aria-label={`${buttonLink?.title}`}
 								target={buttonLink?.target}
 								className={buttonLink?.url ? "block" : "hidden"}
 							>

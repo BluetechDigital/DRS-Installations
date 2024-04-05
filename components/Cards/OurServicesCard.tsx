@@ -24,6 +24,7 @@ const OurServicesCard: FC<IOurServicesCard> = ({
 				<Link
 					href={`${link?.url}`}
 					target={link?.target}
+					aria-label={`${link?.title}`}
 					className={styles.card + " group overflow-hidden bg-white"}
 				>
 					<motion.div
