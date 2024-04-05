@@ -17,7 +17,7 @@ const Hero: FC<IHero> = ({title, buttonLink, paragraph, backgroundImage}) => {
 						initial={initialTwo}
 						whileInView={fadeIn}
 						viewport={{once: true}}
-						className="w-full h-[75vh] flex flex-col items-center lg:items-baseline justify-center relative bg-center bg-no-repeat bg-cover"
+						className="w-full flex flex-col items-center lg:items-baseline justify-center relative bg-center bg-no-repeat bg-cover"
 						style={{
 							backgroundImage: `linear-gradient(
 								0deg,
