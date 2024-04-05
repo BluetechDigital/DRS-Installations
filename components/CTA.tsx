@@ -25,9 +25,9 @@ const CTA: FC<ICTA> = ({title, paragraph, buttonLink, backgroundImage}) => {
 						<div className="py-11 px-9 lg:max-w-xl rounded-2xl bg-white">
 							<div className="flex items-center justify-center mb-6 gap-4">
 								<Link
-									href={`${globalContext?.themesOptionsContent?.facebookLink}`}
+									href={`${globalContext?.themesOptionsContent?.facebookLink?.url}`}
 									className={
-										globalContext?.themesOptionsContent?.facebookLink
+										globalContext?.themesOptionsContent?.facebookLink?.url
 											? "inline-block px-1 hover:opacity-70"
 											: "hidden"
 									}
@@ -53,9 +53,9 @@ const CTA: FC<ICTA> = ({title, paragraph, buttonLink, backgroundImage}) => {
 									</svg>
 								</Link>
 								<Link
-									href={`${globalContext?.themesOptionsContent?.twitterLink}`}
+									href={`${globalContext?.themesOptionsContent?.twitterLink?.url}`}
 									className={
-										globalContext?.themesOptionsContent?.twitterLink
+										globalContext?.themesOptionsContent?.twitterLink?.url
 											? "inline-block px-1 hover:opacity-70"
 											: "hidden"
 									}
@@ -81,9 +81,9 @@ const CTA: FC<ICTA> = ({title, paragraph, buttonLink, backgroundImage}) => {
 									</svg>
 								</Link>
 								<Link
-									href={`${globalContext?.themesOptionsContent?.instagramLink}`}
+									href={`${globalContext?.themesOptionsContent?.instagramLink?.url}`}
 									className={
-										globalContext?.themesOptionsContent?.instagramLink
+										globalContext?.themesOptionsContent?.instagramLink?.url
 											? "inline-block px-1 hover:opacity-70"
 											: "hidden"
 									}
