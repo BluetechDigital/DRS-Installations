@@ -23,6 +23,7 @@ const Hero: FC<IHero> = ({
 	paragraph,
 	buttonLink,
 	ctaParagraph,
+	buttonLinkTwo,
 	backgroundImage,
 }) => {
 	return (
@@ -116,8 +117,8 @@ const Hero: FC<IHero> = ({
 							}}
 						>
 							<Link
-								href="/#requestAppointmentForm"
-								target=" "
+								href={`${buttonLinkTwo?.url}`}
+								target={buttonLinkTwo?.target}
 								aria-label={`${ctaParagraph} Form button link`}
 								className="flex items-center gap-4 font-semibold font-tonnelier uppercase text-white text-tiny md:text-base lg:text-lg"
 							>
@@ -162,12 +163,12 @@ const Hero: FC<IHero> = ({
 								</span>
 							</Link>
 							<Link
-								href={`${buttonLink?.url}`}
-								target={buttonLink?.target}
-								aria-label={`${buttonLink?.title}`}
+								href={`${buttonLinkTwo?.url}`}
+								target={buttonLinkTwo?.target}
+								aria-label={`${buttonLinkTwo?.title}`}
 								className={`hidden xl:flex w-fit mx-auto mt-2 py-4 px-6 cursor-pointer rounded-lg bg-primary-three hover:bg-primary-dark transition-all ease-in-out duration-500 font-semibold tracking-[0.10rem] uppercase text-lightGrey text-base text-center font-tonnelier`}
 							>
-								{buttonLink?.title}
+								{buttonLinkTwo?.title}
 							</Link>
 						</motion.div>
 					</motion.div>

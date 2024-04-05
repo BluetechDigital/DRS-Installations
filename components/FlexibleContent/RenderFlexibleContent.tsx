@@ -43,6 +43,7 @@ const RenderFlexibleContent: FC = () => {
 									paragraph={item?.paragraph}
 									buttonLink={item?.buttonLink}
 									ctaParagraph={item?.ctaParagraph}
+									buttonLinkTwo={item?.buttonLinkTwo}
 									backgroundImage={item?.backgroundImage}
 								/>
 							</>
