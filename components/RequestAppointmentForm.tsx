@@ -150,7 +150,7 @@ const RequestAppointmentForm: FC<IRequestAppointmentForm> = ({
 				}}
 			>
 				<div className="lg:container mx-auto px-0 flex flex-col lg:flex-row items-baseline justify-between gap-8">
-					<div className="flex flex-col items-center justify-center lg:items-baseline w-full">
+					<div className="flex flex-col items-center justify-center lg:items-baseline w-full gap-6">
 						<motion.div
 							initial={initial}
 							variants={stagger}
@@ -172,20 +172,20 @@ const RequestAppointmentForm: FC<IRequestAppointmentForm> = ({
 							/>
 							<Paragraph
 								content={paragraph}
-								tailwindStyling="max-w-xl mx-auto xl:mx-0 text-black text-base text-center lg:text-left"
+								tailwindStyling="mb-3 max-w-xl mx-auto xl:mx-0 text-black text-base text-center lg:text-left"
 							/>
-						</motion.div>
-						<div className="flex flex-col lg:flex-row gap-8 items-center justify-center lg:gap-12 lg:justify-start">
 							<Link
 								href={`${buttonLink?.url}`}
 								aria-label={`${buttonLink?.title}`}
 								target={buttonLink?.target}
-								className={`hidden py-4 px-6 w-1/3 cursor-pointer rounded-full bg-primary-default hover:bg-primary-dark transition-all ease-in-out duration-500 font-semibold  uppercase text-lightGrey text-base text-center font-RethinkSansExtraBold ${
+								className={`hidden py-4 px-6 w-fit cursor-pointer rounded-full bg-primary-default hover:bg-primary-dark transition-all ease-in-out duration-500 font-semibold  uppercase text-lightGrey text-base text-center font-RethinkSansExtraBold ${
 									buttonLink?.url ? "lg:block" : "lg:hidden"
 								}`}
 							>
 								{buttonLink?.title}
 							</Link>
+						</motion.div>
+						<div className="flex flex-col lg:flex-row gap-8 items-center justify-center lg:gap-12 lg:justify-start">
 							<motion.div
 								initial={initial}
 								variants={stagger}
@@ -193,7 +193,7 @@ const RequestAppointmentForm: FC<IRequestAppointmentForm> = ({
 								viewport={{once: true}}
 								className="flex items-center"
 							>
-								<div className="flex flex-shrink-0 mr-5  items-center justify-center p-1 w-10 h-10 rounded-full bg-primary-default">
+								<div className="flex flex-shrink-0 mr-5 items-center justify-center p-1 w-10 h-10 rounded-full bg-primary-default">
 									<svg
 										viewBox="0 0 24 24"
 										fill="none"
@@ -259,6 +259,60 @@ const RequestAppointmentForm: FC<IRequestAppointmentForm> = ({
 											{globalContext?.themesOptionsContent?.phoneNumberThree}
 										</span>
 									</Link>
+								</motion.div>
+							</motion.div>
+							<motion.div
+								initial={initial}
+								variants={stagger}
+								whileInView="animate"
+								viewport={{once: true}}
+								className="flex items-center w-full lg:w-1/2 2xl:w-full"
+							>
+								<div className="hidden sm:flex flex-shrink-0 mr-5 sm:mr-8 items-center justify-center p-1 w-10 h-10  rounded-full bg-primary-default">
+									<svg
+										fill="#000000"
+										className="w-5 h-5"
+										viewBox="0 0 512 512"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+										<g
+											id="SVGRepo_tracerCarrier"
+											strokeLinecap="round"
+											strokeLinejoin="round"
+										></g>
+										<g id="SVGRepo_iconCarrier">
+											{" "}
+											<path
+												fill="var(--ci-primary-color, #ffffff)"
+												d="M253.924,127.592a64,64,0,1,0,64,64A64.073,64.073,0,0,0,253.924,127.592Zm0,96a32,32,0,1,1,32-32A32.037,32.037,0,0,1,253.924,223.592Z"
+											></path>
+											<path
+												fill="var(--ci-primary-color, #ffffff)"
+												d="M376.906,68.515A173.922,173.922,0,0,0,108.2,286.426L229.107,472.039a29.619,29.619,0,0,0,49.635,0L399.653,286.426A173.921,173.921,0,0,0,376.906,68.515Zm-4.065,200.444L253.925,451.509,135.008,268.959C98.608,213.08,106.415,138.3,153.571,91.142a141.92,141.92,0,0,1,200.708,0C401.435,138.3,409.241,213.08,372.841,268.959Z"
+											></path>
+										</g>
+									</svg>
+								</div>
+								<motion.div
+									initial={initial}
+									variants={stagger}
+									whileInView="animate"
+									viewport={{once: true}}
+									className="max-w-xl mx-auto sm:mx-0"
+								>
+									<motion.h3
+										initial={initial}
+										whileInView={fadeInUp}
+										viewport={{once: true}}
+										className="mb-2 uppercase text-black text-center sm:text-left font-semibold text-base"
+									>
+										Address
+									</motion.h3>
+									<Paragraph
+										content={globalContext?.themesOptionsContent?.address}
+										tailwindStyling="max-w-xl mx-auto xl:mx-0 text-tiny sm:text-base text-black text-center sm:text-left"
+									/>
 								</motion.div>
 							</motion.div>
 						</div>
