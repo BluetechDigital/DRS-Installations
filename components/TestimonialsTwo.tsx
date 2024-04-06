@@ -53,7 +53,7 @@ const TestimonialsTwo: FC<ITestimonialsTwo> = ({title, subtitle}) => {
 							variants={stagger}
 							whileInView="animate"
 							viewport={{once: true}}
-							className="w-full lg:w-1/4 mx-auto lg:mx-0 py-3 px-4 grid sm:grid-cols-2 items-center justify-center sm:justify-start gap-6"
+							className="w-full lg:w-1/4 max-w-sm lg:max-w-full mx-auto lg:mx-0 py-3 px-4 grid sm:grid-cols-2 items-center justify-center lg:justify-start gap-6"
 						>
 							<div className="flex items-center justify-center lg:justify-start gap-3">
 								<Image
