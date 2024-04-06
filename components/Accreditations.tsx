@@ -56,7 +56,7 @@ const Accreditations: FC<IAccreditations> = ({
 								initial={initialTwo}
 								whileInView={fadeIn}
 								viewport={{once: true}}
-								className="text-center uppercase font-semibold font-tonnelier leading-tight text-white text-9xl"
+								className="text-center uppercase font-semibold font-RethinkSansExtraBold leading-tight text-white text-9xl"
 							>
 								{text}
 							</motion.h2>
@@ -80,7 +80,7 @@ const Accreditations: FC<IAccreditations> = ({
 					<div className="flex flex-col justify-between h-full px-0 lg:px-8 gap-6 lg:gap-2">
 						<Paragraph
 							content={paragraph}
-							tailwindStyling="paragraph max-w-full lg:max-w-3xl mx-auto lg:mx-0 text-black uppercase font-semibold font-tonnelier leading-tight text-lg sm:text-xl lg:text-3xl text-center lg:text-left"
+							tailwindStyling="paragraph max-w-full lg:max-w-3xl mx-auto lg:mx-0 text-black uppercase font-semibold font-RethinkSansExtraBold leading-tight text-lg sm:text-xl lg:text-3xl text-center lg:text-left"
 						/>
 						<div className="grid gap-4 grid-cols-2 lg:grid-cols-4 items-center justify-center">
 							{accreditationsGrid?.length > 0 ? (

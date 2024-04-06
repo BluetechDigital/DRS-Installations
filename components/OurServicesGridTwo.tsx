@@ -70,7 +70,7 @@ const OurServicesGridTwo: FC<IOurServicesGridTwo> = ({
 						href={`${buttonLink?.url}`}
 						aria-label={`${buttonLink?.title}`}
 						target={buttonLink?.target}
-						className={`hidden mb-8 mr-8 py-4 px-6 cursor-pointer rounded-full bg-primary-default hover:bg-primary-dark transition-all ease-in-out duration-500 font-semibold  uppercase text-lightGrey text-base text-center font-tonnelier ${
+						className={`hidden mb-8 mr-8 py-4 px-6 cursor-pointer rounded-full bg-primary-default hover:bg-primary-dark transition-all ease-in-out duration-500 font-semibold  uppercase text-lightGrey text-base text-center font-RethinkSansExtraBold ${
 							buttonLink?.url ? "lg:block" : "lg:hidden"
 						}`}
 					>

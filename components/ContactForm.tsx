@@ -175,7 +175,7 @@ const ContactForm: FC<IContactForm> = ({title, paragraph}) => {
 								initial={initial}
 								whileInView={fadeInUp}
 								viewport={{once: true}}
-								className="my-3 max-w-xl mx-auto xl:mx-0 uppercase text-black text-center lg:text-left font-semibold font-tonnelier text-lg md:text-xl"
+								className="my-3 max-w-xl mx-auto xl:mx-0 uppercase text-black text-center lg:text-left font-semibold font-RethinkSansExtraBold text-lg md:text-xl"
 							>
 								{title}
 							</motion.h3>
@@ -229,7 +229,7 @@ const ContactForm: FC<IContactForm> = ({title, paragraph}) => {
 									href={`tel:${globalContext?.themesOptionsContent?.phoneNumber}`}
 									aria-label={`${globalContext?.themesOptionsContent?.phoneNumber}`}
 								>
-									<span className="font-semibold uppercase font-tonnelier">
+									<span className="font-semibold uppercase font-RethinkSansExtraBold">
 										Office:{" "}
 									</span>
 									<span className="text-black hover:text-primary-default hover:border-b-2">
@@ -240,7 +240,7 @@ const ContactForm: FC<IContactForm> = ({title, paragraph}) => {
 									className="flex items-center gap-3 text-tiny sm:text-base text-center sm:text-left"
 									href={`tel:${globalContext?.themesOptionsContent?.phoneNumberTwo}`}
 								>
-									<span className="font-semibold uppercase font-tonnelier">
+									<span className="font-semibold uppercase font-RethinkSansExtraBold">
 										David:{" "}
 									</span>
 									<span className="text-black hover:text-primary-default hover:border-b-2">
@@ -251,7 +251,7 @@ const ContactForm: FC<IContactForm> = ({title, paragraph}) => {
 									className="flex items-center gap-3 text-tiny sm:text-base text-center sm:text-left"
 									href={`tel:${globalContext?.themesOptionsContent?.phoneNumberThree}`}
 								>
-									<span className="font-semibold uppercase font-tonnelier">
+									<span className="font-semibold uppercase font-RethinkSansExtraBold">
 										Tony:{" "}
 									</span>
 									<span className="text-black hover:text-primary-default hover:border-b-2">

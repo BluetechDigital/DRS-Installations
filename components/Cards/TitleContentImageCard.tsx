@@ -97,7 +97,7 @@ const TitleContentImageCard: FC<ITitleContentImageCard> = ({
 						href={`${buttonLink?.url}`}
 						target={buttonLink?.target}
 						aria-label={`${buttonLink?.title}`}
-						className={`mb-8 py-4 px-6 cursor-pointer rounded-full bg-primary-default hover:bg-primary-dark transition-all ease-in-out duration-500 font-semibold  uppercase text-lightGrey text-base text-center font-tonnelier ${
+						className={`mb-8 py-4 px-6 cursor-pointer rounded-full bg-primary-default hover:bg-primary-dark transition-all ease-in-out duration-500 font-semibold  uppercase text-lightGrey text-base text-center font-RethinkSansExtraBold ${
 							buttonLink?.url ? "block" : "hidden"
 						}`}
 					>

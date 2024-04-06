@@ -203,7 +203,7 @@ const Navbar: FC = () => {
 																											ourServicesSublinksOpen
 																												? "w-full hover:bg-primary-default text-center text-black hover:text-white"
 																												: "text-black"
-																										} block p-4 font-tonnelier uppercase text-base`}
+																										} block p-4 font-RethinkSansExtraBold uppercase text-base`}
 																									>
 																										{item?.node?.label}
 																									</Link>

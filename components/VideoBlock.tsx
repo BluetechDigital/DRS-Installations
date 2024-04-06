@@ -53,7 +53,7 @@ const VideoBlock: FC<IVideoBlock> = ({
 								initial={initial}
 								whileInView={fadeInUp}
 								viewport={{once: true}}
-								className="my-3 max-w-xl mx-auto lg:mx-0 text-black uppercase font-tonnelier leading-[2.25rem] text-center lg:text-left text-lg sm:text-3xl"
+								className="my-3 max-w-xl mx-auto lg:mx-0 text-black uppercase font-RethinkSansExtraBold leading-[2.25rem] text-center lg:text-left text-lg sm:text-3xl"
 							>
 								{title}
 							</motion.h3>
@@ -67,7 +67,7 @@ const VideoBlock: FC<IVideoBlock> = ({
 								href={`${buttonLink?.url}`}
 								target={buttonLink?.target}
 								aria-label={`${buttonLink?.title}`}
-								className={`hidden w-fit mx-auto lg:mx-0 mt-2 py-4 px-6 cursor-pointer rounded-full bg-primary-default hover:bg-primary-dark transition-all ease-in-out duration-500 font-semibold  uppercase text-lightGrey text-base text-center font-tonnelier ${
+								className={`hidden w-fit mx-auto lg:mx-0 mt-2 py-4 px-6 cursor-pointer rounded-full bg-primary-default hover:bg-primary-dark transition-all ease-in-out duration-500 font-semibold  uppercase text-lightGrey text-base text-center font-RethinkSansExtraBold ${
 									buttonLink?.url ? "lg:block" : "lg:hidden"
 								}`}
 							>

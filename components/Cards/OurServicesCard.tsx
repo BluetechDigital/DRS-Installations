@@ -74,7 +74,7 @@ const OurServicesCard: FC<IOurServicesCard> = ({
 						initial={initial}
 						whileInView={fadeInUp}
 						viewport={{once: true}}
-						className="text-center text-black uppercase font-tonnelier text-medium my-3 font-semibold"
+						className="text-center text-black uppercase font-RethinkSansExtraBold text-medium my-3 font-semibold"
 					>
 						{title}
 					</motion.h3>

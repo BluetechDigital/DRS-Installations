@@ -11,10 +11,10 @@
 }
 
 @font-face {
-	font-family: tonnelier;
-	src: url("../fonts/tonnelier-heavy.woff");
+	font-family: RethinkSansExtraBold;
+	src: url("../fonts/RethinkSans-ExtraBold.woff");
 }
 
 // Font Stack Properties
-$main: "tonnelier", sans-serif;
+$main: "RethinkSansExtraBold", sans-serif;
 $body: "OpenSauceSansRegular", "PlusJakartaSans", sans-serif;

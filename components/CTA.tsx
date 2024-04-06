@@ -168,7 +168,7 @@ const CTA: FC<ICTA> = ({title, paragraph, buttonLink, backgroundImage}) => {
 								initial={initialTwo}
 								whileInView={fadeIn}
 								viewport={{once: true}}
-								className="my-3 max-w-xl mx-auto lg:mx-0 uppercase text-black text-center lg:text-left font-semibold font-tonnelier text-lg md:text-xl"
+								className="my-3 max-w-xl mx-auto lg:mx-0 uppercase text-black text-center lg:text-left font-semibold font-RethinkSansExtraBold text-lg md:text-xl"
 							>
 								{title}
 							</motion.h3>
@@ -182,7 +182,7 @@ const CTA: FC<ICTA> = ({title, paragraph, buttonLink, backgroundImage}) => {
 								aria-label={`${buttonLink?.title}`}
 								className={`${
 									buttonLink?.url ? "block" : "hidden"
-								} lg:hidden py-4 px-6 cursor-pointer rounded-full bg-primary-default hover:bg-primary-dark transition-all ease-in-out duration-500 font-semibold  uppercase text-lightGrey text-base text-center font-tonnelier`}
+								} lg:hidden py-4 px-6 cursor-pointer rounded-full bg-primary-default hover:bg-primary-dark transition-all ease-in-out duration-500 font-semibold  uppercase text-lightGrey text-base text-center font-RethinkSansExtraBold`}
 							>
 								{buttonLink?.title}
 							</Link>
@@ -191,7 +191,7 @@ const CTA: FC<ICTA> = ({title, paragraph, buttonLink, backgroundImage}) => {
 							href={`${buttonLink?.url}`}
 							target={buttonLink?.target}
 							aria-label={`${buttonLink?.title}`}
-							className={`hidden absolute bottom-0 right-0 mb-8 mr-8 py-4 px-6 cursor-pointer rounded-full bg-primary-default hover:bg-primary-dark transition-all ease-in-out duration-500 font-semibold  uppercase text-lightGrey text-base text-center font-tonnelier ${
+							className={`hidden absolute bottom-0 right-0 mb-8 mr-8 py-4 px-6 cursor-pointer rounded-full bg-primary-default hover:bg-primary-dark transition-all ease-in-out duration-500 font-semibold  uppercase text-lightGrey text-base text-center font-RethinkSansExtraBold ${
 								buttonLink?.url ? "lg:block" : "lg:hidden"
 							}`}
 						>

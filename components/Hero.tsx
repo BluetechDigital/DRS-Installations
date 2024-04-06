@@ -125,7 +125,7 @@ const Hero: FC<IHero> = ({
 									href={`${buttonLink?.url}`}
 									target={buttonLink?.target}
 									aria-label={`${buttonLink?.title}`}
-									className={`w-fit mx-auto lg:mx-0 py-4 px-6 cursor-pointer rounded-full bg-primary-default hover:bg-primary-dark transition-all ease-in-out duration-500 font-semibold  uppercase text-lightGrey text-base text-center font-tonnelier`}
+									className={`w-fit mx-auto lg:mx-0 py-4 px-6 cursor-pointer rounded-full bg-primary-default hover:bg-primary-dark transition-all ease-in-out duration-500 font-semibold  uppercase text-lightGrey text-base text-center font-RethinkSansExtraBold`}
 								>
 									{buttonLink?.title}
 								</Link>
@@ -141,7 +141,7 @@ const Hero: FC<IHero> = ({
 								href={`${buttonLinkTwo?.url}`}
 								target={buttonLinkTwo?.target}
 								aria-label={`${ctaParagraph} Form button link`}
-								className="flex items-center justify-between gap-4 font-semibold font-tonnelier uppercase leading-tight text-white text-tiny md:text-base lg:text-medium"
+								className="flex items-center justify-between gap-4 font-semibold font-RethinkSansExtraBold uppercase leading-tight text-white text-tiny md:text-base lg:text-medium"
 							>
 								<span>{ctaParagraph}</span>
 								<span className="ctaSVG xl:hidden flex items-center justify-end px-2 h-12 w-fit lg:h-16 rounded-full bg-white hover:bg-primary-default transition-all duration-200 ease-in-out">
@@ -187,7 +187,7 @@ const Hero: FC<IHero> = ({
 								href={`${buttonLinkTwo?.url}`}
 								target={buttonLinkTwo?.target}
 								aria-label={`${buttonLinkTwo?.title}`}
-								className={`hidden xl:flex w-fit mx-auto mt-2 py-4 px-6 cursor-pointer rounded-full bg-white hover:bg-accent-two transition-all ease-in-out duration-500 font-semibold  uppercase text-black hover:text-white text-base text-center font-tonnelier`}
+								className={`hidden xl:flex w-fit mx-auto mt-2 py-4 px-6 cursor-pointer rounded-full bg-white hover:bg-accent-two transition-all ease-in-out duration-500 font-semibold  uppercase text-black hover:text-white text-base text-center font-RethinkSansExtraBold`}
 							>
 								{buttonLinkTwo?.title}
 							</Link>

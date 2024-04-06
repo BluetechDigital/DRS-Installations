@@ -10,7 +10,7 @@ const NavbarContactInfoBanner: FC = () => {
 		<>
 			<div className="hidden md:flex flex-row items-center justify-between gap-4 p-2 bg-primary-default">
 				<div className="flex flex-row items-center gap-4">
-					<h3 className="hidden xl:block font-medium uppercase text-tiny font-tonnelier text-white">
+					<h3 className="hidden xl:block font-medium uppercase text-tiny font-RethinkSansExtraBold text-white">
 						In Need of Home Security Specialists?
 					</h3>
 					<div
@@ -38,7 +38,7 @@ const NavbarContactInfoBanner: FC = () => {
 								></path>
 							</svg>
 						</div>
-						<h3 className="font-medium uppercase text-tiny font-tonnelier text-white">
+						<h3 className="font-medium uppercase text-tiny font-RethinkSansExtraBold text-white">
 							Email us your questions:
 						</h3>
 						<Link
@@ -81,7 +81,7 @@ const NavbarContactInfoBanner: FC = () => {
 								</g>
 							</svg>
 						</div>
-						<h3 className="font-medium uppercase text-tiny font-tonnelier text-white">
+						<h3 className="font-medium uppercase text-tiny font-RethinkSansExtraBold text-white">
 							Office:
 						</h3>
 						<Link
@@ -94,7 +94,7 @@ const NavbarContactInfoBanner: FC = () => {
 					</div>
 				</div>
 				<div className="flex flex-row items-center gap-2">
-					<h3 className="hidden lg:block font-medium uppercase text-tiny font-tonnelier text-white">
+					<h3 className="hidden lg:block font-medium uppercase text-tiny font-RethinkSansExtraBold text-white">
 						Follow Us:
 					</h3>
 					<Link

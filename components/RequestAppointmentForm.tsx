@@ -168,7 +168,7 @@ const RequestAppointmentForm: FC<IRequestAppointmentForm> = ({
 							</motion.h4>
 							<Title
 								content={title}
-								tailwindStyling="title my-3 max-w-xl mx-auto lg:mx-0 text-black uppercase font-tonnelier leading-[2.25rem] text-center lg:text-left text-lg sm:text-3xl"
+								tailwindStyling="title my-3 max-w-xl mx-auto lg:mx-0 text-black uppercase font-RethinkSansExtraBold leading-[2.25rem] text-center lg:text-left text-lg sm:text-3xl"
 							/>
 							<Paragraph
 								content={paragraph}
@@ -180,7 +180,7 @@ const RequestAppointmentForm: FC<IRequestAppointmentForm> = ({
 								href={`${buttonLink?.url}`}
 								aria-label={`${buttonLink?.title}`}
 								target={buttonLink?.target}
-								className={`hidden py-4 px-6 w-1/3 cursor-pointer rounded-full bg-primary-default hover:bg-primary-dark transition-all ease-in-out duration-500 font-semibold  uppercase text-lightGrey text-base text-center font-tonnelier ${
+								className={`hidden py-4 px-6 w-1/3 cursor-pointer rounded-full bg-primary-default hover:bg-primary-dark transition-all ease-in-out duration-500 font-semibold  uppercase text-lightGrey text-base text-center font-RethinkSansExtraBold ${
 									buttonLink?.url ? "lg:block" : "lg:hidden"
 								}`}
 							>
@@ -230,7 +230,7 @@ const RequestAppointmentForm: FC<IRequestAppointmentForm> = ({
 										href={`tel:${globalContext?.themesOptionsContent?.phoneNumber}`}
 										aria-label={`${globalContext?.themesOptionsContent?.phoneNumber}`}
 									>
-										<span className="font-semibold uppercase font-tonnelier">
+										<span className="font-semibold uppercase font-RethinkSansExtraBold">
 											Office:{" "}
 										</span>
 										<span className="text-black hover:text-primary-default hover:border-b-2">
@@ -241,7 +241,7 @@ const RequestAppointmentForm: FC<IRequestAppointmentForm> = ({
 										className="flex items-center gap-3 text-tiny sm:text-base text-center sm:text-left"
 										href={`tel:${globalContext?.themesOptionsContent?.phoneNumberTwo}`}
 									>
-										<span className="font-semibold uppercase font-tonnelier">
+										<span className="font-semibold uppercase font-RethinkSansExtraBold">
 											David:{" "}
 										</span>
 										<span className="text-black hover:text-primary-default hover:border-b-2">
@@ -252,7 +252,7 @@ const RequestAppointmentForm: FC<IRequestAppointmentForm> = ({
 										className="flex items-center gap-3 text-tiny sm:text-base text-center sm:text-left"
 										href={`tel:${globalContext?.themesOptionsContent?.phoneNumberThree}`}
 									>
-										<span className="font-semibold uppercase font-tonnelier">
+										<span className="font-semibold uppercase font-RethinkSansExtraBold">
 											Tony:{" "}
 										</span>
 										<span className="text-black hover:text-primary-default hover:border-b-2">
@@ -275,7 +275,7 @@ const RequestAppointmentForm: FC<IRequestAppointmentForm> = ({
 									viewport={{once: true}}
 									className="flex items-center justify-center my-4 mb-8 gap-x-2"
 								>
-									<h3 className="text-xl font-semibold uppercase font-tonnelier text-white">
+									<h3 className="text-xl font-semibold uppercase font-RethinkSansExtraBold text-white">
 										Sending Message...
 									</h3>
 								</motion.div>
@@ -286,7 +286,7 @@ const RequestAppointmentForm: FC<IRequestAppointmentForm> = ({
 									viewport={{once: true}}
 									className="flex items-center justify-center my-4 mb-8 gap-x-2"
 								>
-									<h3 className="text-xl font-semibold text-center uppercase font-tonnelier text-white">
+									<h3 className="text-xl font-semibold text-center uppercase font-RethinkSansExtraBold text-white">
 										Message Sent!
 									</h3>
 								</motion.div>
@@ -297,7 +297,7 @@ const RequestAppointmentForm: FC<IRequestAppointmentForm> = ({
 									viewport={{once: true}}
 									className="flex items-center justify-center my-4 mb-8 gap-x-2"
 								>
-									<h3 className="text-xl font-semibold text-center uppercase font-tonnelier text-white">
+									<h3 className="text-xl font-semibold text-center uppercase font-RethinkSansExtraBold text-white">
 										Error Message: Something went wrong with sending your
 										message. Please try again.
 									</h3>
@@ -313,7 +313,7 @@ const RequestAppointmentForm: FC<IRequestAppointmentForm> = ({
 										initial={initial}
 										whileInView={fadeInUp}
 										viewport={{once: true}}
-										className="my-3 max-w-xl mx-auto xl:mx-0 uppercase font-tonnelier text-white text-center lg:text-left font-semibold text-lg md:text-lg"
+										className="my-3 max-w-xl mx-auto xl:mx-0 uppercase font-RethinkSansExtraBold text-white text-center lg:text-left font-semibold text-lg md:text-lg"
 									>
 										We Promise to Fast-track your safety
 									</motion.h3>
@@ -467,7 +467,7 @@ const RequestAppointmentForm: FC<IRequestAppointmentForm> = ({
 												: `${styles.submitButton}`
 										}
 									>
-										<span className="tracking-widest text-white uppercase font-tonnelier text-sm">
+										<span className="tracking-widest text-white uppercase font-RethinkSansExtraBold text-sm">
 											{loading
 												? "Sending Message..."
 												: messageSent

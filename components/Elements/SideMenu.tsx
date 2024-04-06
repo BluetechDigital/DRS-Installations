@@ -77,7 +77,7 @@ const SideMenu: FC<ISideMenu> = ({menuActive, setMenuActive}) => {
 															item?.node?.target ? item?.node?.target : "_self"
 														}`}
 														aria-label={`${item?.node?.label}`}
-														className="leading-snug font-tonnelier uppercase text-black text-tiny text-center hover:text-primary-two"
+														className="leading-snug font-RethinkSansExtraBold uppercase text-black text-tiny text-center hover:text-primary-two"
 													>
 														{item?.node?.label}
 													</Link>
@@ -160,7 +160,7 @@ const SideMenu: FC<ISideMenu> = ({menuActive, setMenuActive}) => {
 														item?.node?.target ? item?.node?.target : "_self"
 													}`}
 													aria-label={`${item?.node?.label}`}
-													className="block py-4 leading-snug font-tonnelier uppercase text-tiny text-black hover:text-primary-two"
+													className="block py-4 leading-snug font-RethinkSansExtraBold uppercase text-tiny text-black hover:text-primary-two"
 												>
 													{item?.node?.label}
 												</Link>
@@ -181,7 +181,7 @@ const SideMenu: FC<ISideMenu> = ({menuActive, setMenuActive}) => {
 							viewport={{once: true}}
 							className="flex flex-col items-center justify-between gap-4"
 						>
-							<h4 className="mb-5 text-medium font-tonnelier tracking-normal text-center uppercase md:text-left text-black">
+							<h4 className="mb-5 text-medium font-RethinkSansExtraBold tracking-normal text-center uppercase md:text-left text-black">
 								Contact Links
 							</h4>
 							<div className="flex items-center justify-center gap-4 text-center">
