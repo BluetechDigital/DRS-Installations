@@ -37,7 +37,7 @@ const Hero: FC<IHero> = ({
 						variants={stagger}
 						whileInView="animate"
 						viewport={{once: true}}
-						className="w-full h-[75vh] flex flex-col items-center lg:items-baseline justify-center relative bg-center bg-no-repeat bg-cover"
+						className="w-full h-screen sm:h-[75vh] flex flex-col items-center lg:items-baseline justify-center relative bg-center bg-no-repeat bg-cover"
 						style={{
 							backgroundImage: `linear-gradient(
 								0deg,
@@ -54,13 +54,13 @@ const Hero: FC<IHero> = ({
 								variants={stagger}
 								whileInView="animate"
 								viewport={{once: true}}
-								className="max-w-sm lg:max-w-xl mx-auto lg:mx-0 "
+								className="max-w-full lg:max-w-xl mx-auto lg:mx-0 "
 							>
 								<motion.h1
 									initial={initialTwo}
 									whileInView={fadeIn}
 									viewport={{once: true}}
-									className="text-center lg:text-left uppercase text-medium sm:text-2xl md:text-2xl lg:text-3xl xl:text-5xl text-white font-semibold leading-tight xl:leading-[2.5rem]"
+									className="text-center lg:text-left uppercase text-medium sm:text-2xl lg:text-3xl xl:text-5xl text-white font-semibold leading-tight xl:leading-[2.5rem]"
 								>
 									{title}
 								</motion.h1>
@@ -73,9 +73,9 @@ const Hero: FC<IHero> = ({
 									variants={stagger}
 									whileInView="animate"
 									viewport={{once: true}}
-									className="w-fit mx-auto lg:mx-0 py-3 px-4 bg-lightGreyTwo/30 grid sm:grid-cols-2 md:grid-cols-3 items-center justify-start gap-6"
+									className="w-fit mx-auto lg:mx-0 py-3 px-4 bg-lightGreyTwo/30 grid sm:grid-cols-2 md:grid-cols-3 items-center justify-center sm:justify-start gap-6"
 								>
-									<div className="flex items-center justify-start gap-3">
+									<div className="flex items-center justify-center sm:justify-start gap-3">
 										<Image
 											className="my-auto lg:mx-0 rounded-full w-10 h-10 object-cover object-center"
 											alt={`Facebook reviews logo`}
@@ -92,7 +92,7 @@ const Hero: FC<IHero> = ({
 											</h3>
 										</div>
 									</div>
-									<div className="flex items-center justify-start gap-3">
+									<div className="flex items-center justify-center sm:justify-start gap-3">
 										<Image
 											className="bg-white my-auto lg:mx-0 rounded-full p-1 w-10 h-10 object-cover object-center"
 											alt={`Google reviews logo`}
@@ -109,7 +109,7 @@ const Hero: FC<IHero> = ({
 											</h3>
 										</div>
 									</div>
-									<div className="flex items-center justify-start gap-0 basis-1/2">
+									<div className="flex items-center justify-center sm:justify-start gap-0 basis-1/2">
 										<Image
 											className="my-auto lg:mx-0 p-1 w-full h-10 object-cover object-center"
 											alt={`Trustpilot reviews logo`}
@@ -144,7 +144,7 @@ const Hero: FC<IHero> = ({
 								className="flex items-center justify-between gap-4 font-semibold font-tonnelier uppercase leading-tight text-white text-tiny md:text-base lg:text-medium"
 							>
 								<span>{ctaParagraph}</span>
-								<span className="ctaSVG xl:hidden flex items-center justify-center h-12 w-32 sm:w-16 md:w-12 lg:w-44 lg:h-16 rounded-full bg-white hover:bg-primary-default transition-all duration-200 ease-in-out">
+								<span className="ctaSVG xl:hidden flex items-center justify-end px-2 h-12 w-fit lg:h-16 rounded-full bg-white hover:bg-primary-default transition-all duration-200 ease-in-out">
 									<svg
 										version="1.1"
 										fill="none"
