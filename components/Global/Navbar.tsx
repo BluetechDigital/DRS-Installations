@@ -58,7 +58,7 @@ const Navbar: FC = () => {
 				<NoticeInfoBanner />
 				<NavbarContactInfoBanner />
 				<div className="flex p-0 bg-white">
-					<div className="w-full flex items-center gap-4 container lg:mx-auto px-4 bg-white">
+					<div className="w-full flex items-center gap-4 container lg:mx-auto pl-4 pr-0 sm:px-4 bg-white">
 						<Link href="/">
 							<Image
 								priority
@@ -66,12 +66,12 @@ const Navbar: FC = () => {
 								height={500}
 								alt="DRS Installations Ltd Logo"
 								src="/img/logos/drs-installations-logo.png"
-								className="object-contain object-center w-[150px] h-[65px]"
+								className="object-contain object-center w-[105px] sm:w-[150px] h-[65px]"
 							/>
 						</Link>
-						<div className="flex flex-row items-baseline gap-2 py-2 ">
+						<div className="w-1/4 sm:w-full flex flex-row items-baseline gap-2 py-2 px-0">
 							<Link
-								className="flex items-center justify-center w-8 h-8 rounded-full bg-primary-default md:hidden"
+								className="flex items-center justify-center p-2 w-fit h-full rounded-full bg-primary-default md:hidden"
 								href={`mailto:${globalContext?.themesOptionsContent?.email}`}
 								aria-label={`${globalContext?.themesOptionsContent?.email}`}
 							>
@@ -93,7 +93,7 @@ const Navbar: FC = () => {
 								</svg>
 							</Link>
 							<Link
-								className="flex items-center justify-center w-8 h-8 rounded-full bg-primary-default md:hidden"
+								className="flex items-center justify-center p-2 w-fit h-full rounded-full bg-primary-default md:hidden"
 								href={`tel:${globalContext?.themesOptionsContent?.phoneNumber}`}
 								aria-label={`${globalContext?.themesOptionsContent?.phoneNumber}`}
 							>
@@ -253,7 +253,7 @@ const Navbar: FC = () => {
 							</div>
 						</div>
 					</div>
-					<div className="w-full"></div>
+					<div className="w-1/3 sm:w-full"></div>
 					<motion.div
 						initial={initialTwo}
 						whileInView={fadeIn}
