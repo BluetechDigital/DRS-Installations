@@ -22,7 +22,7 @@ const SkillsExperiences: FC<ISkillsExperiences> = ({
 	return (
 		<>
 			<section className="relative overflow-hidden py-8 px-4 ">
-				<div className="md:container px-0 mx-auto">
+				<div className="lg:container px-0 mx-auto">
 					<div className="flex flex-wrap border-b border-primary-dark my-4">
 						<div className="w-full lg:w-1/2 p-4">
 							<motion.h3

@@ -162,7 +162,7 @@ const ContactForm: FC<IContactForm> = ({title, paragraph}) => {
 					backgroundImage: `url("/svg/background/layered-waves-haikei-lightgrey-two.svg")`,
 				}}
 			>
-				<div className="md:container mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-0">
+				<div className="lg:container mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-0">
 					<div className="w-full lg:w-1/2 p-0 flex flex-col items-center lg:items-baseline">
 						<motion.div
 							initial={initial}
@@ -400,7 +400,7 @@ const ContactForm: FC<IContactForm> = ({title, paragraph}) => {
 						initialValues={formik?.initialValues}
 						className="w-full lg:w-1/2"
 					>
-						<Form className="md:container mx-auto py-10 px-6 md:max-w-xl shadow-2xl border-4 border-primary-default">
+						<Form className="lg:container mx-auto py-10 px-6 md:max-w-xl shadow-2xl border-4 border-primary-default">
 							{loading ? (
 								<motion.div
 									initial={initialTwo}

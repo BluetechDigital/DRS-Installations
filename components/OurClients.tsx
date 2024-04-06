@@ -20,7 +20,7 @@ const OurClients: FC<IOurClients> = ({
 	return (
 		<>
 			<div className={styles.ourClients + ` py-16 px-4 lg:px-0 bg-white`}>
-				<div className="md:container px-0 mx-auto">
+				<div className="lg:container px-0 mx-auto">
 					<motion.div
 						initial={initial}
 						variants={stagger}

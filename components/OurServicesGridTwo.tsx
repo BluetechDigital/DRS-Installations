@@ -25,7 +25,7 @@ const OurServicesGridTwo: FC<IOurServicesGridTwo> = ({
 	return (
 		<>
 			<div className={styles.ourServices + " relative py-8 px-4 bg-white"}>
-				<div className="md:container relative m-auto flex flex-col items-center gap-6">
+				<div className="lg:container relative m-auto flex flex-col items-center gap-6">
 					<motion.div
 						initial={initial}
 						variants={stagger}

@@ -15,7 +15,7 @@ const CTA: FC<ICTA> = ({title, paragraph, buttonLink, backgroundImage}) => {
 	return (
 		<>
 			<div className="py-8">
-				<div className="md:md:container mx-auto px-4">
+				<div className="md:lg:container mx-auto px-4">
 					<div
 						className="p-8 relative flex flex-col lg:flex-row gap-4 rounded-2xl bg-cover bg-no-repeat bg-center"
 						style={{

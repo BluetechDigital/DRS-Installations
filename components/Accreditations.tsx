@@ -31,7 +31,7 @@ const Accreditations: FC<IAccreditations> = ({
 			<div
 				className={
 					styles.accreditations +
-					" accreditations flex flex-col-reverse lg:flex-row flex-wrap p-4 lg:py-10 lg:px-0 md:container mx-auto gap-10 lg:gap-0"
+					" accreditations flex flex-col-reverse lg:flex-row flex-wrap p-4 lg:py-10 lg:px-0 lg:container mx-auto gap-10 lg:gap-0"
 				}
 			>
 				<motion.div

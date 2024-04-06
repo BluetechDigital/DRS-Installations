@@ -197,7 +197,11 @@ const Navbar: FC = () => {
 																								>
 																									<Link
 																										href={`${item?.node?.url}`}
-																										target={`${item?.node?.target}`}
+																										target={`${
+																											item?.node?.target
+																												? item?.node?.target
+																												: "_self"
+																										}`}
 																										aria-label={`${item?.node?.label}`}
 																										className={` ${
 																											ourServicesSublinksOpen

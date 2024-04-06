@@ -25,7 +25,7 @@ const Footer: FC = () => {
 					backgroundImage: `url(/svg/background/layered-waves-haikei-lightgrey-blue-right.svg)`,
 				}}
 			>
-				<div className="md:container p-4 mx-auto">
+				<div className="lg:container p-4 mx-auto">
 					<div className="flex flex-col lg:flex-row items-center lg:items-start justify-between py-4 gap-16 lg:gap-4">
 						<motion.div
 							initial={initial}
@@ -85,7 +85,11 @@ const Footer: FC = () => {
 													>
 														<Link
 															href={`${item?.node?.url}`}
-															target={`${item?.node?.target}`}
+															target={`${
+																item?.node?.target
+																	? item?.node?.target
+																	: "_self"
+															}`}
 															aria-label={`${item?.node?.label}`}
 															className="text-black transition-all duration-200 ease-in-out text-base hover:text-primary-default hover:border-b-2"
 														>
@@ -573,7 +577,7 @@ const Footer: FC = () => {
 					</div>
 				</div>
 				<div className="py-4 my-0">
-					<div className="md:container px-4 mx-auto flex flex-col-reverse lg:flex-row items-center justify-between">
+					<div className="lg:container px-4 mx-auto flex flex-col-reverse lg:flex-row items-center justify-between">
 						<motion.div
 							initial={initial}
 							variants={stagger}
@@ -621,7 +625,9 @@ const Footer: FC = () => {
 											>
 												<Link
 													href={`${item?.node?.url}`}
-													target={`${item?.node?.target}`}
+													target={`${
+														item?.node?.target ? item?.node?.target : "_self"
+													}`}
 													aria-label={`${item?.node?.label}`}
 													className="text-black lg:text-lightGreyTwo transition-all duration-200 ease-in-out text-tiny hover:text-primary-darkerTwo hover:border-b-2"
 												>

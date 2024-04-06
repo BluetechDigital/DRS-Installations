@@ -19,7 +19,7 @@ const OurProjectsGrid: FC<IOurProjectsGrid> = ({
 	return (
 		<>
 			<div className="py-12 px-4 bg-white">
-				<div className="md:container px-0 mx-auto flex flex-col items-center gap-6 lg:gap-16">
+				<div className="lg:container px-0 mx-auto flex flex-col items-center gap-6 lg:gap-16">
 					<motion.div
 						initial={initial}
 						variants={stagger}

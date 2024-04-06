@@ -25,7 +25,7 @@ const TestimonialsSlider: FC = () => {
 					styles.testimonialsSlider + ` px-0 py-8 overflow-x-hidden bg-white`
 				}
 			>
-				<div className="md:container px-4 mx-auto">
+				<div className="lg:container px-4 mx-auto">
 					<div className="flex items-center">
 						<Swiper
 							navigation={true}
