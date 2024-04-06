@@ -41,7 +41,7 @@ const TestimonialsCard: FC<ITestimonialsCard> = ({
 						</div>
 					</div>
 					<div>
-						<div className="flex flex-wrap items-center justify-between px-5 -m-2 gap-4">
+						<div className="flex flex-row md:flex-wrap items-center justify-between px-0 md:px-5 -m-2 gap-0 md:gap-4">
 							<div className="flex items-center justify-between">
 								<div className="w-auto p-2">
 									<Image
@@ -79,7 +79,7 @@ const TestimonialsCard: FC<ITestimonialsCard> = ({
 									</h4>
 								</div>
 							</div>
-							<div className="ml-5">
+							<div className="ml-2 md:ml-5">
 								<svg
 									width="50"
 									height="50"
