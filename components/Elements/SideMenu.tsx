@@ -73,6 +73,10 @@ const SideMenu: FC<ISideMenu> = ({menuActive, setMenuActive}) => {
 													<Link
 														onClick={toggleMenu}
 														href={item?.node?.url}
+														target={`${
+															item?.node?.target ? item?.node?.target : "_self"
+														}`}
+														aria-label={`${item?.node?.label}`}
 														className="leading-snug font-tonnelier uppercase text-black text-tiny text-center hover:text-primary-two"
 													>
 														{item?.node?.label}
@@ -108,7 +112,11 @@ const SideMenu: FC<ISideMenu> = ({menuActive, setMenuActive}) => {
 																		<Fragment key={keys}>
 																			<Link
 																				href={`${item?.node?.url}`}
-																				target={`${item?.node?.target}`}
+																				target={`${
+																					item?.node?.target
+																						? item?.node?.target
+																						: "_self"
+																				}`}
 																				aria-label={`${item?.node?.label}`}
 																			>
 																				<li
@@ -121,7 +129,11 @@ const SideMenu: FC<ISideMenu> = ({menuActive, setMenuActive}) => {
 																					<Link
 																						onClick={toggleMenu}
 																						href={`${item?.node?.url}`}
-																						target={`${item?.node?.target}`}
+																						target={`${
+																							item?.node?.target
+																								? item?.node?.target
+																								: "_self"
+																						}`}
 																						aria-label={`${item?.node?.label}`}
 																						className="block p-4 text-tiny"
 																					>
@@ -144,7 +156,9 @@ const SideMenu: FC<ISideMenu> = ({menuActive, setMenuActive}) => {
 												<Link
 													onClick={toggleMenu}
 													href={`${item?.node?.url}`}
-													target={`${item?.node?.target}`}
+													target={`${
+														item?.node?.target ? item?.node?.target : "_self"
+													}`}
 													aria-label={`${item?.node?.label}`}
 													className="block py-4 leading-snug font-tonnelier uppercase text-tiny text-black hover:text-primary-two"
 												>
