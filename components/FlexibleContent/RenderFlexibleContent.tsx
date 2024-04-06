@@ -1,6 +1,5 @@
 // Imports
 import {FC} from "react";
-import dynamic from "next/dynamic";
 import {usePageContext} from "@/context/pages";
 import {IPostTypeFlexibleContent} from "@/types/context";
 import DynamicComponent from "./DynamicComponent";

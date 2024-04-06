@@ -16,7 +16,7 @@ import RenderStars from "./Elements/RenderStars";
 const CTATwo: FC<ICTATwo> = ({title, buttonLink, backgroundImage}) => {
 	return (
 		<>
-			<div className={styles.ctaTwo + ` ctaTwo px-4 lg:px-0`}>
+			<div className={styles.ctaTwo + ` ctaTwo p-4 lg:px-0`}>
 				<div
 					className="lg:container mx-auto px-0 lg:px-8 rounded-2xl bg-center bg-no-repeat bg-cover"
 					style={{
@@ -25,7 +25,7 @@ const CTATwo: FC<ICTATwo> = ({title, buttonLink, backgroundImage}) => {
 								rgb(0, 0, 0, 0.4),
 								rgba(0, 0, 0, 0.4),
 								rgba(0, 0, 0, 0.4)
-							),url("${backgroundImage}")`,
+							),url("${backgroundImage?.sourceUrl}")`,
 					}}
 				>
 					<div className="flex flex-col gap-6 py-6 px-4 bg-cover bg-center bg-no-repeat">

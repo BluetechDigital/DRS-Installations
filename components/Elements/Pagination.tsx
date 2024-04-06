@@ -47,7 +47,7 @@ const Pagination: FC<IPagination> = ({
 	};
 
 	const tailwindButtonStyling =
-		"relative px-6 py-2 text-pureBlack hover:text-white font-semibold tracking-widest text-tiny w-fit border-2 border-solid border-primary-default hover:bg-primary-default hover:border-primary-default transition-all ease-in-out duration-500 before:left-[15%]";
+		"relative px-6 py-2 text-pureBlack hover:text-white font-semibold tracking-widest text-tiny rounded-full w-fit border-2 border-solid border-primary-default hover:bg-primary-default hover:border-primary-default transition-all ease-in-out duration-500 before:left-[15%]";
 
 	return (
 		<>

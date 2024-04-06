@@ -84,7 +84,7 @@ const VideoBlock: FC<IVideoBlock> = ({
 						} bg-center bg-no-repeat bg-cover mt-6 lg:mt-12 w-full`}
 						style={{
 							backgroundImage: `url("${
-								displayVideo ? "none" : videoBackgroundImage
+								displayVideo ? "none" : videoBackgroundImage?.sourceUrl
 							}")`,
 						}}
 					>

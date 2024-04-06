@@ -2,11 +2,18 @@
 export type ICTA = {
 	title: string;
 	paragraph: string;
-	backgroundImage: string;
 	buttonLink: {
 		url: string;
 		title: string;
 		target: string;
+	};
+	backgroundImage: {
+		altText: string;
+		sourceUrl: string;
+		mediaDetails: {
+			width: number;
+			height: number;
+		};
 	};
 };
 export type IHero = {
@@ -34,11 +41,18 @@ export type IHero = {
 };
 export type ICTATwo = {
 	title: string;
-	backgroundImage: string;
 	buttonLink: {
 		url: string;
 		title: string;
 		target: string;
+	};
+	backgroundImage: {
+		altText: string;
+		sourceUrl: string;
+		mediaDetails: {
+			width: number;
+			height: number;
+		};
 	};
 };
 export type IHeroTwo = {
@@ -80,7 +94,12 @@ export type IVideoBlock = {
 		target: string;
 	};
 	videoBackgroundImage: {
+		altText: string;
 		sourceUrl: string;
+		mediaDetails: {
+			width: number;
+			height: number;
+		};
 	};
 };
 export type IOurClients = {
