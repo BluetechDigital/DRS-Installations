@@ -122,7 +122,7 @@ const TestimonialsGrid: FC<ITestimonialsGrid> = ({
 						contentType="TestimonialsCard"
 						numberOfItemsRenderedPerPage={12}
 						contentArray={globalContext?.testimonials}
-						tailwindStyling={`grid px-4 lg:px-16 lg:-m-4 gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3`}
+						tailwindStyling={`grid px-0 lg:px-16 lg:-m-4 gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3`}
 					/>
 				</div>
 			</div>
