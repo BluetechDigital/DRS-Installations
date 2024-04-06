@@ -71,7 +71,7 @@ const TestimonialsGrid: FC<ITestimonialsGrid> = ({
 							variants={stagger}
 							whileInView="animate"
 							viewport={{once: true}}
-							className="w-fit lg:w-1/4 mx-auto lg:mx-0 py-3 px-4 grid sm:grid-cols-2 items-center justify-center sm:justify-start gap-6"
+							className="w-full lg:w-1/4 mx-auto lg:mx-0 py-3 px-4 grid sm:grid-cols-2 items-center justify-center sm:justify-start gap-6"
 						>
 							<div className="flex items-center justify-center sm:justify-start gap-3">
 								<Image
