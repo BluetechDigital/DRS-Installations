@@ -17,7 +17,7 @@ import {IAccreditations} from "@/types/components/index";
 import styles from "../styles/components/Accreditations.module.scss";
 
 // Components
-import Title from "./Elements/Title";
+import Paragraph from "./Elements/Paragraph";
 
 const Accreditations: FC<IAccreditations> = ({
 	text,
@@ -56,7 +56,7 @@ const Accreditations: FC<IAccreditations> = ({
 								initial={initialTwo}
 								whileInView={fadeIn}
 								viewport={{once: true}}
-								className="text-center uppercase font-semibold font-tonnelier leading-tight text-white text-7xl sm:text-9xl"
+								className="text-center uppercase font-semibold font-tonnelier leading-tight text-white text-9xl"
 							>
 								{text}
 							</motion.h2>
@@ -64,7 +64,7 @@ const Accreditations: FC<IAccreditations> = ({
 								initial={initialTwo}
 								whileInView={fadeIn}
 								viewport={{once: true}}
-								className="max-w-[7.5rem] text-left font-medium font-openSauceSansRegular leading-tight text-white text-lg sm:text-xl lg:text-3xl xl:text-xl"
+								className="max-w-[7.5rem] text-left font-medium font-openSauceSansRegular leading-tight text-white text-xl lg:text-3xl xl:text-xl"
 							>
 								{textTwo}
 							</motion.h3>
@@ -77,10 +77,10 @@ const Accreditations: FC<IAccreditations> = ({
 					whileInView={slideInRightFinish}
 					className="w-full lg:w-7/12"
 				>
-					<div className="flex flex-col justify-between h-full px-8 gap-6 lg:gap-2">
-						<Title
+					<div className="flex flex-col justify-between h-full px-0 lg:px-8 gap-6 lg:gap-2">
+						<Paragraph
 							content={paragraph}
-							tailwindStyling="paragraph max-w-3xl mx-auto lg:mx-0 text-black uppercase font-semibold font-tonnelier leading-tight text-lg sm:text-xl lg:text-3xl text-center lg:text-left"
+							tailwindStyling="paragraph max-w-full lg:max-w-3xl mx-auto lg:mx-0 text-black uppercase font-semibold font-tonnelier leading-tight text-lg sm:text-xl lg:text-3xl text-center lg:text-left"
 						/>
 						<div className="grid gap-4 grid-cols-2 lg:grid-cols-4 items-center justify-center">
 							{accreditationsGrid?.length > 0 ? (

@@ -60,7 +60,7 @@ const Hero: FC<IHero> = ({
 									initial={initialTwo}
 									whileInView={fadeIn}
 									viewport={{once: true}}
-									className="text-center lg:text-left uppercase text-medium sm:text-2xl lg:text-3xl xl:text-5xl text-white font-semibold leading-tight xl:leading-[2.5rem]"
+									className="text-center lg:text-left uppercase text-medium sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl text-white font-semibold leading-tight xl:leading-[2.5rem]"
 								>
 									{title}
 								</motion.h1>
