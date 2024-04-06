@@ -73,7 +73,7 @@ const TestimonialsGrid: FC<ITestimonialsGrid> = ({
 							viewport={{once: true}}
 							className="w-full lg:w-1/4 mx-auto lg:mx-0 py-3 px-4 grid sm:grid-cols-2 items-center justify-center sm:justify-start gap-6"
 						>
-							<div className="flex items-center justify-center sm:justify-start gap-3">
+							<div className="flex items-center justify-center lg:justify-start gap-3">
 								<Image
 									className="my-auto lg:mx-0 rounded-full w-10 h-10 object-cover object-center"
 									alt={`Facebook reviews logo`}
@@ -90,7 +90,7 @@ const TestimonialsGrid: FC<ITestimonialsGrid> = ({
 									</h3>
 								</div>
 							</div>
-							<div className="flex items-center justify-center sm:justify-start gap-3">
+							<div className="flex items-center justify-center lg:justify-start gap-3">
 								<Image
 									className="bg-white my-auto lg:mx-0 rounded-full p-1 w-10 h-10 object-cover object-center"
 									alt={`Google reviews logo`}
@@ -107,7 +107,7 @@ const TestimonialsGrid: FC<ITestimonialsGrid> = ({
 									</h3>
 								</div>
 							</div>
-							<div className="flex items-center justify-center sm:justify-start gap-0">
+							<div className="flex items-center justify-center lg:justify-start gap-0">
 								<Image
 									className="bg-white my-auto lg:mx-0 rounded-full p-1 w-full h-10 object-cover object-center"
 									alt={`Trustpilot reviews logo`}

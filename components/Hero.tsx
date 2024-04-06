@@ -75,7 +75,7 @@ const Hero: FC<IHero> = ({
 									viewport={{once: true}}
 									className="w-fit mx-auto lg:mx-0 py-3 px-4 bg-lightGreyTwo/30 grid sm:grid-cols-2 md:grid-cols-3 items-center justify-center sm:justify-start gap-6"
 								>
-									<div className="flex items-center justify-center sm:justify-start gap-3">
+									<div className="flex items-center justify-center lg:justify-start gap-3">
 										<Image
 											className="my-auto lg:mx-0 rounded-full w-10 h-10 object-cover object-center"
 											alt={`Facebook reviews logo`}
@@ -92,7 +92,7 @@ const Hero: FC<IHero> = ({
 											</h3>
 										</div>
 									</div>
-									<div className="flex items-center justify-center sm:justify-start gap-3">
+									<div className="flex items-center justify-center lg:justify-start gap-3">
 										<Image
 											className="bg-white my-auto lg:mx-0 rounded-full p-1 w-10 h-10 object-cover object-center"
 											alt={`Google reviews logo`}
@@ -109,7 +109,7 @@ const Hero: FC<IHero> = ({
 											</h3>
 										</div>
 									</div>
-									<div className="flex items-center justify-center sm:justify-start gap-0 basis-1/2">
+									<div className="flex items-center justify-center lg:justify-start gap-0 basis-1/2">
 										<Image
 											className="my-auto lg:mx-0 p-1 w-full h-10 object-cover object-center"
 											alt={`Trustpilot reviews logo`}
