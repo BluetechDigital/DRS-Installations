@@ -8,6 +8,12 @@
 		background-color: $white;
 	}
 
+	.title {
+		span {
+			@apply text-primary-default;
+		}
+	}
+
 	.submitButton {
 		@apply w-fit flex items-center justify-center rounded-full py-3 px-6 bg-primary-two hover:bg-primary-dark transition-all duration-200 ease-in-out;
 	}

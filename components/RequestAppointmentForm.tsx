@@ -9,7 +9,6 @@ import {
 	initialTwo,
 } from "@/animations/animations";
 import Link from "next/link";
-import Image from "next/image";
 import {motion} from "framer-motion";
 import {useRouter} from "next/router";
 import React, {useState, FC} from "react";
@@ -23,6 +22,7 @@ import {IRequestAppointmentForm} from "@/types/components";
 import styles from "@/styles/components/RequestAppointmentForm.module.scss";
 
 // Components
+import Title from "./Elements/Title";
 import Paragraph from "./Elements/Paragraph";
 
 const RequestAppointmentForm: FC<IRequestAppointmentForm> = ({
@@ -166,15 +166,10 @@ const RequestAppointmentForm: FC<IRequestAppointmentForm> = ({
 							>
 								{subtitle}
 							</motion.h4>
-							<motion.h3
-								initial={initial}
-								whileInView={fadeInUp}
-								viewport={{once: true}}
-								className="my-3 max-w-xl mx-auto lg:mx-0 text-black uppercase font-tonnelier leading-[2.25rem] text-center lg:text-left text-lg sm:text-3xl"
-							>
-								{title}
-							</motion.h3>
-
+							<Title
+								content={title}
+								tailwindStyling="title my-3 max-w-xl mx-auto lg:mx-0 text-black uppercase font-tonnelier leading-[2.25rem] text-center lg:text-left text-lg sm:text-3xl"
+							/>
 							<Paragraph
 								content={paragraph}
 								tailwindStyling="max-w-xl mx-auto xl:mx-0 text-black text-base text-center lg:text-left"
@@ -185,7 +180,7 @@ const RequestAppointmentForm: FC<IRequestAppointmentForm> = ({
 								href={`${buttonLink?.url}`}
 								aria-label={`${buttonLink?.title}`}
 								target={buttonLink?.target}
-								className={`hidden py-4 px-6 cursor-pointer rounded-full bg-primary-default hover:bg-primary-dark transition-all ease-in-out duration-500 font-semibold  uppercase text-lightGrey text-base text-center font-tonnelier ${
+								className={`hidden py-4 px-6 w-1/3 cursor-pointer rounded-full bg-primary-default hover:bg-primary-dark transition-all ease-in-out duration-500 font-semibold  uppercase text-lightGrey text-base text-center font-tonnelier ${
 									buttonLink?.url ? "lg:block" : "lg:hidden"
 								}`}
 							>
@@ -320,7 +315,7 @@ const RequestAppointmentForm: FC<IRequestAppointmentForm> = ({
 										viewport={{once: true}}
 										className="my-3 max-w-xl mx-auto xl:mx-0 uppercase font-tonnelier text-white text-center lg:text-left font-semibold text-lg md:text-lg"
 									>
-										Make an Appointment
+										We Promise to Fast-track your safety
 									</motion.h3>
 								</motion.div>
 							)}

@@ -2,10 +2,10 @@
 import {
 	fadeIn,
 	initial,
+	stagger,
 	initialTwo,
 	slideInRightFinish,
 	slideInRightInitial,
-	stagger,
 } from "../animations/animations";
 import {FC} from "react";
 import Link from "next/link";
@@ -73,7 +73,7 @@ const Hero: FC<IHero> = ({
 									variants={stagger}
 									whileInView="animate"
 									viewport={{once: true}}
-									className="w-fit mx-auto lg:mx-0 py-3 px-4 bg-lightGreyTwo/30 grid sm:grid-cols-2 items-center justify-start gap-6"
+									className="w-fit mx-auto lg:mx-0 py-3 px-4 bg-lightGreyTwo/30 grid sm:grid-cols-2 md:grid-cols-3 items-center justify-start gap-6"
 								>
 									<div className="flex items-center justify-start gap-3">
 										<Image
@@ -108,6 +108,15 @@ const Hero: FC<IHero> = ({
 												5.0 Rating
 											</h3>
 										</div>
+									</div>
+									<div className="flex items-center justify-start gap-0 basis-1/2">
+										<Image
+											className="my-auto lg:mx-0 p-1 w-full h-10 object-cover object-center"
+											alt={`Trustpilot reviews logo`}
+											src="/svg/trustpilot-logo-white.svg"
+											width={500}
+											height={500}
+										/>
 									</div>
 								</motion.div>
 							</motion.div>
