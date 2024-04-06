@@ -73,7 +73,7 @@ const Hero: FC<IHero> = ({
 									variants={stagger}
 									whileInView="animate"
 									viewport={{once: true}}
-									className="w-fit max-w-lg lg:max-w-full mx-auto lg:mx-0 py-3 px-4 bg-lightGreyTwo/30 grid sm:grid-cols-2 md:grid-cols-3 items-center justify-center lg:justify-start gap-6"
+									className="w-fit max-w-lg lg:max-w-full mx-auto lg:mx-0 py-3 px-4 rounded-2xl bg-lightGreyTwo/30 grid sm:grid-cols-2 md:grid-cols-3 items-center justify-center lg:justify-start gap-6"
 								>
 									<div className="flex items-center justify-center lg:justify-start gap-3">
 										<Image

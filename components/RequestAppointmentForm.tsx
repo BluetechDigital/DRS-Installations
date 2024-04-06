@@ -168,7 +168,7 @@ const RequestAppointmentForm: FC<IRequestAppointmentForm> = ({
 							</motion.h4>
 							<Title
 								content={title}
-								tailwindStyling="title my-3 max-w-xl mx-auto lg:mx-0 text-black uppercase font-RethinkSansExtraBold leading-[2.25rem] text-center lg:text-left text-lg sm:text-3xl"
+								tailwindStyling="title my-3 max-w-xl mx-auto lg:mx-0 text-black uppercase font-RethinkSansExtraBold leading-tight leading-[2.25rem] text-center lg:text-left text-lg sm:text-3xl"
 							/>
 							<Paragraph
 								content={paragraph}

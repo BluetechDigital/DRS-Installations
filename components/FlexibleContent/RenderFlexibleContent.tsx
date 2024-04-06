@@ -6,6 +6,7 @@ import {IPostTypeFlexibleContent} from "@/types/context";
 // Components
 import CTA from "../CTA";
 import Hero from "../Hero";
+import CTATwo from "../CTATwo";
 import HeroTwo from "../HeroTwo";
 import Gallery from "../Gallery";
 import OurClients from "../OurClients";
@@ -205,6 +206,15 @@ const RenderFlexibleContent: FC = () => {
 								<CTA
 									title={item?.title}
 									paragraph={item?.paragraph}
+									buttonLink={item?.buttonLink}
+									backgroundImage={item?.backgroundImage?.sourceUrl}
+								/>
+							</>
+						) : item?.fieldGroupName === `${FlexibleContent}_CtaTwo` &&
+						  item?.displaySection ? (
+							<>
+								<CTATwo
+									title={item?.title}
 									buttonLink={item?.buttonLink}
 									backgroundImage={item?.backgroundImage?.sourceUrl}
 								/>

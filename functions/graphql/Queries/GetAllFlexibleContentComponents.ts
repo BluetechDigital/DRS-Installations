@@ -306,6 +306,19 @@ export const getAllFlexibleContentComponents = async (
 													sourceUrl
 												}
 											}
+											... on ${postTypeFlexibleContent}_CtaTwo {
+												fieldGroupName
+												title
+												displaySection
+												buttonLink {
+													url
+													title
+													target
+												}
+												backgroundImage {
+													sourceUrl
+												}
+											}
 											... on ${postTypeFlexibleContent}_ContactForm {
 												fieldGroupName
 												title

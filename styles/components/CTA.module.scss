@@ -1,0 +1,11 @@
+// Imports
+@import "../base/fonts";
+@import "../base/colors";
+
+.ctaTwo {
+	.title {
+		span {
+			@apply text-accent-default;
+		}
+	}
+}

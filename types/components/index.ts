@@ -32,6 +32,15 @@ export type IHero = {
 		};
 	};
 };
+export type ICTATwo = {
+	title: string;
+	backgroundImage: string;
+	buttonLink: {
+		url: string;
+		title: string;
+		target: string;
+	};
+};
 export type IHeroTwo = {
 	title: string;
 	paragraph: string;

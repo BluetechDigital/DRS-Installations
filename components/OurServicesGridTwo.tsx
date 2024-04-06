@@ -37,7 +37,7 @@ const OurServicesGridTwo: FC<IOurServicesGridTwo> = ({
 							initial={initial}
 							whileInView={fadeInUp}
 							viewport={{once: true}}
-							className="my-3 max-w-xl mx-auto lg:mx-0 uppercase text-black text-center lg:text-left font-semibold text-lg lg:text-xl"
+							className="my-3 max-w-xl mx-auto lg:mx-0 text-black uppercase font-RethinkSansExtraBold leading-tight leading-[2.25rem] text-center text-lg sm:text-3xl"
 						>
 							{title}
 						</motion.h3>
