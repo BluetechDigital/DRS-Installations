@@ -1,8 +1,8 @@
 // Imports
-import {fadeIn, initialTwo} from "../animations/animations";
 import {FC} from "react";
 import {motion} from "framer-motion";
 import {IHeroTwo} from "@/types/components/index";
+import {fadeIn, initialTwo} from "../animations/animations";
 
 // Components
 import Paragraph from "./Elements/Paragraph";
