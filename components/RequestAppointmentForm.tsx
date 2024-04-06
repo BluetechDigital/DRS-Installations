@@ -193,7 +193,7 @@ const RequestAppointmentForm: FC<IRequestAppointmentForm> = ({
 								viewport={{once: true}}
 								className="flex items-center"
 							>
-								<div className="hidden sm:flex flex-shrink-0 mr-5  items-center justify-center p-1 w-10 h-10 rounded-full bg-primary-default">
+								<div className="flex flex-shrink-0 mr-5  items-center justify-center p-1 w-10 h-10 rounded-full bg-primary-default">
 									<svg
 										viewBox="0 0 24 24"
 										fill="none"

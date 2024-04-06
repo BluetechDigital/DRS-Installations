@@ -31,7 +31,7 @@ const OurServicesCard: FC<IOurServicesCard> = ({
 						initial={initial}
 						whileInView={fadeInUp}
 						viewport={{once: true}}
-						className="bg-primary-darker group-hover:bg-primary-darker relative px-4 py-6 w-full lg:py-12 h-[350px] bg-center bg-no-repeat bg-cover"
+						className="bg-primary-darker group-hover:bg-primary-darker relative px-4 py-6 w-full lg:py-12 h-[250px] sm:h-[350px] bg-center bg-no-repeat bg-cover"
 						style={{
 							backgroundImage: `url("${image?.sourceUrl}")`,
 						}}
