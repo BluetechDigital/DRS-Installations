@@ -123,7 +123,7 @@ const Navbar: FC = () => {
 							</Link>
 						</div>
 					</div>
-					<div className="hidden w-full lg:min-w-[45%] 2xl:min-w-[40%] lg:flex items-center justify-end gap-8 2xl:gap-12 xl:gap-24">
+					<div className="hidden w-full lg:min-w-[45%] 2xl:min-w-[40%] lg:flex items-center justify-center gap-8 2xl:gap-12 xl:gap-24">
 						<div className="hidden lg:flex items-center justify-end">
 							<div className="hidden xl:flex items-center gap-8">
 								<ul className="flex lg:items-center">
@@ -257,7 +257,22 @@ const Navbar: FC = () => {
 							</div>
 						</div>
 					</div>
-					<div className="w-1/3 sm:w-full"></div>
+					<div className="w-1/3 sm:w-full px-4 flex flex-row items-center justify-end gap-2">
+						<Image
+							width={500}
+							height={500}
+							alt={`Ring Authorized Partner Logo`}
+							src="/img/ring-authorized-partner.jpg"
+							className="hidden md:block object-contain object-center w-fit h-[50px]"
+						/>
+						<Image
+							width={500}
+							height={500}
+							alt={`Videoloft Certified Logo`}
+							src="/img/Videoloft_certified-transparent-2.png"
+							className="hidden md:block object-contain object-center w-fit h-[50px]"
+						/>
+					</div>
 					<motion.div
 						initial={initialTwo}
 						whileInView={fadeIn}

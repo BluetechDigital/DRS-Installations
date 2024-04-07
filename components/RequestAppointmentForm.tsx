@@ -191,7 +191,7 @@ const RequestAppointmentForm: FC<IRequestAppointmentForm> = ({
 								variants={stagger}
 								whileInView="animate"
 								viewport={{once: true}}
-								className="flex items-center"
+								className="flex items-center w-full lg:w-1/2 2xl:w-full"
 							>
 								<div className="flex flex-shrink-0 mr-5 items-center justify-center p-1 w-10 h-10 rounded-full bg-primary-default">
 									<svg
