@@ -1,6 +1,5 @@
 // Imports
 import {FC} from "react";
-import dynamic from "next/dynamic";
 
 // Components
 import Navbar from "../Global/Navbar";
