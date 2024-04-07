@@ -40,7 +40,7 @@ const CTATwo: FC<ICTATwo> = ({title, buttonLink, backgroundImage}) => {
 									: "hidden"
 							}
 						>
-							<div>
+							<div className="w-full lg:w-1/2">
 								<Title
 									content={title}
 									tailwindStyling="title my-3 max-w-xl mx-auto lg:mx-0 text-white uppercase font-RethinkSansExtraBold leading-[2.25rem] text-center lg:text-left text-lg sm:text-3xl"
@@ -50,7 +50,7 @@ const CTATwo: FC<ICTATwo> = ({title, buttonLink, backgroundImage}) => {
 									variants={stagger}
 									whileInView="animate"
 									viewport={{once: true}}
-									className="w-fit max-w-lg lg:max-w-full mx-auto lg:mx-0 py-3 px-4 rounded-2xl bg-lightGreyTwo/30 grid sm:grid-cols-2 md:grid-cols-3 items-center justify-center lg:justify-start gap-6"
+									className="w-fit max-w-lg lg:max-w-md xl:max-w-full mx-auto lg:mx-0 py-3 px-4 rounded-2xl bg-lightGreyTwo/30 grid sm:grid-cols-2 md:grid-cols-3 items-center justify-center lg:justify-start gap-6"
 								>
 									<div className="flex items-center justify-center lg:justify-start gap-3">
 										<Image
