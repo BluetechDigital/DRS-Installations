@@ -263,14 +263,14 @@ const Navbar: FC = () => {
 							height={500}
 							alt={`Ring Authorized Partner Logo`}
 							src="/img/ring-authorized-partner.jpg"
-							className="hidden md:block object-contain object-center w-fit h-[50px]"
+							className="hidden md:block object-contain object-center w-fit lg:w-[150px] h-[50px]"
 						/>
 						<Image
 							width={500}
 							height={500}
 							alt={`Videoloft Certified Logo`}
 							src="/img/Videoloft_certified-transparent-2.png"
-							className="hidden md:block object-contain object-center w-fit h-[50px]"
+							className="hidden md:block object-contain object-center w-fit lg:w-[150px] h-[50px]"
 						/>
 					</div>
 					<motion.div
