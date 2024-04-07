@@ -12,7 +12,6 @@ import {getAllFlexibleContentComponents} from "@/functions/graphql/Queries/GetAl
 import Layout from "@/components/Layout/Layout";
 import BackToTopButton from "@/components/Elements/BackToTopButton";
 import PageContextProvider from "@/components/Context/PageContextProvider";
-import RenderFlexibleContent from "@/components/FlexibleContent/RenderFlexibleContent";
 
 const dynamicPages: NextPage<IPageContext> = ({
 	seo,
@@ -26,10 +25,8 @@ const dynamicPages: NextPage<IPageContext> = ({
 				content={content}
 				postTypeFlexibleContent={postTypeFlexibleContent}
 			>
-				<Layout>
-					<BackToTopButton link={`#`} />
-					<RenderFlexibleContent />
-				</Layout>
+				<BackToTopButton link={`#`} />
+				<Layout />
 			</PageContextProvider>
 		</>
 	);

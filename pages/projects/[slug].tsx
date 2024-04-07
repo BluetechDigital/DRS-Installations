@@ -13,7 +13,6 @@ import Layout from "@/components/Layout/Layout";
 import BackHoverButton from "@/components/Elements/BackHoverButton";
 import BackToTopButton from "@/components/Elements/BackToTopButton";
 import PageContextProvider from "@/components/Context/PageContextProvider";
-import RenderFlexibleContent from "@/components/FlexibleContent/RenderFlexibleContent";
 
 const dynamicSinglePosts: NextPage<IPageContext> = ({
 	seo,
@@ -26,11 +25,9 @@ const dynamicSinglePosts: NextPage<IPageContext> = ({
 			content={content}
 			postTypeFlexibleContent={postTypeFlexibleContent}
 		>
-			<Layout>
-				<BackToTopButton link={`#`} />
-				<BackHoverButton link={`/our-projects`} />
-				<RenderFlexibleContent />
-			</Layout>
+			<BackToTopButton link={`#`} />
+			<BackHoverButton link={`/our-projects`} />
+			<Layout />
 		</PageContextProvider>
 	);
 };

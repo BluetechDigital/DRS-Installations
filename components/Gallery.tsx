@@ -23,7 +23,7 @@ const Gallery: FC<IGallery> = ({
 				className={
 					styles.gallery +
 					` ${
-						title && paragraph ? "pt-4" : "pt-16"
+						title && paragraph ? "pt-16" : "pt-4"
 					} p-4 bg-white lg:container mx-auto`
 				}
 			>
@@ -42,7 +42,7 @@ const Gallery: FC<IGallery> = ({
 						initial={initial}
 						whileInView={fadeInUp}
 						viewport={{once: true}}
-						className="my-3 max-w-xl mx-auto xl:mx-0 uppercase text-black text-center font-semibold text-lg md:text-xl"
+						className="my-1 max-w-xl mx-auto xl:mx-0 uppercase text-black text-center font-semibold text-lg md:text-xl"
 					>
 						{title}
 					</motion.h3>

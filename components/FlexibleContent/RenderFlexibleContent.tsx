@@ -4,8 +4,6 @@ import {usePageContext} from "@/context/pages";
 import {IPostTypeFlexibleContent} from "@/types/context";
 
 // Components
-import Navbar from "../Global/Navbar";
-import Footer from "../Global/Footer";
 import DynamicComponent from "./DynamicComponent";
 
 const RenderFlexibleContent: FC = () => {
@@ -41,8 +39,6 @@ const RenderFlexibleContent: FC = () => {
 
 	return (
 		<>
-			<Navbar />
-
 			{content?.content?.length > 0 ? (
 				content?.content?.map((item: any, keys: number) => (
 					<section key={keys}>
@@ -63,8 +59,6 @@ const RenderFlexibleContent: FC = () => {
 			) : (
 				<></>
 			)}
-
-			<Footer />
 		</>
 	);
 };

@@ -10,7 +10,6 @@ import {getAllFlexibleContentComponents} from "@/functions/graphql/Queries/GetAl
 // Components
 import Layout from "@/components/Layout/Layout";
 import PageContextProvider from "@/components/Context/PageContextProvider";
-import RenderFlexibleContent from "@/components/FlexibleContent/RenderFlexibleContent";
 
 const HomePage: NextPage<IPageContext> = ({
 	seo,
@@ -24,9 +23,7 @@ const HomePage: NextPage<IPageContext> = ({
 				content={content}
 				postTypeFlexibleContent={postTypeFlexibleContent}
 			>
-				<Layout>
-					<RenderFlexibleContent />
-				</Layout>
+				<Layout />
 			</PageContextProvider>
 		</>
 	);

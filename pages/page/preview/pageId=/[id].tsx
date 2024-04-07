@@ -3,8 +3,8 @@ import {isEmpty} from "lodash";
 import {IPageContext} from "@/types/context";
 import type {GetServerSideProps, NextPage} from "next";
 import {getAuthToken} from "@/functions/cookies/cookies";
-import {postType, flexibleContentType} from "@/context/pages";
 import {getLoginPreviewRedirectUrl} from "@/functions/redirects/redirects";
+import {postType, PageContext, flexibleContentType} from "@/context/pages";
 
 // Mutations Functions
 import {getAllPreviewSeoContent} from "@/functions/graphql/Mutations/GetAllPreviewSeoContent";
@@ -12,7 +12,6 @@ import {getAllPreviewFlexibleContentComponents} from "@/functions/graphql/Mutati
 
 // Components
 import Layout from "@/components/Layout/Layout";
-import PageContextProvider from "@/components/Context/PageContextProvider";
 
 const dynamicPreviewPosts: NextPage<IPageContext> = ({
 	seo,
@@ -21,13 +20,15 @@ const dynamicPreviewPosts: NextPage<IPageContext> = ({
 }) => {
 	return (
 		<>
-			<PageContextProvider
-				seo={seo}
-				content={content}
-				postTypeFlexibleContent={postTypeFlexibleContent}
+			<PageContext.Provider
+				value={{
+					seo: seo,
+					content: content,
+					postTypeFlexibleContent: postTypeFlexibleContent,
+				}}
 			>
 				<Layout />
-			</PageContextProvider>
+			</PageContext.Provider>
 		</>
 	);
 };
